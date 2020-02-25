@@ -1,0 +1,1 @@
+sumatrapdf.exe ./out/poster.pdf
