@@ -1,0 +1,107 @@
+%  $Id: fancychapters.sty,v 1.1 1992/07/10 07:40:27 joke Exp $
+%
+%  A macro for fancy chapter headings for use with LaTeX 2.09
+%
+%  Copyright (C) 1992 by Joerg Heitkoetter
+%  Systems Analysis Group, University of Dortmund, Germany.
+%  (joke@ls11.informatik.uni-dortmund.de).
+%
+%  This is modified code from bk11.sty, I received from TeXpert
+%  Gerd Neugebauer 8/7/92 (gerd@intellektik.informatik.th-darmstadt.de).
+%  Thank's for the q&d hack, Gerd!
+%
+%  Corrections of typos, \newdimensions, and everything, to handle
+%  things relatively by joke.
+%  
+%  Enjoy!
+
+
+%  DESCRIPTION
+%
+%  This style option provides the macro \Chapter. It requires the style
+%  book (report works as well :-)
+%
+%  The first argument is typeset in a \parbox on the right top of the
+%  chapter page, using an \emphasized font.  The second argument is the
+%  chapter's title.
+%  An optional argument between, corresponds to the optional argument of
+%  the \chapter command. Thus
+%
+%    \Chapter{<quote>}{<title>} or \Chapter{<quote>}[<abbrev>]{<title>}
+%
+%  are both valid constructs.
+%
+%  Two new dimension counters, \fancychapwidth and \fancychapsep handle
+%  the width of the quote's \parbox, and it's distance to the begin
+%  of the `Chapter X' mark, respectively. See the EXAMPLE below to `grok'
+%  how things work. Please note that the real distance between quote
+%  and `Chapter X' mark is actually \fancychapsep + 50pt, as the latter
+%  is always inserted, before a chapter starts. You could simply use
+%  negative values (e.g. \fancychapsep=-50pt) to get around this, but
+%  you shouldn't do, unless you're a fan of \uglychapters ;-)
+
+
+% Some new dimensions...
+\newdimen\fancychapwidth
+\newdimen\fancychapsep
+
+% ... and their defaults
+\fancychapwidth=0.5\textwidth
+\fancychapsep=10pt
+
+% the \Chapter ...
+\long\def\Chapter#1{\cleardoublepage
+   \thispagestyle{plain}%
+   \global\@topnum\z@
+
+   \@afterindentfalse
+   \hfill\parbox{\fancychapwidth}{\em #1}	% put quotation in a box
+						   % flushed right
+   \vspace{\fancychapsep}\par			% add distance to chapter head
+   \secdef\@chapter\@schapter}
+
+% That's all folks.
+\endinput
+
+
+%  EXAMPLE
+%
+%  (1) uncomment the following %%% marked lines
+%  (2) save them to a file
+%  (3) LaTeX it!
+
+%%%\documentstyle[fancychapters]{report}
+%%%
+%%%\begin{document}
+%%%\Chapter{
+%%%{\scriptsize (Sung to the tune of ``The Impossible Dream'' from MAN OF
+LA MANCHA)}\\[5pt]
+%%%        To code the impossible code,				\\
+%%%        To bring up a virgin machine,			\\
+%%%        To pop out of endless recursion,			\\
+%%%        To grok what appears on the screen,			\\[5pt]
+%%%        To right the unrightable bug,			\\
+%%%        To endlessly twiddle and thrash,			\\
+%%%        To mount the unmountable magtape,			\\
+%%%        To stop the unstoppable crash!
+%%%
+%%%	\begin{center}
+%%%	  {\tt /usr/games/fortune}
+%%%	\end{center}
+%%%	}{Building Operating Systems}
+%%%
+%%%\fancychapwidth=2in
+%%%\fancychapsep=0pt
+%%%\Chapter{``Nobody feels as helpless as the owner of a sick goldfish.''
+%%%}{Building More Operating Systems}
+%%%
+%%%\fancychapwidth=0.75\textwidth
+%%%\fancychapsep=10pt
+%%%\Chapter{
+%%%``Parents of young organic life forms should be warned, that
+%%%towels can be harmful, if swallowed in large quantities.''
+%%%\\[5pt]
+%%%\rightline{{\rm --- Douglas Adams}}
+%%%}[No More]{Building No More Operating Systems}
+%%%
+%%%\end{document}

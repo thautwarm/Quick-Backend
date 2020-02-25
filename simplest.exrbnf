@@ -1,0 +1,16 @@
+lvar : <name> | <constant-literal> ;
+
+expr : "Var"    <name>
+     | "App"    <name> [<lvar>]
+     | "Const" <constant-literal>
+     | "Update" <name> <expr>
+     ;
+
+block_stmt : [<stmt>] ;
+
+stmt : "Update" <name> <expr>
+     | "DefFun" <name> [<name>] <block_stmt>
+     | "Switch" <expr> ["(" <constant-literal>  "," <block_stmt>  ")"]
+     | "If" <expr> <block_stmt> <block_stmt>
+     ;
+

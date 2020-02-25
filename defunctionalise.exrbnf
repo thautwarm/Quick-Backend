@@ -9,7 +9,7 @@ expr :  "Var" <name>
      | "Proj" <expr> <int>
      | "Cons" <name> [<expr>]
      | "Case" <expr> [alt]
-     | "Const" <constant literal>
+     | "Const" <constant-literal>
      | "Foreign" <fdesc> <fdesc>
         ["(" <fdesc> "," <expr> ")"]
      | "Op" <primitive-op> [<expr>]
@@ -18,7 +18,7 @@ expr :  "Var" <name>
      ;
 
 alt : "ConCase" <name> [<name>] <expr>
-    | "ConstCase" <constant literal> <expr>
+    | "ConstCase" <constant-literal> <expr>
     | "DefaultCase" <expr>
     ;
 
