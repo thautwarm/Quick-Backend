@@ -1,6 +1,6 @@
 # The Poster of "Quick and Reusable Code Generation for Idris"
 
-
+The pdf file is `poster.pdf` in the project root directory.
 
 ## License
 
