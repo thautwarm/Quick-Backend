@@ -31,11 +31,12 @@
 
 
 \usepackage{graphicx} % Required for including images
-\graphicspath{{figures/}} % Location of the graphics files
+\graphicspath{{figs/}} % Location of the graphics files
 \usepackage{booktabs} % Top and bottom rules for table
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
 \usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
+\usepackage[epsilon, tsrm, altpo]{backnaur}
 
 \begin{document}
 
@@ -100,9 +101,145 @@ or even minutes.
 %Avoid using technical definitions unless absolutely necessary. The introduction section is here to introduce your issue, so be sure to not bore your readers right away with excessive information. You can even include graphics if they will help the viewer understand the work that you have done.
 %----------------------------------------------------------------------------------------
 
-\color{Red} % color for the introduction
+\color{OrangeRed} % color for the introduction
 
 \section*{Introduction}
+
+% \includegraphics[width=15cm]{Idris-Backend-For-Free.png}\\
+Idris has already made lots of efforts to their code generation, where
+they provided various IRs \cite{brady2015cross} to start a custom back end.
+
+We provide a concise version of their defunctionalised IR with some details omitted, hereafter as $DDecl$.
+
+\begin{multicols}{2}
+
+\begin{minipage}[b]{0.8\linewidth}
+\begin{bnf*}
+    \bnfprod{expr}{\bnftd{Var} \bnfsp \bnftd{name}}\\
+    \bnfmore{\bnfor \bnftd{App} \bnfsp \bnftd{bool} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{Let} \bnfsp \bnftd{name} \bnfsp \bnftd{expr} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{Update} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{Proj} \bnfsp \bnftd{expr} \bnfsp \bnftd{int}}\\
+    \bnfmore{\bnfor \bnftd{Cons} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{Case} \bnfsp \bnftd{expr} \bnfsp \bnfts{[} \bnfpn{alt}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{Const} \bnfsp \bnftd{constant literal}}\\
+    \bnfmore{\bnfor \bnftd{Foreign} \bnfsp \bnftd{fdesc} \bnfsp \bnftd{fdesc} \bnfsp \bnfts{[} \bnftd{(} \bnfsp \bnftd{fdesc} \bnfsp \bnftd{,} \bnfsp \bnftd{expr} \bnfsp \bnftd{)}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{Op} \bnfsp \bnftd{primitive-op} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{DoNothing}}\\
+    \bnfmore{\bnfor \bnftd{Error} \bnfsp \bnftd{string}}\\
+\end{bnf*}
+\end{minipage}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{bnf*}
+    \bnfprod{alt}{\bnftd{ConCase} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{ConstCase} \bnfsp \bnftd{constant literal} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{DefaultCase} \bnfsp \bnftd{expr}}\\
+    \bnfprod{decl}{\bnftd{DefFun} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{DefCons} \bnfsp \bnftd{name} \bnfsp \bnftd{int}}\\   
+    \bnfprod{arith-type}{\bnftd{float} \bnfor \bnftd{int}}\\
+    \bnfprod{primitive-op}{\bnftd{sdiv} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{udiv} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{+} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{-} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{*} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{...}}
+\end{bnf*}
+\end{minipage}
+
+\end{multicols}
+
+where
+
+\begin{itemize}
+
+\item $Cons$, $DefCons$ : constructing tagged unions, and constructor definitions
+\item $Case$ : pattern matching, or deconstructions
+\item $Proj$ : projections, on tuples and tagged unions
+\item $primitive-op$ : $+$, $-$, $*$, $/$, and other primitive operators defined and used by Idris compiler
+
+\end{itemize}
+
+This IR is already convenient, however still cannot we gain code reuse or avoid repetitions,
+when implementing distinct back ends.
+
+
+Firstly we check $Let$ expressions. They are responsible for variable introductions,
+and also capable of \textbf{shadowing variables}, but unfortunately missing in most old programming languages
+such as C/C++, Java, Ruby, Python, etc.
+
+\begin{multicols}{3}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{1cm}
+\includegraphics[width=0.9\linewidth]{figs/let.png}
+\captionof{figure}{\color{DarkRed} $let$ in $DDecl$}
+\end{center}\vspace{1cm}
+\end{minipage}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{1cm}
+\includegraphics[width=0.9\linewidth]{figs/let-by-mangling.png}
+\captionof{figure}{\color{DarkRed} Eliminating $let$ by name mangling}
+\end{center}\vspace{1cm}
+\end{minipage}
+
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{1cm}
+\includegraphics[width=0.9\linewidth]{figs/let-by-im-call.png}
+\captionof{figure}{\color{DarkRed} Eliminating $let$ by immediately invoked functions(abbr. IIFE)}
+\end{center}\vspace{1cm}
+\end{minipage}
+
+\end{multicols}
+
+ Eliminating $let$ by IIFE is very handy without requiring much code, however
+ extremely \textbf{SLOW} down the back ends of dynamic programming languages.
+
+ As for name mangling,
+
+\begin{itemize}
+    \item renaming variables itself needs a simple pass to analyse the scope of your program!
+    \item considering register allocation problems?
+\end{itemize}
+
+\begin{multicols}{2}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{1cm}
+    \includegraphics[width=0.9\linewidth]{figs/let-occur.png}
+    \captionof{figure}{\color{DarkRed} Occurrences of distinct $x$}
+\end{center}\vspace{1cm}
+\end{minipage}
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{1cm}
+    \includegraphics[width=0.9\linewidth]{figs/let-realloc.png}
+    \captionof{figure}{\color{DarkRed} Register allocation optimisation for $x$}
+\end{center}\vspace{1cm}
+\end{minipage}
+
+
+\end{multicols}
+
+
+
+% 2 common ways of eliminating $Let$ expressions are illustrated in above boxes, where
+% the approach by immediately invoked function expressions(abbr. IIFE) is straightforward,
+% and can be achieved without much code.
+
+% Yet, function calls in dynamic programming languages without JIT compilation can be particularly slow.
+% For instance, in Python, addition as a function is about 2.5 slower than addition as a binary operation.
+
+% Other than a performance concern, eliminating $Let$ by IIFE may also produce
+% stack overflow errors, because combinations of $Let$ expressions lead to nested function calls,
+% unlike a series of parallel assignments.
+
+% Hence, to support back ends of some dynamic programming languages, we shall use name mangling instead of IIFE,
+% to achieve a better performance, and get rid of stack overflow.
+
+
 
 Aliquam non lacus dolor, \textit{a aliquam quam} \cite{Smith:2012qr}. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla in nibh mauris. Donec vel ligula nisi, a lacinia arcu. Sed mi dui, malesuada vel consectetur et, egestas porta nisi. Sed eleifend pharetra dolor, et dapibus est vulputate eu. \textbf{Integer faucibus elementum felis vitae fringilla.} In hac habitasse platea dictumst. Duis tristique rutrum nisl, nec vulputate elit porta ut. Donec sodales sollicitudin turpis sed convallis. Etiam mauris ligula, blandit adipiscing condimentum eu, dapibus pellentesque risus.
 
