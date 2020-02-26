@@ -1,1 +1,1 @@
-sumatrapdf.exe ./out/poster.pdf
+sumatrapdf.exe poster.pdf

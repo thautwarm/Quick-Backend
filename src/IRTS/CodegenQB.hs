@@ -1,7 +1,14 @@
-{-# LANGUAGE LambdaCase #-}
-{-# LANGUAGE DeriveGeneric #-}
-{-# LANGUAGE ViewPatterns #-}
-
+{-# LANGUAGE LambdaCase
+  , DeriveGeneric
+  , ViewPatterns
+  , NamedFieldPuns
+  , DeriveTraversable
+  , DeriveFunctor
+  , FlexibleInstances
+  , MultiParamTypeClasses
+  , ScopedTypeVariables
+  , PartialTypeSignatures
+#-}
 module IRTS.CodegenQB(codegenQB) where
 import Data.Map.Strict (Map)
 import Prelude hiding (writeFile)
@@ -17,22 +24,29 @@ import Data.Aeson
 import GHC.Generics
 import Control.Arrow
 
-vars = fmap (\x -> "var." ++ show x) [0 ..]
+type N =
+    String
 
-type N = String
+-- Idris has to distinguish values and thunks,
+-- hence an external object needs
+-- following representations.
+data Ext a
+    = EF N [a] -- call external functions
+    | EV N     -- access external variables
+    deriving (Show, Ord, Eq)
 
 -- | simplified DDecl
 -- TODO: tail call support
 data SDExp
     = SDVar N
-    | SDApp Bool N SDExp
+    | SDExt (Ext SDExp)
+    | SDApp Bool N [SDExp]
     | SDLet N SDExp SDExp
     | SDUp N SDExp
     | SDProj SDExp Int
     | SDCons N [SDExp]
     | SDCase SDExp [SDAlt]
     | SDConst Const
-    | SDForeign FDesc FDesc [(FDesc, SDExp)]
     | SDOp PrimFn [SDExp]
     | SDDoNothing
     | SDError String
@@ -55,11 +69,13 @@ data WStmt form
     | WDefFun N [N] [WStmt form]
     | WSwitch form [(Const, [WStmt form])]
     | WIf form [WStmt form] [WStmt form]
+    deriving (Eq, Ord, Show)
 
 data WExp form
     = WVar N
     | WApp N [form]
     | WC   Const
+    deriving (Eq, Ord, Show)
 
 newtype Fix f = InT {outT :: f (Fix f)}
 
@@ -70,9 +86,77 @@ data ANFTerm
 type NonANFWExp = Fix WExp
 type NonANFWStmt = WStmt NonANFWExp
 
+specify :: N -> Maybe SDExp
+specify "MkUnit"             = Just SDDoNothing
+specify "Prelude.Bool.True"  = Just (SDExt $ EV "True")
+specify "Prelude.Bool.False" = Just (SDExt $ EV "False")
+specify _ = Nothing
 
-sdd :: DDecl -> SDDecl
-sdd = error ""
+sdExp :: DExp -> SDExp
+sdExp = \case
+    DV (showCG -> name) ->
+        SDVar name
+    DApp isTailCall (showCG -> name) (map sdExp -> args) ->
+        SDApp isTailCall name args
+    DLet (showCG -> name) (sdExp -> v) (sdExp -> body) ->
+        SDLet name v body
+    DUpdate (showCG -> name) (sdExp -> body) ->
+        SDUp name body
+    DC _ _ (showCG -> name) (map sdExp -> args) ->
+        SDCons name args
+    DCase _ (sdExp -> target) (map sdAlt -> alts) ->
+        SDCase target alts
+    DChkCase (sdExp -> target) (map sdAlt -> alts) ->
+        SDCase target alts
+    DProj (sdExp -> var) i ->
+        SDProj var i
+    DConst const ->
+        SDConst const
+    DOp primfn (map sdExp -> vars) -> SDOp primfn vars
+    DNothing -> SDDoNothing
+    DError s -> SDError s
+    DForeign _ fname (map (sdExp . snd) -> xs) ->
+
+        case fname of
+            FApp n [FStr name] | show n == "FVar" ->
+                if null xs then
+                    SDExt (EV name)
+                else
+                    error $
+                      "Accessing foreign variable " ++ name ++
+                      "requires no function arguments."
+            FApp n [FStr name] | show n == "FFunc" ->
+                SDExt (EF name xs)
+            _ -> error $ "Not supported FFI ops :" ++ show fname
+
+sdAlt :: DAlt -> SDAlt
+sdAlt = \case
+    DConCase _ (showCG -> target) (map showCG -> binds) (sdExp -> body) ->
+        SDConCase target binds body
+    DConstCase const (sdExp -> body) ->
+        SDConstCase const body
+    DDefaultCase (sdExp -> body) ->
+        SDDefaultCase body
+
+sdDecl :: DDecl -> SDDecl
+sdDecl = \case
+    DFun (showCG -> fname) (map showCG -> args) (sdExp -> body) ->
+        SDDefFun fname args body
+    DConstructor (showCG -> ctorName) _ ary ->
+        SDDefCons ctorName ary
+
+    -- DC _ _ (specify -> Just specified) [] ->
+    --     specified
+    -- DC _ _ (showCG -> name) [] ->
+    --     SDVar name
+    -- DC _ _ (showCG -> name) (map sdExp -> args) ->
+    --     SDApp (SDExt "MakeTuple") []
+    
+
+    
+    
+    
+
 
 cg :: [NonANFWExp] -> String
 cg = error ""
@@ -82,7 +166,7 @@ codegenQB anf regOpt symEmu ci =
     writeFile filename (encodeToLazyText "")
     where
         filename = outputFile ci
-        -- ir = defunDecls ci >>= (cg . sdd)
+        -- ir = defunDecls ci >>= (cg . sdExp)
         -- t = map (showCG . fst) . simpleDecls $ ci
 
 
