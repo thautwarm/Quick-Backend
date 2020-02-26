@@ -17,9 +17,16 @@ source-repository head
   type: git
   location: https://github.com/thautwarm/PPL2020-quick-and-reusable-code-generation-for-idris
 
+
 executable idris-codegen-qb
    main-is: Main.hs
    other-modules:
+      Quick.St
+      Quick.SDDecl
+      Quick.SymbolEmulation
+      Quick.Lower
+      Quick.Dump
+      Quick.Weakest
       IRTS.CodegenQB
    hs-source-dirs:
       src
@@ -53,4 +60,18 @@ executable idris-codegen-qb
                    , Win32 < 2.7
 
    ghc-prof-options: -auto-all -caf-all
-   ghc-options:      -threaded -rtsopts -funbox-strict-fields
+   ghc-options:      -threaded -rtsopts -funbox-strict-fields -Wno-partial-type-signatures
+
+   default-extensions:
+          LambdaCase
+        , ViewPatterns
+        , NamedFieldPuns
+        , FlexibleInstances
+        , MultiParamTypeClasses
+        , GADTs
+        , FunctionalDependencies
+        , ScopedTypeVariables
+        , PartialTypeSignatures
+        , PatternGuards
+        , ExistentialQuantification
+        , RankNTypes
