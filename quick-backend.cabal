@@ -1,0 +1,56 @@
+cabal-version: >= 1.18
+name:           quick-backend
+version:        0.1.0.0
+description:    Quick and Reusable Code Generation for Idris
+homepage:       https://github.com/thautwarm/PPL2020-quick-and-reusable-code-generation-for-idris#readme
+bug-reports:    https://github.com/thautwarm/PPL2020-quick-and-reusable-code-generation-for-idris/issues
+author:         thautwarm
+maintainer:     thaut@logic.cs.tsukuba.ac.jp
+copyright:      MIT
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/thautwarm/PPL2020-quick-and-reusable-code-generation-for-idris
+
+executable idris-codegen-qb
+   main-is: Main.hs
+   other-modules:
+      IRTS.CodegenQB
+   hs-source-dirs:
+      src
+   build-depends:
+      idris
+      , base
+      , containers
+      , directory
+      , filepath
+      , haskeline >= 0.7
+      , mtl
+      , transformers
+      , aeson
+      , text
+
+   if os(linux)
+      cpp-options:   -DLINUX
+      build-depends: unix < 2.8
+   if os(freebsd)
+      cpp-options:   -DFREEBSD
+      build-depends: unix < 2.8
+   if os(dragonfly)
+      cpp-options:   -DDRAGONFLY
+      build-depends: unix < 2.8
+   if os(darwin)
+      cpp-options:   -DMACOSX
+      build-depends: unix < 2.8
+   if os(windows)
+      cpp-options:   -DWINDOWS
+      build-depends: mintty >= 0.1 && < 0.2
+                   , Win32 < 2.7
+
+   ghc-prof-options: -auto-all -caf-all
+   ghc-options:      -threaded -rtsopts -funbox-strict-fields
