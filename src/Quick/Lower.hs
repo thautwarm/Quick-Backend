@@ -102,7 +102,7 @@ lowerExp =
       locally $ do
         n <- enter n
         (e, stmts2) <- lowerExp body
-        return (e, stmts1 ++ (WUp n b : stmts2))
+        return (e, stmts1 ++ (WIntro n : WUp n b : stmts2))
     SDUp n val -> do
       n <- require n
       (val, stmts) <- lowerExp val
