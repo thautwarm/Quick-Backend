@@ -1,4 +1,11 @@
 import sys
+import re
+camel_to_snake_regex = re.compile(r"([A-Z]+[a-z]*)+?")
+def camel_to_snake(n):
+    xs = camel_to_snake_regex.match(n).groups()
+    return '_'.join(map(str.lower, xs))
+
+
 CTOR = sys.argv[1]
 
 code = """
@@ -25,12 +32,15 @@ LPlus ArithTy | LMinus ArithTy | LTimes ArithTy
 | LCrash
 | LNoOp
 """
+
+
 code = code.replace('\n', '')
 def ctor(lst):
     lst = tuple(lst)
-    return "{0} {2} -> {3} \"prim-{1}\"".format(
+    n = lst[0][1:]
+    return "Lang.{0} {2} -> {3} \"op_{1}\"".format(
         lst[0],
-        lst[0].lower()[1:],
+        camel_to_snake(n),
         " ".join(map(lambda _: '_', lst[1:])),
         CTOR
     )
