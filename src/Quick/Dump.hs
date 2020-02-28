@@ -9,6 +9,8 @@ data LitKind
   | Char
   | Str
   | BigInt
+  | Symbol
+  | Boolean
 
 data DumpTree
   = Tree
@@ -27,6 +29,8 @@ dumpKind =
     Char -> "char"
     Str -> "string"
     BigInt -> "bigInt"
+    Symbol -> "symbol"
+    Boolean -> "bool"
 
 dumpTree :: DumpTree -> String
 dumpTree =

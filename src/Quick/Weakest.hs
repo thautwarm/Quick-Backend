@@ -19,15 +19,9 @@ module Quick.Weakest
   , Prop(..)
   ) where
 
-import           Quick.Dump
 import           Quick.SDDecl (Ext (..))
+import           Quick.St
 import           Text.Printf  (printf)
-
-class IsConst a where
-  toDumpTree :: a -> DumpTree
-
-instance IsConst Int where
-  toDumpTree i = Leaf {litKind = Int, litStr = show i}
 
 type N = String
 
@@ -40,12 +34,10 @@ data Prop
   | IsRecur
 
 data WStmt (form :: Prop) where
+  -- introduction of some variables
+  WIntro :: N -> WStmt form
   WUp :: N -> WExp form -> WStmt form
-  WSwitch
-    :: forall c form. IsConst c
-    => WExp form
-    -> [(c, [WStmt form])]
-    -> WStmt form
+  WSwitch :: WExp form -> [(CC, [WStmt form])] -> [WStmt form] -> WStmt form
   WIf :: WExp form -> [WStmt form] -> [WStmt form] -> WStmt form
   WExp :: WExp form -> WStmt form
   WRet :: WExp form -> WStmt form
@@ -55,7 +47,7 @@ data WExp tag where
   WVar :: N -> WExp tag
   WExt :: Ext (WExp tag) -> WExp tag
   WC
-    :: forall c tag. IsConst c
+    :: forall tag c. (IsConst c)
     => c
     -> WExp tag
   WApp :: N -> [WExp tag] -> WExp IsRecur
