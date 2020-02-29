@@ -72,6 +72,13 @@ lowerDecl =
         let suite :: [WStmt DefUse]
             suite = stmts ++ [WRet ret]
         return $ WDefFun (Def fn) (map Def args) suite
+    
+    SDDefCons fn 0 -> do
+      s <- get
+      let tag = WC $ CC (fn `symConst` s)
+      fn <- require fn
+      locally $ return $ WDefFun (Def fn) [] [WRet tag]
+
     SDDefCons fn n -> do
       s <- get
       let tag = WC $ CC (fn `symConst` s)

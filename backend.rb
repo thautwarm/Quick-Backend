@@ -26,14 +26,15 @@ def code_list_to_string(prefix, io, xs)
     if xs.is_a? Array
         next_prefix = prefix + "  "
         xs.each {|x|
-            io.write prefix
             code_list_to_string(next_prefix, io, x)
-            io.write("\n")
         }
+        io.write("\n") unless xs.empty?
         return
     else
         raise xs unless xs.is_a? String
+        io.write prefix
         io.write(xs)
+        io.write("\n")
     end
 end
 
@@ -176,12 +177,16 @@ def main(filename, out)
         if out.downcase == 'std'
             STDOUT.write("require_relative 'idris_rts'\n")
             STDOUT.write("$__RTS = IdrisRTS::new\n")
-            code_list_to_string('', STDOUT, code_secs)
+            code_secs.each do |code_sec|
+                code_list_to_string('', STDOUT, code_sec)
+            end
         else
             File.open(out, "w") do |wfile|
                 wfile.write("require_relative 'idris_rts'\n")
                 wfile.write("$__RTS = IdrisRTS::new\n")
-                code_list_to_string('', wfile, code_secs)
+                code_secs.each do |code_sec|
+                    code_list_to_string('', wfile, code_sec)
+                end
             end
         end
     end

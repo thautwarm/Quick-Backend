@@ -9,11 +9,12 @@ from io import StringIO
 literal_map = {
     'float': float,
     'int': int,
-    'bigint': int,
+    'bigInt': int,
     'char': str,
     'string': str,
     'bool': lambda x: bool(int(x)),
-    'unit': lambda _: None
+    'unit': lambda _: None,
+    "symbol": str
 }
 
 
@@ -21,13 +22,14 @@ def code_list_to_string(prefix, io, xs):
     if isinstance(xs, list):
         next_prefix = prefix + '  '
         for each in xs:
-            io.write(prefix)
             code_list_to_string(next_prefix, io, each)
-            io.write('\n')
+        xs and io.write('\n')
         return
 
     assert isinstance(xs, str), xs
+    io.write(prefix)
     io.write(xs)
+    io.write('\n')
 
 
 def mk_list(*args):
@@ -124,7 +126,7 @@ class Generate:
                     action = literal_map[kind]
                     if action is not None:
                         buf = action(buf)
-                    obj_stack.append(str(buf))
+                    obj_stack.append(buf)
 
                 elif dispatch == "list":
                     n = int(pats[1])
@@ -160,7 +162,8 @@ def main(filename: str, out: str):
     """
     with open(filename) as f:
         io = StringIO()
-        code_list_to_string('', io, sum(Generate.read_and_gen(f), []))
+        for c in sum(Generate.read_and_gen(f), []):
+            code_list_to_string('', io, c)
     if out.lower() == 'std':
         print(io.getvalue())
     else:

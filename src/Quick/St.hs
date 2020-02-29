@@ -60,10 +60,7 @@ data CC =
             CC c
 
 instance Dumpable CC where
-  dump (CC c) = dump c
-
-instance IsConst CC
-
+  dump (CC c) = CtorNode {treeCons = "Constant", components = [dump c]}
 
 instance IsConst ()
 

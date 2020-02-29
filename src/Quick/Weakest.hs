@@ -17,7 +17,6 @@ module Quick.Weakest
   , WStmt(..)
   , WExp(..)
   , Fix(..)
-  , Prop(..)
   , DefUse(..)
   , dumpWDecls
   , wnone
@@ -84,7 +83,7 @@ instance Dumpable (WExp DefUse) where
     \case
       WVar n -> CtorNode {treeCons = "Var", components = [dump n]}
       WExt ext -> dump ext
-      WC cc -> CtorNode {treeCons = "Constant", components = [dump cc]}
+      WC cc -> dump cc
       WApp name (dumpList -> args) -> CtorNode {treeCons = "Call", components = [dump name, args]}
 
 instance Dumpable (WStmt DefUse) where
