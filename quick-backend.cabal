@@ -27,6 +27,8 @@ executable idris-codegen-qb
       Quick.Lower
       Quick.Dump
       Quick.Weakest
+      Quick.Row
+      Quick.Reusable
       IRTS.CodegenQB
    hs-source-dirs:
       src
@@ -41,6 +43,7 @@ executable idris-codegen-qb
       , transformers
       , aeson
       , text
+      , lens
 
    if os(linux)
       cpp-options:   -DLINUX

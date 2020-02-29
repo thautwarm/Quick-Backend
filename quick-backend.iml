@@ -90,5 +90,25 @@
     <orderEntry type="library" name="network-uri-2.6.1.0" level="project" />
     <orderEntry type="library" name="tagsoup-0.14.7" level="project" />
     <orderEntry type="library" name="old-locale-1.0.0.7" level="project" />
+    <orderEntry type="library" name="lens-4.17" level="project" />
+    <orderEntry type="library" name="base-orphans-0.8.1" level="project" />
+    <orderEntry type="library" name="bifunctors-5.5.3" level="project" />
+    <orderEntry type="library" name="call-stack-0.1.0" level="project" />
+    <orderEntry type="library" name="comonad-5.0.4" level="project" />
+    <orderEntry type="library" name="contravariant-1.5" level="project" />
+    <orderEntry type="library" name="distributive-0.6" level="project" />
+    <orderEntry type="library" name="exceptions-0.10.1" level="project" />
+    <orderEntry type="library" name="free-5.1" level="project" />
+    <orderEntry type="library" name="kan-extensions-5.2" level="project" />
+    <orderEntry type="library" name="parallel-3.2.2.0" level="project" />
+    <orderEntry type="library" name="profunctors-5.3" level="project" />
+    <orderEntry type="library" name="reflection-2.1.4" level="project" />
+    <orderEntry type="library" name="semigroupoids-5.3.2" level="project" />
+    <orderEntry type="library" name="semigroups-0.18.5" level="project" />
+    <orderEntry type="library" name="void-0.7.2" level="project" />
+    <orderEntry type="library" name="StateVar-1.1.1.1" level="project" />
+    <orderEntry type="library" name="transformers-base-0.4.5.2" level="project" />
+    <orderEntry type="library" name="adjunctions-4.4" level="project" />
+    <orderEntry type="library" name="invariant-0.5.1" level="project" />
   </component>
 </module>

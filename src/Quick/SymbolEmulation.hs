@@ -15,18 +15,16 @@ module Quick.SymbolEmulation
 
 import           Control.Monad.State
 import qualified Data.Map.Strict     as Map
+import           Quick.Row
 import           Quick.SDDecl
 import           Quick.St            (Status (..))
 
 type N = String
 
-newtype SymTb =
-  SymTb
-    { getSymTb :: Map.Map N Integer
-    }
+type SymTb = Map.Map N Integer
 
 solveSymTb ::
-     forall a tag. Status a SymTb
+     forall a tag. Field a Me SymTb
   => [SDDecl tag]
   -> State a ()
 solveSymTb xs =
@@ -35,7 +33,7 @@ solveSymTb xs =
     SDDefCons n _ -> updateSymTb n
 
 solveAlt ::
-     forall a tag. Status a SymTb
+     forall a tag. Field a Me SymTb
   => SDAlt tag
   -> State a ()
 solveAlt =
@@ -44,7 +42,7 @@ solveAlt =
     _ -> return ()
 
 solveExp ::
-     forall a tag. Status a SymTb
+     forall a tag. Field a Me SymTb
   => SDExp tag
   -> State a ()
 solveExp =
@@ -53,12 +51,12 @@ solveExp =
     _ -> return ()
 
 updateSymTb ::
-     forall a tag. Status a SymTb
+     forall a tag. Field a Me SymTb
   => N
   -> State a ()
 updateSymTb n = do
-  SymTb s <- gets readStatus
+  s <- gets (.: Me)
   if n `Map.member` s
     then return ()
     else let cnt = Map.size s
-          in modify $ writeStatus $ SymTb (Map.insert n (toInteger cnt) s)
+          in modify $ Me .-> Map.insert n (toInteger cnt)

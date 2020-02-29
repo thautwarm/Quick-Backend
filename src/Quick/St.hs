@@ -39,6 +39,9 @@ class IsConst a where
 instance IsConst Int where
   toDumpTree i = Leaf {litKind = Int, litStr = show i}
 
+instance IsConst Integer where
+  toDumpTree i = Leaf {litKind = Int, litStr = show i}
+
 instance IsConst Bool where
   toDumpTree i =
     Leaf
@@ -67,3 +70,9 @@ data CC =
 
 instance IsConst CC where
   toDumpTree (CC c) = toDumpTree c
+
+instance IsConst () where
+  toDumpTree _ = Leaf {litKind = Unit, litStr = ""}
+
+instance IsConst DumpTree where
+  toDumpTree l = l

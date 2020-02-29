@@ -1,4 +1,7 @@
 {-# LANGUAGE DataKinds                 #-}
+{-# LANGUAGE DeriveFoldable            #-}
+{-# LANGUAGE DeriveFunctor             #-}
+{-# LANGUAGE DeriveTraversable         #-}
 {-# LANGUAGE ExistentialQuantification #-}
 {-# LANGUAGE FlexibleInstances         #-}
 {-# LANGUAGE FunctionalDependencies    #-}
@@ -17,42 +20,47 @@ module Quick.Weakest
   , WExp(..)
   , Fix(..)
   , Prop(..)
+  , dumpWDecls
   ) where
 
+import           Quick.Dump
 import           Quick.SDDecl (Ext (..))
 import           Quick.St
+
 import           Text.Printf  (printf)
 
 type N = String
 
-data WDecl form where
-  WDefFun :: N -> [N] -> [WStmt form] -> WDecl form
-  WTop :: WStmt form -> WDecl form
+data WDecl where
+  WDefFun :: N -> [N] -> [WStmt a] -> WDecl
 
 data Prop
   = IsANF
   | IsRecur
 
-data WStmt (form :: Prop) where
+data WStmt a
   -- introduction of some variables
-  WIntro :: N -> WStmt form
-  WUp :: N -> WExp form -> WStmt form
-  WSwitch :: WExp form -> [(CC, [WStmt form])] -> [WStmt form] -> WStmt form
-  WIf :: WExp form -> [WStmt form] -> [WStmt form] -> WStmt form
-  WExp :: WExp form -> WStmt form
-  WRet :: WExp form -> WStmt form
+      where
+  WIntro :: N -> WStmt a
+  WUp :: N -> WExp a -> WStmt a
+  WSwitch :: WExp a -> [(CC, [WStmt a])] -> [WStmt a] -> WStmt a
+  WIf :: WExp a -> [WStmt a] -> [WStmt a] -> WStmt a
+  WExp :: WExp a -> WStmt a
+  WRet :: WExp a -> WStmt a
+  deriving (Functor, Foldable, Traversable)
 
-data WExp tag where
-  WNone :: WExp tag
-  WVar :: N -> WExp tag
-  WExt :: Ext (WExp tag) -> WExp tag
-  WC
-    :: forall tag c. (IsConst c)
-    => c
-    -> WExp tag
-  WApp :: N -> [WExp tag] -> WExp IsRecur
+data WExp a where
+  WNone :: WExp a
+  WVar :: N -> WExp a
+  WExt :: Ext (WExp a) -> WExp a
+  WC :: CC -> WExp a
+  WApp :: N -> [WExp a] -> WExp a
+  deriving (Functor, Foldable, Traversable)
 
 newtype Fix f =
   Box
     { unbox :: f (Fix f)
     }
+
+dumpWDecls :: [WDecl] -> DumpTree
+dumpWDecls _ = error ""

@@ -18,31 +18,39 @@ module IRTS.CodegenQB
   ( codegenQB
   ) where
 
-import           Data.Map.Strict      (Map)
-import qualified Data.Map.Strict      as Map
-import qualified Data.Set             as Set
-import           Prelude              hiding (writeFile)
+import           Data.Map.Strict       (Map)
+import qualified Data.Map.Strict       as Map
+import qualified Data.Set              as Set
+import           Prelude               hiding (writeFile)
 
 import           Control.Arrow
 import           Control.Monad.State
 import           Data.Aeson
-import           Data.Aeson.Text      (encodeToLazyText)
-import           Data.Text.Lazy.IO    (writeFile)
+import           Data.Aeson.Text       (encodeToLazyText)
+import           Data.Text.Lazy.IO     (writeFile)
 import           GHC.Generics
 import           Idris.Core.TT
 import           IRTS.CodegenCommon
 import           IRTS.Defunctionalise
 import           IRTS.Lang
 
---specify :: N -> Maybe SDExp
---specify "MkUnit"             = Just SDDoNothing
---specify "Prelude.Bool.True"  = Just (SDExt $ EV "True")
---specify "Prelude.Bool.False" = Just (SDExt $ EV "False")
---specify _                    = Nothing
+import           Quick.Lower
+import           Quick.Reusable
+import           Quick.SDDecl
+import           Quick.SymbolEmulation
+import           Quick.Weakest
 
 codegenQB :: Bool -> Bool -> Bool -> CodeGenerator
 codegenQB anf regOpt symEmu ci = writeFile filename (encodeToLazyText "")
   where
     filename = outputFile ci
-        -- ir = defunDecls ci >>= (cg . sdExp)
-        -- t = map (showCG . fst) . simpleDecls $ ci
+    sddecls = map (sdDecl . snd) (defunDecls ci)
+    st = ScopeT Map.empty $ GenSymT 0 Set.empty
+    tree
+      | symEmu =
+        let st' = EmuSymStore Map.empty st
+         in let st'' = execState (solveSymTb sddecls) st'
+             in dumpWDecls $ evalState (lower sddecls) st''
+      | otherwise =
+        let st' = NativeSymStore st
+         in dumpWDecls $ evalState (lower sddecls) st'

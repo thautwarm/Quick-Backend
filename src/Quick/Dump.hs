@@ -11,6 +11,7 @@ data LitKind
   | BigInt
   | Symbol
   | Boolean
+  | Unit
 
 data DumpTree
   = Tree
@@ -31,13 +32,14 @@ dumpKind =
     BigInt -> "bigInt"
     Symbol -> "symbol"
     Boolean -> "bool"
+    Unit -> "unit"
 
 dumpTree :: DumpTree -> String
 dumpTree =
   \case
     Tree cons comp ->
       let n = length comp
-       in unlines [cons, show n, concatMap dumpTree comp]
+       in unlines [cons, show n, unlines $ map dumpTree comp]
     Leaf kind str ->
       let n = length str
        in unwords ["@", dumpKind kind, show n, str]
