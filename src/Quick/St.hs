@@ -1,4 +1,5 @@
 {-# LANGUAGE FunctionalDependencies #-}
+{-# LANGUAGE UndecidableInstances #-}
 
 module Quick.St
   ( IsGenSym(..)
@@ -33,17 +34,22 @@ class Status s a | s -> a where
   readStatus :: s -> a
   writeStatus :: a -> s -> s
 
-class IsConst a where
-  toDumpTree :: a -> DumpTree
+class Dumpable a =>
+      IsConst a
 
-instance IsConst Int where
-  toDumpTree i = Leaf {litKind = Int, litStr = show i}
 
-instance IsConst Integer where
-  toDumpTree i = Leaf {litKind = Int, litStr = show i}
+instance Dumpable Int where
+  dump i = Leaf {litKind = Int, litStr = show i}
 
-instance IsConst Bool where
-  toDumpTree i =
+instance IsConst Int
+
+instance Dumpable Integer where
+  dump i = Leaf {litKind = Int, litStr = show i}
+
+instance IsConst Integer
+
+instance Dumpable Bool where
+  dump i =
     Leaf
       { litKind = Boolean
       , litStr =
@@ -52,8 +58,12 @@ instance IsConst Bool where
             else "0"
       }
 
-instance IsConst String where
-  toDumpTree s = Leaf {litKind = Str, litStr = s}
+instance IsConst Bool
+
+instance Dumpable String where
+  dump s = Leaf {litKind = Str, litStr = s}
+
+instance IsConst String
 
 -- accessing a mapping from tag name to symbol constant
 -- The symbol constant is either an integer in a language without native Symbol type,
@@ -68,11 +78,17 @@ data CC =
   forall c. IsConst c =>
             CC c
 
-instance IsConst CC where
-  toDumpTree (CC c) = toDumpTree c
+instance Dumpable CC where
+  dump (CC c) = dump c
 
-instance IsConst () where
-  toDumpTree _ = Leaf {litKind = Unit, litStr = ""}
+instance IsConst CC
 
-instance IsConst DumpTree where
-  toDumpTree l = l
+instance Dumpable () where
+  dump _ = Leaf {litKind = Unit, litStr = ""}
+
+instance IsConst ()
+
+instance Dumpable DumpTree where
+  dump l = l
+
+instance IsConst DumpTree

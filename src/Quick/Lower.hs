@@ -20,8 +20,8 @@ import Quick.SDDecl
 import Quick.St
 import Quick.Weakest
 
-instance IsConst TT.Const where
-  toDumpTree =
+instance Dumpable TT.Const where
+  dump =
     \case
       TT.I i -> Leaf {litKind = Int, litStr = show i}
       TT.BI i -> Leaf {litKind = BigInt, litStr = show i}
@@ -29,6 +29,8 @@ instance IsConst TT.Const where
       TT.Ch c -> Leaf {litKind = Char, litStr = [c]}
       TT.Str s -> Leaf {litKind = Str, litStr = s}
       s -> error $ "Not implemented constant:" ++ show s
+
+instance IsConst TT.Const
 
 type N = String
 

@@ -1,17 +1,17 @@
-{-# LANGUAGE DataKinds                 #-}
-{-# LANGUAGE DeriveFoldable            #-}
-{-# LANGUAGE DeriveFunctor             #-}
-{-# LANGUAGE DeriveTraversable         #-}
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DeriveFoldable #-}
+{-# LANGUAGE DeriveFunctor #-}
+{-# LANGUAGE DeriveTraversable #-}
 {-# LANGUAGE ExistentialQuantification #-}
-{-# LANGUAGE FlexibleInstances         #-}
-{-# LANGUAGE FunctionalDependencies    #-}
-{-# LANGUAGE GADTs                     #-}
-{-# LANGUAGE KindSignatures            #-}
-{-# LANGUAGE MultiParamTypeClasses     #-}
-{-# LANGUAGE NamedFieldPuns            #-}
-{-# LANGUAGE PartialTypeSignatures     #-}
-{-# LANGUAGE RankNTypes                #-}
-{-# LANGUAGE ScopedTypeVariables       #-}
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE FunctionalDependencies #-}
+{-# LANGUAGE GADTs #-}
+{-# LANGUAGE KindSignatures #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE NamedFieldPuns #-}
+{-# LANGUAGE PartialTypeSignatures #-}
+{-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 
 module Quick.Weakest
   ( IsConst(..)
@@ -23,11 +23,11 @@ module Quick.Weakest
   , dumpWDecls
   ) where
 
-import           Quick.Dump
-import           Quick.SDDecl (Ext (..))
-import           Quick.St
+import Quick.Dump
+import Quick.SDDecl (Ext(..))
+import Quick.St
 
-import           Text.Printf  (printf)
+import Text.Printf (printf)
 
 type N = String
 
@@ -63,4 +63,18 @@ newtype Fix f =
     }
 
 dumpWDecls :: [WDecl] -> DumpTree
-dumpWDecls _ = error ""
+dumpWDecls (ListNode . map dump -> res) = res
+
+instance Dumpable WDecl where
+  dump (WDefFun fname args stmts) =
+    CtorNode {treeCons = "Defun", components = [dump fname, dumpList args, ListNode $ map dump stmts]}
+
+instance Dumpable (WExp a) where
+  dump = error ""
+
+instance Dumpable (WStmt a) where
+  dump =
+    \case
+      WIntro n -> CtorNode {treeCons = "Introduction", components = [dump n]}
+      WUp n exp -> CtorNode {treeCons = "Update", components = [dump n, dump exp]}
+      

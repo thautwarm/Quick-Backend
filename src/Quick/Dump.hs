@@ -14,7 +14,7 @@ data LitKind
   | Unit
 
 data DumpTree
-  = Tree
+  = CtorNode
       { treeCons :: String
       , components :: [DumpTree]
       }
@@ -22,6 +22,7 @@ data DumpTree
       { litKind :: LitKind
       , litStr :: String
       }
+  | ListNode [DumpTree]
 
 dumpKind =
   \case
@@ -37,9 +38,17 @@ dumpKind =
 dumpTree :: DumpTree -> String
 dumpTree =
   \case
-    Tree cons comp ->
+    CtorNode cons comp ->
       let n = length comp
-       in unlines [cons, show n, unlines $ map dumpTree comp]
+       in unlines $ unwords ["constructor", cons, show n] : map dumpTree comp
     Leaf kind str ->
       let n = length str
-       in unwords ["@", dumpKind kind, show n, str]
+       in unlines [unwords ["literal", dumpKind kind, show n], str]
+    ListNode xs ->
+      let n = length xs
+       in unlines $ unwords ["list", show n] : map dumpTree xs
+
+class Dumpable a where
+  dump :: a -> DumpTree
+
+dumpList xs = ListNode $ map dump xs
