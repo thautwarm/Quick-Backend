@@ -14,6 +14,7 @@
 module Quick.Reusable where
 
 import Control.Monad.State
+import qualified Data.Char as Char
 import qualified Data.Map.Strict as Map
 import Data.Maybe (fromMaybe)
 import qualified Data.Set as Set
@@ -24,7 +25,7 @@ import Quick.St
 type N = String
 
 data GenSymT =
-  GenSymT Int (Set.Set N)
+  GenSymT Int (Set.Set N) Bool
 
 data SymCnt =
   SymCnt
@@ -32,29 +33,48 @@ data SymCnt =
 data SymNS =
   SymNS
 
+data SymIsJavaName =
+  SymIsJavaName
+
 instance Label SymCnt where
   label = SymCnt
 
 instance Label SymNS where
   label = SymNS
 
+instance Label SymIsJavaName where
+  label = SymIsJavaName
+
 instance Field GenSymT SymCnt Int where
-  GenSymT i _ .: SymCnt = i
-  SymCnt .-> f = \(GenSymT i m) -> GenSymT (f i) m
+  GenSymT i _ _ .: SymCnt = i
+  SymCnt .-> f = \(GenSymT i m b) -> GenSymT (f i) m b
 
 instance Field GenSymT SymNS (Set.Set N) where
-  GenSymT _ m .: SymNS = m
-  SymNS .-> f = \(GenSymT i m) -> GenSymT i (f m)
+  GenSymT _ m _ .: SymNS = m
+  SymNS .-> f = \(GenSymT i m b) -> GenSymT i (f m) b
+
+instance Field GenSymT SymIsJavaName Bool where
+  GenSymT _ _ b .: _ = b
+  _ .-> f = \(GenSymT i m b) -> GenSymT i m (f b)
 
 instance IsGenSym GenSymT where
   gensym n = do
     st <- get
     let ns = st .: SymNS
-        cnt = st .: SymCnt
-    n <- pure $ n ++ show cnt
+        isJavaName = st .: SymIsJavaName
+    n <-
+      pure
+        (if isJavaName
+           then classicName n
+           else n)
     n <- pure $ until (`Set.notMember` ns) ('_' :) n
     modify $ (SymNS .-> Set.insert n) . (SymCnt .-> (+ 1))
     return n
+
+classicName [] = []
+classicName (c:cs)
+  | Char.isAlphaNum c = c : classicName cs
+  | otherwise = "_" ++ show (Char.ord c) ++ "_" ++ classicName cs
 
 data ScopeT where
   ScopeT :: Map.Map N N -> GenSymT -> ScopeT

@@ -18,11 +18,11 @@ module IRTS.CodegenQB
   ( codegenQB
   ) where
 
+import           Control.Arrow
+import           Control.Monad.State
 import           Data.Map.Strict       (Map)
 import qualified Data.Map.Strict       as Map
 import qualified Data.Set              as Set
-import           Control.Arrow
-import           Control.Monad.State
 import           GHC.Generics
 import           Idris.Core.TT
 import           IRTS.CodegenCommon
@@ -36,12 +36,12 @@ import           Quick.SDDecl
 import           Quick.SymbolEmulation
 import           Quick.Weakest
 
-codegenQB :: Bool -> Bool -> Bool -> CodeGenerator
-codegenQB anf regOpt symEmu ci = writeFile filename $ serialize tree
+codegenQB :: (Bool, Bool, Bool, Bool) -> CodeGenerator
+codegenQB (anf, regOpt, symEmu, javaName) ci = writeFile filename $ serialize tree
   where
     filename = outputFile ci
     sddecls = map (sdDecl . snd) (defunDecls ci)
-    st = ScopeT Map.empty $ GenSymT 0 Set.empty
+    st = ScopeT Map.empty $ GenSymT 0 Set.empty javaName
     tree
       | symEmu =
         let st' = EmuSymStore Map.empty st

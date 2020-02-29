@@ -20,6 +20,7 @@ module Quick.Weakest
   , Prop(..)
   , DefUse(..)
   , dumpWDecls
+  , wnone
   ) where
 
 import Quick.Dump
@@ -32,6 +33,7 @@ type N = String
 
 data WDecl a where
   WDefFun :: a -> [a] -> [WStmt a] -> WDecl a
+  WTop :: WStmt a -> WDecl a
 
 data Prop
   = IsANF
@@ -53,7 +55,6 @@ data WStmt a
   deriving (Functor, Foldable, Traversable)
 
 data WExp a where
-  WNone :: WExp a
   WVar :: a -> WExp a
   WExt :: Ext (WExp a) -> WExp a
   WC :: CC -> WExp a
@@ -79,14 +80,15 @@ instance Dumpable a => Dumpable (Ext a) where
 instance Dumpable (WDecl DefUse) where
   dump (WDefFun fname args stmts) =
     CtorNode {treeCons = "Defun", components = [dump fname, dumpList args, ListNode $ map dump stmts]}
+  dump (WTop s) = dump s
 
+wnone = WC (CC ())
 instance Dumpable (WExp DefUse) where
   dump =
     \case
-      WNone -> dump ()
       WVar n -> CtorNode {treeCons = "Var", components = [dump n]}
       WExt ext -> dump ext
-      WC cc -> dump cc
+      WC cc -> CtorNode {treeCons = "Constant", components = [dump cc]}
       WApp name (dumpList -> args) -> CtorNode {treeCons = "Call", components = [dump name, args]}
 
 instance Dumpable (WStmt DefUse) where

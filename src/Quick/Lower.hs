@@ -1,5 +1,6 @@
 -- | desugaring block expressions
 -- self-hosting RTS:
+-- 0. `in0`: stdout
 -- 1. `make_tuple`
 -- 2. `error`
 -- 3. `is_tuple`
@@ -53,7 +54,9 @@ lower ::
   -> State s [WDecl DefUse]
 lower decls = do
   preDecl decls
-  forM decls lowerDecl
+  decls <- forM decls lowerDecl
+  n <- require "{runMain_0}"
+  return $ decls ++ [WTop $ WExp $ WApp (Use n) []]
 
 lowerDecl ::
      forall s l. (IsScope s, IsTagStore s l)
@@ -68,7 +71,7 @@ lowerDecl =
         (ret, stmts) <- lowerExp body
         let suite :: [WStmt DefUse]
             suite = stmts ++ [WRet ret]
-        return $ WDefFun (Def fn) (map Use args) suite
+        return $ WDefFun (Def fn) (map Def args) suite
     SDDefCons fn n -> do
       s <- get
       let tag = WC $ CC (fn `symConst` s)
@@ -113,14 +116,14 @@ lowerExp =
     SDUp n val -> do
       n <- require n
       (val, stmts) <- lowerExp val
-      let expr = WVar (Use n) -- or WNone? this seems UB
+      let expr = WVar (Use n) -- or wnone? this seems UB
       return (expr, stmts ++ [WUp (Use n) val])
     SDProj subj idx -> do
       (subj, xs) <- lowerExp subj
       let expr = WExt $ EF "proj" [subj, WC $ CC idx]
       return (expr, xs)
     -- specialized lowering
-    SDCons "MkUnit" [] -> return (WNone, [])
+    SDCons "MkUnit" [] -> return (wnone, [])
     SDCons "Prelude.Bool.True" [] -> return (WC $ CC True, [])
     SDCons "Prelude.Bool.False" [] -> return (WC $ CC False, [])
     SDCons a [] -> do
@@ -141,7 +144,7 @@ lowerExp =
     SDOp (primitiveFnName -> opFuncName) args -> do
       (args, stmts) <- lowerExpSeq args
       return (WExt $ EF opFuncName args, stmts)
-    SDDoNothing -> return (WNone, [])
+    SDDoNothing -> return (wnone, [])
     SDError s -> return (WExt $ EF "error" [WC (CC s)], [])
 
 -- | const case
@@ -181,7 +184,7 @@ caseCompile ::
 caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases} = do
   let defaultBr
         | Just defaultCase <- defaultCase = lowerExp defaultCase
-        | otherwise = return (WNone, [WExp $ WExt $ EF "error" [WC $ CC "pattern matching failed"]])
+        | otherwise = return (wnone, [WExp $ WExt $ EF "error" [WC $ CC "pattern matching failed"]])
   br <- defaultBr
   mergeRes <- gensym "caseMerged"
   br <- foldCtorCases mergeRes valToMatch br
@@ -270,19 +273,19 @@ primitiveFnName =
     Lang.LSExt _ _ -> "op_sext"
     Lang.LZExt _ _ -> "op_zext"
     Lang.LTrunc _ _ -> "op_trunc"
-    Lang.LStrConcat -> "op_str"
-    Lang.LStrLt -> "op_str"
-    Lang.LStrEq -> "op_str"
-    Lang.LStrLen -> "op_str"
-    Lang.LIntFloat _ -> "op_int"
-    Lang.LFloatInt _ -> "op_float"
-    Lang.LIntStr _ -> "op_int"
-    Lang.LStrInt _ -> "op_str"
-    Lang.LFloatStr -> "op_float"
-    Lang.LStrFloat -> "op_str"
-    Lang.LChInt _ -> "op_ch"
-    Lang.LIntCh _ -> "op_int"
-    Lang.LBitCast _ _ -> "op_bit"
+    Lang.LStrConcat -> "op_str_concat"
+    Lang.LStrLt -> "op_str_lt"
+    Lang.LStrEq -> "op_str_eq"
+    Lang.LStrLen -> "op_str_len"
+    Lang.LIntFloat _ -> "op_int_float"
+    Lang.LFloatInt _ -> "op_float_int"
+    Lang.LIntStr _ -> "op_int_str"
+    Lang.LStrInt _ -> "op_str_int"
+    Lang.LFloatStr -> "op_float_str"
+    Lang.LStrFloat -> "op_str_float"
+    Lang.LChInt _ -> "op_ch_int"
+    Lang.LIntCh _ -> "op_int_ch"
+    Lang.LBitCast _ _ -> "op_bit_cast"
     Lang.LFExp -> "op_fexp"
     Lang.LFLog -> "op_flog"
     Lang.LFSin -> "op_fsin"
@@ -296,17 +299,17 @@ primitiveFnName =
     Lang.LFFloor -> "op_ffloor"
     Lang.LFCeil -> "op_fceil"
     Lang.LFNegate -> "op_fnegate"
-    Lang.LStrHead -> "op_str"
-    Lang.LStrTail -> "op_str"
-    Lang.LStrCons -> "op_str"
-    Lang.LStrIndex -> "op_str"
-    Lang.LStrRev -> "op_str"
-    Lang.LStrSubstr -> "op_str"
-    Lang.LReadStr -> "op_read"
-    Lang.LWriteStr -> "op_write"
-    Lang.LSystemInfo -> "op_system"
+    Lang.LStrHead -> "op_str_head"
+    Lang.LStrTail -> "op_str_tail"
+    Lang.LStrCons -> "op_str_cons"
+    Lang.LStrIndex -> "op_str_index"
+    Lang.LStrRev -> "op_str_rev"
+    Lang.LStrSubstr -> "op_str_substr"
+    Lang.LReadStr -> "op_read_str"
+    Lang.LWriteStr -> "op_write_str"
+    Lang.LSystemInfo -> "op_system_info"
     Lang.LFork -> "op_fork"
     Lang.LPar -> "op_par"
     Lang.LExternal _ -> "op_external"
     Lang.LCrash -> "op_crash"
-    Lang.LNoOp -> "op_no"
+    Lang.LNoOp -> "op_no_op"

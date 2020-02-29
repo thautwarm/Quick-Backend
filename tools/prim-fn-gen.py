@@ -1,8 +1,8 @@
 import sys
 import re
-camel_to_snake_regex = re.compile(r"([A-Z]+[a-z]*)+?")
+camel_to_snake_regex = re.compile(r"([A-Z]+[a-z]*)")
 def camel_to_snake(n):
-    xs = camel_to_snake_regex.match(n).groups()
+    xs = camel_to_snake_regex.findall(n)
     return '_'.join(map(str.lower, xs))
 
 
