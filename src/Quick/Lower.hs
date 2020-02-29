@@ -35,8 +35,8 @@ instance IsConst TT.Const
 type N = String
 
 preDecl ::
-     forall s a. IsScope s
-  => [SDDecl a]
+     forall s. IsScope s
+  => [SDDecl N]
   -> State s ()
 preDecl [] = return ()
 preDecl (x:xs) = do
@@ -48,17 +48,17 @@ preDecl (x:xs) = do
       | SDDefCons fn _ <- x = fn
 
 lower ::
-     forall s a l. (IsScope s, IsTagStore s l)
-  => [SDDecl a]
-  -> State s [WDecl]
+     forall s l. (IsScope s, IsTagStore s l)
+  => [SDDecl N]
+  -> State s [WDecl DefUse]
 lower decls = do
   preDecl decls
   forM decls lowerDecl
-  
+
 lowerDecl ::
-     forall s a l. (IsScope s, IsTagStore s l)
-  => SDDecl a
-  -> State s WDecl
+     forall s l. (IsScope s, IsTagStore s l)
+  => SDDecl N
+  -> State s (WDecl DefUse)
 lowerDecl =
   \case
     SDDefFun fn args body -> do
@@ -66,34 +66,36 @@ lowerDecl =
       locally $ do
         args <- forM args enter
         (ret, stmts) <- lowerExp body
-        let suite :: [WStmt a]
+        let suite :: [WStmt DefUse]
             suite = stmts ++ [WRet ret]
-        return $ WDefFun fn args suite
+        return $ WDefFun (Def fn) (map Use args) suite
     SDDefCons fn n -> do
+      s <- get
+      let tag = WC $ CC (fn `symConst` s)
       fn <- require fn
       locally $ do
         argnames <- replicateM n (gensym "constructor_arg")
-        let ext = EF "make_tuple" $ map WVar argnames
+        let ext = EF "make_tuple" $ tag : map (WVar . Use) argnames
             call = WExt ext
-        return $ WDefFun fn argnames [WRet call]
+        return $ WDefFun (Def fn) (map Use argnames) [WRet call]
 
 lowerExpSeq ::
      forall s a l. (IsScope s, IsTagStore s l)
-  => [SDExp a]
-  -> State s ([WExp a], [WStmt a])
+  => [SDExp N]
+  -> State s ([WExp DefUse], [WStmt DefUse])
 lowerExpSeq xs = do
   (es, stmts) <- unzip <$> forM xs lowerExp
   return (es, concat stmts)
 
 lowerExp ::
      forall s a l. (IsScope s, IsTagStore s l)
-  => SDExp a
-  -> State s (WExp a, [WStmt a])
+  => SDExp N
+  -> State s (WExp DefUse, [WStmt DefUse])
 lowerExp =
   \case
     SDVar n -> do
       n <- require n
-      return (WVar n, [])
+      return (WVar $ Use n, [])
     SDExt (EF fn xs) -> do
       (xs, stmts) <- lowerExpSeq xs
       return (WExt (EF fn xs), stmts)
@@ -101,18 +103,18 @@ lowerExp =
     SDApp _ f xs -> do
       f <- require f -- is this really necessary? As the IR is already lifted.
       (args, stmts) <- lowerExpSeq xs
-      return (WApp f args, stmts)
+      return (WApp (Use f) args, stmts)
     SDLet n boundVal body -> do
       (b, stmts1) <- lowerExp boundVal
       locally $ do
         n <- enter n
         (e, stmts2) <- lowerExp body
-        return (e, stmts1 ++ (WIntro n : WUp n b : stmts2))
+        return (e, stmts1 ++ (WIntro (Def n) : WUp (Use n) b : stmts2))
     SDUp n val -> do
       n <- require n
       (val, stmts) <- lowerExp val
-      let expr = WVar n -- or WNone? this seems UB
-      return (expr, stmts ++ [WUp n val])
+      let expr = WVar (Use n) -- or WNone? this seems UB
+      return (expr, stmts ++ [WUp (Use n) val])
     SDProj subj idx -> do
       (subj, xs) <- lowerExp subj
       let expr = WExt $ EF "proj" [subj, WC $ CC idx]
@@ -133,8 +135,8 @@ lowerExp =
     SDCase val alts -> do
       (val, stmts1) <- lowerExp val
       valToMatchN <- gensym "valToMatch"
-      (exp, stmts2) <- caseCompile (WVar valToMatchN) (caseSplit alts)
-      return (exp, stmts1 ++ [WIntro valToMatchN, WUp valToMatchN val] ++ stmts2)
+      (exp, stmts2) <- caseCompile ((WVar . Use) valToMatchN) (caseSplit alts)
+      return (exp, stmts1 ++ [WIntro (Def valToMatchN), WUp (Use valToMatchN) val] ++ stmts2)
     SDConst c -> return (WC (CC c), [])
     SDOp (primitiveFnName -> opFuncName) args -> do
       (args, stmts) <- lowerExpSeq args
@@ -143,15 +145,15 @@ lowerExp =
     SDError s -> return (WExt $ EF "error" [WC (CC s)], [])
 
 -- | const case
-data CaseSplit s =
+data CaseSplit =
   CaseSplit
-    { ctorCases :: [(N, [N], SDExp s)]
-    , enumCases :: [(N, SDExp s)]
-    , constCases :: [(CC, SDExp s)]
-    , defaultCase :: Maybe (SDExp s)
+    { ctorCases :: [(N, [N], SDExp N)]
+    , enumCases :: [(N, SDExp N)]
+    , constCases :: [(CC, SDExp N)]
+    , defaultCase :: Maybe (SDExp N)
     }
 
-caseSplit :: [SDAlt a] -> CaseSplit a
+caseSplit :: forall a. [SDAlt N] -> CaseSplit
 caseSplit xs = caseSplitImpl (CaseSplit [] [] [] Nothing) xs
   where
     caseSplitImpl cs =
@@ -172,10 +174,10 @@ caseSplit xs = caseSplitImpl (CaseSplit [] [] [] Nothing) xs
             SDDefaultCase exp -> cs {defaultCase = Just exp}
 
 caseCompile ::
-     forall a s l. (IsTagStore s l, IsGenSym s, IsScope s)
-  => WExp a
-  -> CaseSplit a
-  -> State s (WExp a, [WStmt a])
+     forall s l. (IsTagStore s l, IsGenSym s, IsScope s)
+  => WExp DefUse
+  -> CaseSplit
+  -> State s (WExp DefUse, [WStmt DefUse])
 caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases} = do
   let defaultBr
         | Just defaultCase <- defaultCase = lowerExp defaultCase
@@ -185,10 +187,10 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
   br <- foldCtorCases mergeRes valToMatch br
   br <- foldConstCases mergeRes valToMatch br
   (exp, stmts) <- foldEnumCases mergeRes valToMatch br
-  return (exp, WIntro mergeRes : stmts)
+  return (exp, WIntro (Def mergeRes) : stmts)
   where
     foldEnumCases ::
-         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp a -> (WExp a, [WStmt a]) -> State s (WExp a, [WStmt a])
+         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp _ -> (WExp _, [WStmt _]) -> State s (WExp _, [WStmt _])
     foldEnumCases
       | [] <- enumCases = const (const return)
       | otherwise =
@@ -198,11 +200,11 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
             forM enumCases $ \(n, body) -> do
               let tag = n `symConst` s
               (exp, stmts) <- locally $ lowerExp body
-              return (CC tag, stmts ++ [WUp mergeRes exp])
-          let switch = WSwitch valToMatch cases (defaultStmts ++ [WUp mergeRes defaultExp])
-          return (WVar mergeRes, [switch])
+              return (CC tag, stmts ++ [WUp (Use mergeRes) exp])
+          let switch = WSwitch valToMatch cases (defaultStmts ++ [WUp (Use mergeRes) defaultExp])
+          return (WVar (Use mergeRes), [switch])
     foldConstCases ::
-         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp a -> (WExp a, [WStmt a]) -> State s (WExp a, [WStmt a])
+         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp _ -> (WExp _, [WStmt _]) -> State s (WExp _, [WStmt _])
     foldConstCases
       | [] <- constCases = const (const return)
       | otherwise =
@@ -211,11 +213,11 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
           cases <-
             forM constCases $ \(c, body) -> do
               (exp, stmts) <- locally $ lowerExp body
-              return (c, stmts ++ [WUp mergeRes exp])
-          let switch = WSwitch valToMatch cases (defaultStmts ++ [WUp mergeRes defaultExp])
-          return (WVar mergeRes, [switch])
+              return (c, stmts ++ [WUp (Use mergeRes) exp])
+          let switch = WSwitch valToMatch cases (defaultStmts ++ [WUp (Use mergeRes) defaultExp])
+          return (WVar (Use mergeRes), [switch])
     foldCtorCases ::
-         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp a -> (WExp a, [WStmt a]) -> State s (WExp a, [WStmt a])
+         (IsGenSym s, IsScope s, IsTagStore s l) => N -> WExp _ -> (WExp _, [WStmt _]) -> State s (WExp _, [WStmt _])
     foldCtorCases
       | [] <- ctorCases = const (const return)
       | otherwise =
@@ -224,8 +226,8 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
           cases <-
             forM ctorCases $ \(n, binds, body) -> do
               let tag = n `symConst` s
-                  idx :: N -> Int -> [WStmt a]
-                  idx name i = [WIntro name, WUp name $ WExt $ EF "proj" [valToMatch, WC $ CC i]]
+                  idx :: N -> Int -> [WStmt DefUse]
+                  idx name i = [WIntro (Def name), WUp (Use name) $ WExt $ EF "proj" [valToMatch, WC $ CC i]]
               (exp, stmts) <-
                 locally $
                   -- index 0 is the tag, start from 1
@@ -233,11 +235,11 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
                   binds <- forM (zip [1 ..] binds) $ \(i, bind) -> enter bind >>= \name -> return (idx name i)
                   (exp, stmts) <- lowerExp body
                   return (exp, concat binds ++ stmts)
-              return (CC tag, stmts ++ [WUp mergeRes exp])
-          let defaultStmts' = defaultStmts ++ [WUp mergeRes defaultExp]
+              return (CC tag, stmts ++ [WUp (Use mergeRes) exp])
+          let defaultStmts' = defaultStmts ++ [WUp (Use mergeRes) defaultExp]
               switch = WSwitch valToMatch cases defaultStmts'
               ifStmt = WIf (WExt $ EF "is_tuple" [valToMatch]) [switch] defaultStmts'
-          return (WVar mergeRes, [ifStmt])
+          return (WVar (Use mergeRes), [ifStmt])
 
 -- | auto generated by tools/prim-fn-gen.py
 primitiveFnName =

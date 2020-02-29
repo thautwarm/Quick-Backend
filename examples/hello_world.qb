@@ -8,7 +8,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 13
+ForeignEnv.::
 constructor Defun 3
 literal string 16
 Prelude.List.::1
@@ -22,7 +24,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 15
+Prelude.List.::
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -40,7 +44,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 17
+Prelude.Stream.::
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -61,7 +67,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 4
+list 5
+literal symbol 1
+=
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -83,7 +91,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.ATDouble
 constructor Defun 3
 literal string 26
 Language.Reflection.ATInt5
@@ -93,7 +103,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.ATInt
 constructor Defun 3
 literal string 26
 Language.Reflection.AType6
@@ -103,7 +115,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.AType
 constructor Defun 3
 literal string 23
 Prelude.Interfaces.Abs7
@@ -115,7 +129,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 22
+Prelude.Interfaces.Abs
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -128,7 +144,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Prelude.WellFounded.Access
 constructor Defun 3
 literal string 31
 Prelude.WellFounded.Accessible9
@@ -144,7 +162,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 30
+Prelude.WellFounded.Accessible
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -163,7 +183,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 20
+Prelude.Nat.Additive
 constructor Defun 3
 literal string 30
 Language.Reflection.AllTypes11
@@ -173,7 +195,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.AllTypes
 constructor Defun 3
 literal string 43
 Language.Reflection.Errors.AlreadyDefined12
@@ -183,7 +207,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 41
+Language.Reflection.Errors.AlreadyDefined
 constructor Defun 3
 literal string 33
 Prelude.Applicative.Alternative13
@@ -195,7 +221,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 31
+Prelude.Applicative.Alternative
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -208,7 +236,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.App
 constructor Defun 3
 literal string 18
 Prelude.Show.App15
@@ -218,7 +248,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 16
+Prelude.Show.App
 constructor Defun 3
 literal string 21
 Prelude.File.Append16
@@ -228,7 +260,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 19
+Prelude.File.Append
 constructor Defun 3
 literal string 33
 Prelude.Applicative.Applicative17
@@ -240,7 +274,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 31
+Prelude.Applicative.Applicative
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -253,7 +289,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.ApplyTactic
 constructor Defun 3
 literal string 29
 Language.Reflection.ArithTy19
@@ -263,7 +301,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.ArithTy
 constructor Defun 3
 literal string 25
 Language.Reflection.B1620
@@ -273,7 +313,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.B16
 constructor Defun 3
 literal string 25
 Language.Reflection.B3221
@@ -283,7 +325,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.B32
 constructor Defun 3
 literal string 25
 Language.Reflection.B6422
@@ -293,7 +337,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.B64
 constructor Defun 3
 literal string 24
 Language.Reflection.B823
@@ -303,7 +349,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.B8
 constructor Defun 3
 literal string 24
 Language.Reflection.BI24
@@ -313,7 +361,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.BI
 constructor Defun 3
 literal string 23
 Prelude.Show.Backtick25
@@ -323,7 +373,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Show.Backtick
 constructor Defun 3
 literal string 26
 Language.Reflection.Bind26
@@ -333,7 +385,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Bind
 constructor Defun 3
 literal string 28
 Language.Reflection.Binder27
@@ -345,7 +399,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 26
+Language.Reflection.Binder
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -358,7 +414,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Bool.Bool
 constructor Defun 3
 literal string 20
 Ownership.Borrowed29
@@ -370,7 +428,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 18
+Ownership.Borrowed
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -383,7 +443,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Bound
 constructor Defun 3
 literal string 34
 Language.Reflection.ByReflection31
@@ -393,7 +455,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 32
+Language.Reflection.ByReflection
 constructor Defun 3
 literal string 7
 CData32
@@ -403,7 +467,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 5
+CData
 constructor Defun 3
 literal string 14
 FFI_C.CFnPtr33
@@ -415,7 +481,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 12
+FFI_C.CFnPtr
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -428,7 +496,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+FFI_C.C_Any
 constructor Defun 3
 literal string 15
 FFI_C.C_CData35
@@ -438,7 +508,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 13
+FFI_C.C_CData
 constructor Defun 3
 literal string 15
 FFI_C.C_Float36
@@ -448,7 +520,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 13
+FFI_C.C_Float
 constructor Defun 3
 literal string 12
 FFI_C.C_Fn37
@@ -458,7 +532,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 10
+FFI_C.C_Fn
 constructor Defun 3
 literal string 16
 FFI_C.C_FnBase38
@@ -468,7 +544,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 14
+FFI_C.C_FnBase
 constructor Defun 3
 literal string 14
 FFI_C.C_FnIO39
@@ -478,7 +556,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 12
+FFI_C.C_FnIO
 constructor Defun 3
 literal string 13
 FFI_C.C_FnT40
@@ -488,7 +568,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+FFI_C.C_FnT
 constructor Defun 3
 literal string 17
 FFI_C.C_FnTypes41
@@ -500,7 +582,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 15
+FFI_C.C_FnTypes
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -513,7 +597,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+FFI_C.C_IntBits16
 constructor Defun 3
 literal string 19
 FFI_C.C_IntBits3243
@@ -523,7 +609,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+FFI_C.C_IntBits32
 constructor Defun 3
 literal string 19
 FFI_C.C_IntBits6444
@@ -533,7 +621,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+FFI_C.C_IntBits64
 constructor Defun 3
 literal string 18
 FFI_C.C_IntBits845
@@ -543,7 +633,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 16
+FFI_C.C_IntBits8
 constructor Defun 3
 literal string 17
 FFI_C.C_IntChar46
@@ -553,7 +645,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 15
+FFI_C.C_IntChar
 constructor Defun 3
 literal string 19
 FFI_C.C_IntNative47
@@ -563,7 +657,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+FFI_C.C_IntNative
 constructor Defun 3
 literal string 14
 FFI_C.C_IntT48
@@ -573,7 +669,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 12
+FFI_C.C_IntT
 constructor Defun 3
 literal string 18
 FFI_C.C_IntTypes49
@@ -585,7 +683,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 16
+FFI_C.C_IntTypes
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -598,7 +698,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 12
+FFI_C.C_MPtr
 constructor Defun 3
 literal string 13
 FFI_C.C_Ptr51
@@ -608,7 +710,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+FFI_C.C_Ptr
 constructor Defun 3
 literal string 13
 FFI_C.C_Str52
@@ -618,7 +722,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+FFI_C.C_Str
 constructor Defun 3
 literal string 15
 FFI_C.C_Types53
@@ -630,7 +736,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 13
+FFI_C.C_Types
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -643,7 +751,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 12
+FFI_C.C_Unit
 constructor Defun 3
 literal string 40
 Language.Reflection.Errors.CantConvert55
@@ -653,7 +763,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.CantConvert
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.CantInferType56
@@ -663,7 +775,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.CantInferType
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.CantIntroduce57
@@ -673,7 +787,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.CantIntroduce
 constructor Defun 3
 literal string 38
 Language.Reflection.Errors.CantMatch58
@@ -683,7 +799,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Errors.CantMatch
 constructor Defun 3
 literal string 40
 Language.Reflection.Errors.CantResolve59
@@ -693,7 +811,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.CantResolve
 constructor Defun 3
 literal string 44
 Language.Reflection.Errors.CantResolveAlts60
@@ -703,7 +823,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 42
+Language.Reflection.Errors.CantResolveAlts
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.CantSolveGoal61
@@ -713,7 +835,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.CantSolveGoal
 constructor Defun 3
 literal string 38
 Language.Reflection.Errors.CantUnify62
@@ -723,7 +847,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Errors.CantUnify
 constructor Defun 3
 literal string 26
 Language.Reflection.Case63
@@ -733,7 +859,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Case
 constructor Defun 3
 literal string 27
 Language.Reflection.CaseN64
@@ -743,7 +871,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.CaseN
 constructor Defun 3
 literal string 19
 Prelude.Cast.Cast65
@@ -757,7 +887,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 17
+Prelude.Cast.Cast
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -773,7 +905,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.Ch
 constructor Defun 3
 literal string 27
 Language.Reflection.Claim67
@@ -783,7 +917,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Claim
 constructor Defun 3
 literal string 19
 Prelude.Nat.CmpEQ68
@@ -793,7 +929,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Nat.CmpEQ
 constructor Defun 3
 literal string 19
 Prelude.Nat.CmpGT69
@@ -803,7 +941,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Nat.CmpGT
 constructor Defun 3
 literal string 19
 Prelude.Nat.CmpLT70
@@ -813,7 +953,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Nat.CmpLT
 constructor Defun 3
 literal string 20
 Prelude.Nat.CmpNat71
@@ -827,7 +969,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 18
+Prelude.Nat.CmpNat
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -843,7 +987,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.Compute
 constructor Defun 3
 literal string 27
 Language.Reflection.Const73
@@ -853,7 +999,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Const
 constructor Defun 3
 literal string 37
 Language.Reflection.Elab.Constraint74
@@ -863,7 +1011,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.Constraint
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.Constructor75
@@ -873,7 +1023,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Constructor
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.ConstructorDefn76
@@ -883,7 +1035,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Elab.ConstructorDefn
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.CtorArg77
@@ -893,7 +1047,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 32
+Language.Reflection.Elab.CtorArg
 constructor Defun 3
 literal string 36
 Language.Reflection.Elab.CtorField78
@@ -903,7 +1059,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Elab.CtorField
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.CtorParameter79
@@ -913,7 +1071,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.CtorParameter
 constructor Defun 3
 literal string 26
 Language.Reflection.DCon80
@@ -923,7 +1083,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.DCon
 constructor Defun 3
 literal string 22
 Prelude.File.DHandle81
@@ -935,7 +1097,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 20
+Prelude.File.DHandle
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -948,7 +1112,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 16
+FFI_Export.DHere
 constructor Defun 3
 literal string 16
 Builtins.DPair83
@@ -962,7 +1128,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 14
+Builtins.DPair
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -978,7 +1146,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+FFI_Export.DThere
 constructor Defun 3
 literal string 17
 FFI_Export.Data85
@@ -994,7 +1164,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 15
+FFI_Export.Data
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1021,7 +1193,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 4
+list 5
+literal symbol 22
+FFI_Export.DataDefined
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1043,7 +1217,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.DataDefn
 constructor Defun 3
 literal string 35
 Language.Reflection.Elab.Datatype88
@@ -1053,7 +1229,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.Datatype
 constructor Defun 3
 literal string 20
 Prelude.Basics.Dec89
@@ -1065,7 +1243,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 18
+Prelude.Basics.Dec
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1080,7 +1260,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 24
+Decidable.Equality.DecEq
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1093,7 +1275,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 32
+Language.Reflection.Elab.Declare
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.DefineDatatype92
@@ -1103,7 +1287,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.DefineDatatype
 constructor Defun 3
 literal string 36
 Language.Reflection.Elab.DefineFun93
@@ -1113,7 +1299,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Elab.DefineFun
 constructor Defun 3
 literal string 7
 Delay94
@@ -1123,7 +1311,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 5
+Delay
 constructor Defun 3
 literal string 13
 DelayReason95
@@ -1133,7 +1323,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+DelayReason
 constructor Defun 3
 literal string 9
 Delayed96
@@ -1147,7 +1339,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 7
+Delayed
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1163,7 +1357,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.File.Directory
 constructor Defun 3
 literal string 21
 Prelude.Show.Dollar98
@@ -1173,7 +1369,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 19
+Prelude.Show.Dollar
 constructor Defun 3
 literal string 23
 Prelude.Interfaces.EQ99
@@ -1183,7 +1381,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Interfaces.EQ
 constructor Defun 3
 literal string 24
 Prelude.Either.Either100
@@ -1197,7 +1397,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 21
+Prelude.Either.Either
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1215,7 +1417,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 29
+Language.Reflection.Elab.Elab
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1228,7 +1432,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Pairs.Element
 constructor Defun 3
 literal string 17
 FFI_Export.End103
@@ -1238,7 +1444,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 14
+FFI_Export.End
 constructor Defun 3
 literal string 15
 Prelude.Enum104
@@ -1250,7 +1458,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 12
+Prelude.Enum
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1265,7 +1475,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 21
+Prelude.Interfaces.Eq
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1278,7 +1490,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 15
+Prelude.Show.Eq
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.Erased107
@@ -1288,7 +1502,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.Erased
 constructor Defun 3
 literal string 29
 Language.Reflection.Erased108
@@ -1298,7 +1514,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Erased
 constructor Defun 3
 literal string 35
 Language.Reflection.Elab.Erasure109
@@ -1308,7 +1526,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 32
+Language.Reflection.Elab.Erasure
 constructor Defun 3
 literal string 33
 Language.Reflection.Errors.Err110
@@ -1318,7 +1538,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Language.Reflection.Errors.Err
 constructor Defun 3
 literal string 26
 Prelude.Providers.Error111
@@ -1328,7 +1550,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.Providers.Error
 constructor Defun 3
 literal string 38
 Language.Reflection.ErrorReportPart112
@@ -1338,7 +1562,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.ErrorReportPart
 constructor Defun 3
 literal string 25
 Prelude.Pairs.Evidence113
@@ -1348,7 +1574,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.Pairs.Evidence
 constructor Defun 3
 literal string 28
 Language.Reflection.Exact114
@@ -1358,7 +1586,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Exact
 constructor Defun 3
 literal string 23
 Prelude.Pairs.Exists115
@@ -1372,7 +1602,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 20
+Prelude.Pairs.Exists
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1388,7 +1620,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.Explicit
 constructor Defun 3
 literal string 18
 ForeignEnv.FEnv117
@@ -1402,7 +1636,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 15
+ForeignEnv.FEnv
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1418,7 +1654,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 3
+FFI
 constructor Defun 3
 literal string 22
 FFI_Export.FFI_Base119
@@ -1434,7 +1672,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 19
+FFI_Export.FFI_Base
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1457,7 +1697,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 22
+FFI_Export.FFI_ExpType
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1479,7 +1721,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 21
+FFI_Export.FFI_Export
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1504,7 +1748,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 25
+FFI_Export.FFI_Exportable
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1527,7 +1773,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 18
+FFI_Export.FFI_Fun
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1545,7 +1793,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 17
+FFI_Export.FFI_IO
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1560,7 +1810,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 19
+FFI_Export.FFI_Prim
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1575,7 +1827,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 18
+FFI_Export.FFI_Ret
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1588,7 +1842,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 4
+FFun
 constructor Defun 3
 literal string 23
 Prelude.File.FHandle128
@@ -1600,7 +1856,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 20
+Prelude.File.FHandle
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1613,7 +1871,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 4
+FRet
 constructor Defun 3
 literal string 6
 FTy130
@@ -1629,7 +1889,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 3
+FTy
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1648,7 +1910,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Fail
 constructor Defun 3
 literal string 21
 Prelude.Bool.False132
@@ -1658,7 +1922,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 18
+Prelude.Bool.False
 constructor Defun 3
 literal string 20
 Prelude.File.File133
@@ -1668,7 +1934,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.File.File
 constructor Defun 3
 literal string 25
 Prelude.File.FileError134
@@ -1678,7 +1946,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.File.FileError
 constructor Defun 3
 literal string 30
 Language.Reflection.FileLoc135
@@ -1688,7 +1958,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.FileLoc
 constructor Defun 3
 literal string 28
 Prelude.File.FileNotFound136
@@ -1698,7 +1970,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Prelude.File.FileNotFound
 constructor Defun 3
 literal string 29
 Prelude.File.FileReadError137
@@ -1708,7 +1982,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Prelude.File.FileReadError
 constructor Defun 3
 literal string 30
 Prelude.File.FileWriteError138
@@ -1718,7 +1994,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Prelude.File.FileWriteError
 constructor Defun 3
 literal string 27
 Language.Reflection.Fill139
@@ -1728,7 +2006,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Fill
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.Fixity140
@@ -1738,7 +2018,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.Fixity
 constructor Defun 3
 literal string 25
 Language.Reflection.Fl141
@@ -1748,7 +2030,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.Fl
 constructor Defun 3
 literal string 28
 Language.Reflection.Focus142
@@ -1758,7 +2042,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Focus
 constructor Defun 3
 literal string 28
 Prelude.Foldable.Foldable143
@@ -1770,7 +2056,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 25
+Prelude.Foldable.Foldable
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1783,7 +2071,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Forgot
 constructor Defun 3
 literal string 32
 Prelude.Interfaces.Fractional145
@@ -1795,7 +2085,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 29
+Prelude.Interfaces.Fractional
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1816,7 +2108,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 4
+list 5
+literal symbol 14
+FFI_Export.Fun
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1838,7 +2132,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.FunArg
 constructor Defun 3
 literal string 37
 Language.Reflection.Elab.FunClause148
@@ -1850,7 +2146,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 34
+Language.Reflection.Elab.FunClause
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1865,7 +2163,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 32
+Language.Reflection.Elab.FunDefn
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1880,7 +2180,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 23
+Prelude.Functor.Functor
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -1893,7 +2195,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.GHole
 constructor Defun 3
 literal string 24
 Prelude.Interfaces.GT152
@@ -1903,7 +2207,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Interfaces.GT
 constructor Defun 3
 literal string 32
 Prelude.File.GenericFileError153
@@ -1913,7 +2219,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Prelude.File.GenericFileError
 constructor Defun 3
 literal string 26
 Prelude.Nat.GetAdditive154
@@ -1923,7 +2231,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.Nat.GetAdditive
 constructor Defun 3
 literal string 32
 Prelude.Nat.GetMultiplicative155
@@ -1933,7 +2243,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Prelude.Nat.GetMultiplicative
 constructor Defun 3
 literal string 31
 Language.Reflection.GoalType156
@@ -1943,7 +2255,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.GoalType
 constructor Defun 3
 literal string 28
 Language.Reflection.Guess157
@@ -1953,7 +2267,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Guess
 constructor Defun 3
 literal string 27
 Language.Reflection.Hole158
@@ -1963,7 +2279,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Hole
 constructor Defun 3
 literal string 24
 Language.Reflection.I159
@@ -1973,7 +2291,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Language.Reflection.I
 constructor Defun 3
 literal string 6
 IO'160
@@ -1987,7 +2307,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 3
+IO'
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2003,7 +2325,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.IT16
 constructor Defun 3
 literal string 27
 Language.Reflection.IT32162
@@ -2013,7 +2337,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.IT32
 constructor Defun 3
 literal string 27
 Language.Reflection.IT64163
@@ -2023,7 +2349,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.IT64
 constructor Defun 3
 literal string 26
 Language.Reflection.IT8164
@@ -2033,7 +2361,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.IT8
 constructor Defun 3
 literal string 28
 Language.Reflection.ITBig165
@@ -2043,7 +2373,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.ITBig
 constructor Defun 3
 literal string 29
 Language.Reflection.ITChar166
@@ -2053,7 +2385,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.ITChar
 constructor Defun 3
 literal string 30
 Language.Reflection.ITFixed167
@@ -2063,7 +2397,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.ITFixed
 constructor Defun 3
 literal string 31
 Language.Reflection.ITNative168
@@ -2073,7 +2409,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.ITNative
 constructor Defun 3
 literal string 37
 Language.Reflection.Implementation169
@@ -2083,7 +2421,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Implementation
 constructor Defun 3
 literal string 42
 Language.Reflection.ImplementationCtorN170
@@ -2093,7 +2433,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.ImplementationCtorN
 constructor Defun 3
 literal string 38
 Language.Reflection.ImplementationN171
@@ -2103,7 +2445,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.ImplementationN
 constructor Defun 3
 literal string 36
 Language.Reflection.Elab.Implicit172
@@ -2113,7 +2457,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.Implicit
 constructor Defun 3
 literal string 24
 Prelude.List.InBounds173
@@ -2129,7 +2475,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 3
+list 4
+literal symbol 21
+Prelude.List.InBounds
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2148,7 +2496,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 20
+Prelude.List.InFirst
 constructor Defun 3
 literal string 23
 Prelude.List.InLater175
@@ -2158,7 +2508,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 20
+Prelude.List.InLater
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.Inaccessible176
@@ -2168,7 +2520,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Errors.Inaccessible
 constructor Defun 3
 literal string 44
 Language.Reflection.Errors.IncompleteTerm177
@@ -2178,7 +2532,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 41
+Language.Reflection.Errors.IncompleteTerm
 constructor Defun 3
 literal string 32
 Language.Reflection.Induction178
@@ -2188,7 +2544,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Language.Reflection.Induction
 constructor Defun 3
 literal string 11
 Infinite179
@@ -2198,7 +2556,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 8
+Infinite
 constructor Defun 3
 literal string 43
 Language.Reflection.Errors.InfiniteUnify180
@@ -2208,7 +2568,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.InfiniteUnify
 constructor Defun 3
 literal string 33
 Language.Reflection.Elab.Infix181
@@ -2218,7 +2580,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Language.Reflection.Elab.Infix
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.Infixl182
@@ -2228,7 +2592,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.Infixl
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.Infixr183
@@ -2238,7 +2604,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.Infixr
 constructor Defun 3
 literal string 28
 Language.Reflection.IntTy184
@@ -2248,7 +2616,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.IntTy
 constructor Defun 3
 literal string 30
 Prelude.Interfaces.Integral185
@@ -2260,7 +2630,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 27
+Prelude.Interfaces.Integral
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2273,7 +2645,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.InternalMsg
 constructor Defun 3
 literal string 28
 Language.Reflection.Intro187
@@ -2283,7 +2657,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Intro
 constructor Defun 3
 literal string 29
 Language.Reflection.Intros188
@@ -2293,7 +2669,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Intros
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.InvalidTCArg189
@@ -2303,7 +2681,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Errors.InvalidTCArg
 constructor Defun 3
 literal string 23
 Prelude.Maybe.IsJust190
@@ -2317,7 +2697,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 20
+Prelude.Maybe.IsJust
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2333,7 +2715,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.List.IsNonEmpty
 constructor Defun 3
 literal string 21
 Prelude.Nat.IsSucc192
@@ -2345,7 +2729,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 18
+Prelude.Nat.IsSucc
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2358,7 +2744,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.Maybe.ItIsJust
 constructor Defun 3
 literal string 23
 Prelude.Nat.ItIsSucc194
@@ -2368,7 +2756,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 20
+Prelude.Nat.ItIsSucc
 constructor Defun 3
 literal string 11
 JS_Float195
@@ -2378,7 +2768,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 8
+JS_Float
 constructor Defun 3
 literal string 8
 JS_Fn196
@@ -2388,7 +2780,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 5
+JS_Fn
 constructor Defun 3
 literal string 12
 JS_FnBase197
@@ -2398,7 +2792,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 9
+JS_FnBase
 constructor Defun 3
 literal string 10
 JS_FnIO198
@@ -2408,7 +2804,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 7
+JS_FnIO
 constructor Defun 3
 literal string 9
 JS_FnT199
@@ -2418,7 +2816,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 6
+JS_FnT
 constructor Defun 3
 literal string 13
 JS_FnTypes200
@@ -2430,7 +2830,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 10
+JS_FnTypes
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2443,7 +2845,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 10
+JS_IntChar
 constructor Defun 3
 literal string 15
 JS_IntNative202
@@ -2453,7 +2857,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 12
+JS_IntNative
 constructor Defun 3
 literal string 10
 JS_IntT203
@@ -2463,7 +2869,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 7
+JS_IntT
 constructor Defun 3
 literal string 14
 JS_IntTypes204
@@ -2475,7 +2883,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 11
+JS_IntTypes
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2488,7 +2898,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 6
+JS_Ptr
 constructor Defun 3
 literal string 9
 JS_Str206
@@ -2498,7 +2910,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 6
+JS_Str
 constructor Defun 3
 literal string 11
 JS_Types207
@@ -2510,7 +2924,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 8
+JS_Types
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2523,7 +2939,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 7
+JS_Unit
 constructor Defun 3
 literal string 7
 JsFn209
@@ -2535,7 +2953,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 4
+JsFn
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2550,7 +2970,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 18
+Prelude.Maybe.Just
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2563,7 +2985,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Interfaces.LT
 constructor Defun 3
 literal string 18
 Prelude.Nat.LTE212
@@ -2577,7 +3001,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 15
+Prelude.Nat.LTE
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2593,7 +3019,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 19
+Prelude.Nat.LTESucc
 constructor Defun 3
 literal string 22
 Prelude.Nat.LTEZero214
@@ -2603,7 +3031,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 19
+Prelude.Nat.LTEZero
 constructor Defun 3
 literal string 26
 Language.Reflection.Lam215
@@ -2613,7 +3043,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Lam
 constructor Defun 3
 literal string 12
 LazyValue216
@@ -2623,7 +3055,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 9
+LazyValue
 constructor Defun 3
 literal string 22
 Prelude.Either.Left217
@@ -2635,7 +3069,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 19
+Prelude.Either.Left
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2648,7 +3084,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Prelude.Nat.LeftIsNotZero
 constructor Defun 3
 literal string 26
 Language.Reflection.Let219
@@ -2658,7 +3096,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Let
 constructor Defun 3
 literal string 29
 Language.Reflection.LetTac220
@@ -2668,7 +3108,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.LetTac
 constructor Defun 3
 literal string 31
 Language.Reflection.LetTacTy221
@@ -2678,7 +3120,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.LetTacTy
 constructor Defun 3
 literal string 20
 Prelude.List.List222
@@ -2690,7 +3134,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 17
+Prelude.List.List
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2703,7 +3149,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.LoadingFailed
 constructor Defun 3
 literal string 25
 Language.Reflection.MN224
@@ -2713,7 +3161,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.MN
 constructor Defun 3
 literal string 13
 ManagedPtr225
@@ -2723,7 +3173,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 10
+ManagedPtr
 constructor Defun 3
 literal string 30
 Prelude.Interfaces.MaxBound226
@@ -2735,7 +3187,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 27
+Prelude.Interfaces.MaxBound
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2750,7 +3204,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 19
+Prelude.Maybe.Maybe
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2763,7 +3219,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.MetaN
 constructor Defun 3
 literal string 30
 Language.Reflection.MethodN229
@@ -2773,7 +3231,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.MethodN
 constructor Defun 3
 literal string 30
 Prelude.Interfaces.MinBound230
@@ -2785,7 +3245,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 27
+Prelude.Interfaces.MinBound
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2800,7 +3262,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 14
+FFI_C.MkCFnPtr
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2813,7 +3277,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 16
+Builtins.MkDPair
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.MkDatatype233
@@ -2823,7 +3289,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.MkDatatype
 constructor Defun 3
 literal string 8
 MkFFI234
@@ -2833,7 +3301,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 5
+MkFFI
 constructor Defun 3
 literal string 36
 Language.Reflection.Elab.MkFunArg235
@@ -2843,7 +3313,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.MkFunArg
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.MkFunClause236
@@ -2853,7 +3325,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.MkFunClause
 constructor Defun 3
 literal string 7
 MkIO237
@@ -2865,7 +3339,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 4
+MkIO
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2878,7 +3354,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 43
+Language.Reflection.Elab.MkImpossibleClause
 constructor Defun 3
 literal string 9
 MkJsFn239
@@ -2890,7 +3368,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 6
+MkJsFn
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2907,7 +3387,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 15
+Builtins.MkPair
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2925,7 +3407,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 11
+FFI_C.MkRaw
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2938,7 +3422,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Prelude.Strings.MkString
 constructor Defun 3
 literal string 19
 Builtins.MkUPair243
@@ -2952,7 +3438,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 16
+Builtins.MkUPair
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -2968,7 +3456,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 6
+MkUnit
 constructor Defun 3
 literal string 20
 Prelude.File.Mode245
@@ -2978,7 +3468,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.File.Mode
 constructor Defun 3
 literal string 22
 Prelude.Monad.Monad246
@@ -2990,7 +3482,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 19
+Prelude.Monad.Monad
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3005,7 +3499,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 22
+Prelude.Algebra.Monoid
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3018,7 +3514,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Language.Reflection.Errors.Msg
 constructor Defun 3
 literal string 29
 Prelude.Nat.Multiplicative249
@@ -3028,7 +3526,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Prelude.Nat.Multiplicative
 constructor Defun 3
 literal string 25
 Language.Reflection.NS250
@@ -3038,7 +3538,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.NS
 constructor Defun 3
 literal string 31
 Language.Reflection.NamePart251
@@ -3048,7 +3550,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.NamePart
 constructor Defun 3
 literal string 31
 Language.Reflection.NameType252
@@ -3058,7 +3562,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.NameType
 constructor Defun 3
 literal string 18
 Prelude.Nat.Nat253
@@ -3068,7 +3574,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 15
+Prelude.Nat.Nat
 constructor Defun 3
 literal string 31
 Language.Reflection.NativeTy254
@@ -3078,7 +3586,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.NativeTy
 constructor Defun 3
 literal string 25
 Prelude.Interfaces.Neg255
@@ -3090,7 +3600,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 22
+Prelude.Interfaces.Neg
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3103,7 +3615,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 14
+ForeignEnv.Nil
 constructor Defun 3
 literal string 19
 Prelude.List.Nil257
@@ -3113,7 +3627,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 16
+Prelude.List.Nil
 constructor Defun 3
 literal string 20
 Prelude.Basics.No258
@@ -3123,7 +3639,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Basics.No
 constructor Defun 3
 literal string 41
 Language.Reflection.Errors.NoRewriting259
@@ -3133,7 +3651,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.NoRewriting
 constructor Defun 3
 literal string 44
 Language.Reflection.Errors.NoSuchVariable260
@@ -3143,7 +3663,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 41
+Language.Reflection.Errors.NoSuchVariable
 constructor Defun 3
 literal string 40
 Language.Reflection.Errors.NoTypeDecl261
@@ -3153,7 +3675,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Errors.NoTypeDecl
 constructor Defun 3
 literal string 41
 Language.Reflection.Errors.NoValidAlts262
@@ -3163,7 +3687,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.NoValidAlts
 constructor Defun 3
 literal string 53
 Language.Reflection.Errors.NonCollapsiblePostulate263
@@ -3173,7 +3699,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 50
+Language.Reflection.Errors.NonCollapsiblePostulate
 constructor Defun 3
 literal string 24
 Prelude.List.NonEmpty264
@@ -3187,7 +3715,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 21
+Prelude.List.NonEmpty
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3203,7 +3733,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 42
+Language.Reflection.Errors.NonFunctionType
 constructor Defun 3
 literal string 26
 Prelude.Nat.NotBothZero266
@@ -3217,7 +3749,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 23
+Prelude.Nat.NotBothZero
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3233,7 +3767,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Errors.NotEquality
 constructor Defun 3
 literal string 37
 Language.Reflection.Elab.NotErased268
@@ -3243,7 +3779,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Elab.NotErased
 constructor Defun 3
 literal string 42
 Language.Reflection.Errors.NotInjective269
@@ -3253,7 +3791,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Errors.NotInjective
 constructor Defun 3
 literal string 24
 Prelude.Maybe.Nothing270
@@ -3263,7 +3803,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Prelude.Maybe.Nothing
 constructor Defun 3
 literal string 31
 Language.Reflection.NullType271
@@ -3273,7 +3815,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.NullType
 constructor Defun 3
 literal string 25
 Prelude.Interfaces.Num272
@@ -3285,7 +3829,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 22
+Prelude.Interfaces.Num
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3298,7 +3844,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Show.Open
 constructor Defun 3
 literal string 25
 Prelude.Interfaces.Ord274
@@ -3310,7 +3858,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 22
+Prelude.Interfaces.Ord
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3323,7 +3873,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Prelude.Interfaces.Ordering
 constructor Defun 3
 literal string 24
 Language.Reflection.P276
@@ -3333,7 +3885,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Language.Reflection.P
 constructor Defun 3
 literal string 27
 Language.Reflection.PVTy277
@@ -3343,7 +3897,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.PVTy
 constructor Defun 3
 literal string 27
 Language.Reflection.PVar278
@@ -3353,7 +3909,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.PVar
 constructor Defun 3
 literal string 16
 Builtins.Pair279
@@ -3367,7 +3925,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 13
+Builtins.Pair
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3383,7 +3943,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.ParentN
 constructor Defun 3
 literal string 32
 Prelude.File.PermissionDenied281
@@ -3393,7 +3955,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Prelude.File.PermissionDenied
 constructor Defun 3
 literal string 25
 Language.Reflection.Pi282
@@ -3403,7 +3967,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.Pi
 constructor Defun 3
 literal string 35
 Language.Reflection.Elab.Plicity283
@@ -3413,7 +3979,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 32
+Language.Reflection.Elab.Plicity
 constructor Defun 3
 literal string 20
 Prelude.Show.Prec284
@@ -3423,7 +3991,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Show.Prec
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.Prefix285
@@ -3433,7 +4003,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.Prefix
 constructor Defun 3
 literal string 27
 Prelude.Show.PrefixMinus286
@@ -3443,7 +4015,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Prelude.Show.PrefixMinus
 constructor Defun 3
 literal string 9
 PrimIO287
@@ -3455,7 +4029,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 6
+PrimIO
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3468,7 +4044,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 48
+Language.Reflection.Elab.Prim__AddImplementation
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Apply289
@@ -3478,7 +4056,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Apply
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__Attack290
@@ -3488,7 +4068,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__Attack
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__BindElab291
@@ -3498,7 +4080,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__BindElab
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Check292
@@ -3508,7 +4092,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Check
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Claim293
@@ -3518,7 +4104,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Claim
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__Compute294
@@ -3528,7 +4116,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__Compute
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__Converts295
@@ -3538,7 +4128,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__Converts
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Debug296
@@ -3548,7 +4140,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Debug
 constructor Defun 3
 literal string 49
 Language.Reflection.Elab.Prim__DeclareDatatype297
@@ -3558,7 +4152,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 46
+Language.Reflection.Elab.Prim__DeclareDatatype
 constructor Defun 3
 literal string 45
 Language.Reflection.Elab.Prim__DeclareType298
@@ -3568,7 +4164,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 42
+Language.Reflection.Elab.Prim__DeclareType
 constructor Defun 3
 literal string 48
 Language.Reflection.Elab.Prim__DefineDatatype299
@@ -3578,7 +4176,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 45
+Language.Reflection.Elab.Prim__DefineDatatype
 constructor Defun 3
 literal string 48
 Language.Reflection.Elab.Prim__DefineFunction300
@@ -3588,7 +4188,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 45
+Language.Reflection.Elab.Prim__DefineFunction
 constructor Defun 3
 literal string 37
 Language.Reflection.Elab.Prim__Env301
@@ -3598,7 +4200,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Elab.Prim__Env
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.Prim__Fail302
@@ -3608,7 +4212,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.Prim__Fail
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.Prim__Fill303
@@ -3618,7 +4224,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.Prim__Fill
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__Fixity304
@@ -3628,7 +4236,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__Fixity
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Focus305
@@ -3638,7 +4248,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Focus
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__Forall306
@@ -3648,7 +4260,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__Forall
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__Gensym307
@@ -3658,7 +4272,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__Gensym
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.Prim__Goal308
@@ -3668,7 +4284,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.Prim__Goal
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Guess309
@@ -3678,7 +4296,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Guess
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Holes310
@@ -3688,7 +4308,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Holes
 constructor Defun 3
 literal string 11
 Prim__IO311
@@ -3700,7 +4322,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 8
+Prim__IO
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3713,7 +4337,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Intro
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__IsTCName313
@@ -3723,7 +4349,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__IsTCName
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__LetBind314
@@ -3733,7 +4361,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__LetBind
 constructor Defun 3
 literal string 44
 Language.Reflection.Elab.Prim__LookupArgs315
@@ -3743,7 +4373,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 41
+Language.Reflection.Elab.Prim__LookupArgs
 constructor Defun 3
 literal string 48
 Language.Reflection.Elab.Prim__LookupDatatype316
@@ -3753,7 +4385,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 45
+Language.Reflection.Elab.Prim__LookupDatatype
 constructor Defun 3
 literal string 47
 Language.Reflection.Elab.Prim__LookupFunDefn317
@@ -3763,7 +4397,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 44
+Language.Reflection.Elab.Prim__LookupFunDefn
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__LookupTy318
@@ -3773,7 +4409,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__LookupTy
 constructor Defun 3
 literal string 44
 Language.Reflection.Elab.Prim__MatchApply319
@@ -3783,7 +4421,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 41
+Language.Reflection.Elab.Prim__MatchApply
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__Metavar320
@@ -3793,7 +4433,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__Metavar
 constructor Defun 3
 literal string 43
 Language.Reflection.Elab.Prim__Namespace321
@@ -3803,7 +4445,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Elab.Prim__Namespace
 constructor Defun 3
 literal string 43
 Language.Reflection.Elab.Prim__Normalise322
@@ -3813,7 +4457,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Elab.Prim__Normalise
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__PatBind323
@@ -3823,7 +4469,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__PatBind
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__PatVar324
@@ -3833,7 +4481,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__PatVar
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__PureElab325
@@ -3843,7 +4493,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__PureElab
 constructor Defun 3
 literal string 47
 Language.Reflection.Elab.Prim__RecursiveElab326
@@ -3853,7 +4505,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 44
+Language.Reflection.Elab.Prim__RecursiveElab
 constructor Defun 3
 literal string 43
 Language.Reflection.Elab.Prim__ResolveTC327
@@ -3863,7 +4517,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Elab.Prim__ResolveTC
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__Rewrite328
@@ -3873,7 +4529,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__Rewrite
 constructor Defun 3
 literal string 40
 Language.Reflection.Elab.Prim__Search329
@@ -3883,7 +4541,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Elab.Prim__Search
 constructor Defun 3
 literal string 39
 Language.Reflection.Elab.Prim__Solve330
@@ -3893,7 +4553,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 36
+Language.Reflection.Elab.Prim__Solve
 constructor Defun 3
 literal string 48
 Language.Reflection.Elab.Prim__SourceLocation331
@@ -3903,7 +4565,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 45
+Language.Reflection.Elab.Prim__SourceLocation
 constructor Defun 3
 literal string 37
 Language.Reflection.Elab.Prim__Try332
@@ -3913,7 +4577,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Elab.Prim__Try
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.Prim__TryCatch333
@@ -3923,7 +4589,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.Prim__TryCatch
 constructor Defun 3
 literal string 41
 Language.Reflection.Elab.Prim__Unfocus334
@@ -3933,7 +4601,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 38
+Language.Reflection.Elab.Prim__Unfocus
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.Prim__Whnf335
@@ -3943,7 +4613,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.Prim__Whnf
 constructor Defun 3
 literal string 48
 Language.Reflection.Errors.ProgramLineComment336
@@ -3953,7 +4625,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 45
+Language.Reflection.Errors.ProgramLineComment
 constructor Defun 3
 literal string 45
 Language.Reflection.Errors.ProofSearchFail337
@@ -3963,7 +4637,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 42
+Language.Reflection.Errors.ProofSearchFail
 constructor Defun 3
 literal string 28
 Prelude.Providers.Provide338
@@ -3973,7 +4649,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Prelude.Providers.Provide
 constructor Defun 3
 literal string 29
 Prelude.Providers.Provider339
@@ -3985,7 +4663,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 26
+Prelude.Providers.Provider
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -3998,7 +4678,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.ProviderError
 constructor Defun 3
 literal string 6
 Ptr341
@@ -4008,7 +4690,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 3
+Ptr
 constructor Defun 3
 literal string 31
 Language.Reflection.Quotable342
@@ -4022,7 +4706,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 28
+Language.Reflection.Quotable
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4038,7 +4724,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.RApp
 constructor Defun 3
 literal string 28
 Language.Reflection.RBind344
@@ -4048,7 +4736,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.RBind
 constructor Defun 3
 literal string 32
 Language.Reflection.RConstant345
@@ -4058,7 +4748,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Language.Reflection.RConstant
 constructor Defun 3
 literal string 28
 Language.Reflection.RType346
@@ -4068,7 +4760,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.RType
 constructor Defun 3
 literal string 29
 Language.Reflection.RUType347
@@ -4078,7 +4772,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.RUType
 constructor Defun 3
 literal string 12
 FFI_C.Raw348
@@ -4090,7 +4786,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 9
+FFI_C.Raw
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4103,7 +4801,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Raw
 constructor Defun 3
 literal string 30
 Language.Reflection.RawPart350
@@ -4113,7 +4813,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.RawPart
 constructor Defun 3
 literal string 20
 Prelude.File.Read351
@@ -4123,7 +4825,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.File.Read
 constructor Defun 3
 literal string 17
 Ownership.Read352
@@ -4133,7 +4837,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 14
+Ownership.Read
 constructor Defun 3
 literal string 26
 Prelude.File.ReadAppend353
@@ -4143,7 +4849,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.File.ReadAppend
 constructor Defun 3
 literal string 25
 Prelude.File.ReadWrite354
@@ -4153,7 +4861,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.File.ReadWrite
 constructor Defun 3
 literal string 33
 Prelude.File.ReadWriteTruncate355
@@ -4163,7 +4873,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Prelude.File.ReadWriteTruncate
 constructor Defun 3
 literal string 26
 Language.Reflection.Ref356
@@ -4173,7 +4885,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Ref
 constructor Defun 3
 literal string 29
 Language.Reflection.Refine357
@@ -4183,7 +4897,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Refine
 constructor Defun 3
 literal string 7
 Refl358
@@ -4193,7 +4909,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 4
+Refl
 constructor Defun 3
 literal string 32
 Language.Reflection.ReflConst359
@@ -4205,7 +4923,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 29
+Language.Reflection.ReflConst
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4218,7 +4938,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.Reflect
 constructor Defun 3
 literal string 30
 Language.Reflection.Rewrite361
@@ -4228,7 +4950,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.Rewrite
 constructor Defun 3
 literal string 23
 Prelude.Either.Right362
@@ -4240,7 +4964,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 20
+Prelude.Either.Right
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4253,7 +4979,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Prelude.Nat.RightIsNotZero
 constructor Defun 3
 literal string 16
 Prelude.Nat.S364
@@ -4263,7 +4991,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 13
+Prelude.Nat.S
 constructor Defun 3
 literal string 25
 Language.Reflection.SN365
@@ -4273,7 +5003,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.SN
 constructor Defun 3
 literal string 29
 Language.Reflection.Search366
@@ -4283,7 +5015,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Search
 constructor Defun 3
 literal string 28
 Prelude.Algebra.Semigroup367
@@ -4295,7 +5029,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 25
+Prelude.Algebra.Semigroup
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4308,7 +5044,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Seq
 constructor Defun 3
 literal string 20
 Prelude.Show.Show369
@@ -4320,7 +5058,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 17
+Prelude.Show.Show
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4335,7 +5075,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 25
+Prelude.WellFounded.Sized
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4348,7 +5090,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.Skip
 constructor Defun 3
 literal string 28
 Language.Reflection.Solve372
@@ -4358,7 +5102,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.Solve
 constructor Defun 3
 literal string 31
 Language.Reflection.SourceFC373
@@ -4368,7 +5114,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.SourceFC
 constructor Defun 3
 literal string 37
 Language.Reflection.SourceLocation374
@@ -4378,7 +5126,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.SourceLocation
 constructor Defun 3
 literal string 34
 Language.Reflection.SpecialName375
@@ -4388,7 +5138,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.SpecialName
 constructor Defun 3
 literal string 26
 Language.Reflection.Str376
@@ -4398,7 +5150,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Str
 constructor Defun 3
 literal string 26
 Prelude.Strings.StrCons377
@@ -4408,7 +5162,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.Strings.StrCons
 constructor Defun 3
 literal string 23
 Prelude.Strings.StrM378
@@ -4420,7 +5176,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 20
+Prelude.Strings.StrM
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4433,7 +5191,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Prelude.Strings.StrNil
 constructor Defun 3
 literal string 30
 Language.Reflection.StrType380
@@ -4443,7 +5203,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.StrType
 constructor Defun 3
 literal string 24
 Prelude.Stream.Stream381
@@ -4455,7 +5217,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 21
+Prelude.Stream.Stream
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4468,7 +5232,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Strings.StringBuffer
 constructor Defun 3
 literal string 32
 Language.Reflection.SubReport383
@@ -4478,7 +5244,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Language.Reflection.SubReport
 constructor Defun 3
 literal string 23
 Prelude.Pairs.Subset384
@@ -4492,7 +5260,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 20
+Prelude.Pairs.Subset
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4510,7 +5280,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 7
+Symbol_
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4523,7 +5295,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.TCon
 constructor Defun 3
 literal string 29
 Language.Reflection.TConst387
@@ -4533,7 +5307,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.TConst
 constructor Defun 3
 literal string 25
 Language.Reflection.TT388
@@ -4543,7 +5319,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.TT
 constructor Defun 3
 literal string 29
 Language.Reflection.TTName389
@@ -4553,7 +5331,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.TTName
 constructor Defun 3
 literal string 29
 Language.Reflection.TTUExp390
@@ -4563,7 +5343,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.TTUExp
 constructor Defun 3
 literal string 28
 Language.Reflection.TType391
@@ -4573,7 +5355,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.TType
 constructor Defun 3
 literal string 29
 Language.Reflection.Tactic392
@@ -4583,7 +5367,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.Tactic
 constructor Defun 3
 literal string 31
 Language.Reflection.TermPart393
@@ -4593,7 +5379,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.TermPart
 constructor Defun 3
 literal string 31
 Language.Reflection.TextPart394
@@ -4603,7 +5391,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.TextPart
 constructor Defun 3
 literal string 11
 TheWorld395
@@ -4615,7 +5405,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 8
+TheWorld
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4628,7 +5420,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.TheWorld
 constructor Defun 3
 literal string 46
 Language.Reflection.Errors.TooManyArguments397
@@ -4638,7 +5432,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 43
+Language.Reflection.Errors.TooManyArguments
 constructor Defun 3
 literal string 34
 Prelude.Traversable.Traversable398
@@ -4650,7 +5446,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 31
+Prelude.Traversable.Traversable
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4663,7 +5461,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.Trivial
 constructor Defun 3
 literal string 20
 Prelude.Bool.True400
@@ -4673,7 +5473,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Bool.True
 constructor Defun 3
 literal string 26
 Language.Reflection.Try401
@@ -4683,7 +5485,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Try
 constructor Defun 3
 literal string 36
 Language.Reflection.Elab.TyConArg402
@@ -4693,7 +5497,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Language.Reflection.Elab.TyConArg
 constructor Defun 3
 literal string 38
 Language.Reflection.Elab.TyConIndex403
@@ -4703,7 +5509,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.Elab.TyConIndex
 constructor Defun 3
 literal string 42
 Language.Reflection.Elab.TyConParameter404
@@ -4713,7 +5521,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 39
+Language.Reflection.Elab.TyConParameter
 constructor Defun 3
 literal string 34
 Language.Reflection.Elab.TyDecl405
@@ -4723,7 +5533,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Language.Reflection.Elab.TyDecl
 constructor Defun 3
 literal string 25
 Language.Reflection.UN406
@@ -4733,7 +5545,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 22
+Language.Reflection.UN
 constructor Defun 3
 literal string 17
 Builtins.UPair407
@@ -4747,7 +5561,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 14
+Builtins.UPair
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4763,7 +5579,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.UType
 constructor Defun 3
 literal string 27
 Language.Reflection.UVal409
@@ -4773,7 +5591,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.UVal
 constructor Defun 3
 literal string 27
 Language.Reflection.UVar410
@@ -4783,7 +5603,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 24
+Language.Reflection.UVar
 constructor Defun 3
 literal string 30
 Language.Reflection.Unfocus411
@@ -4793,7 +5615,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Language.Reflection.Unfocus
 constructor Defun 3
 literal string 40
 Language.Reflection.Errors.UnifyScope412
@@ -4803,7 +5627,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Errors.UnifyScope
 constructor Defun 3
 literal string 34
 Prelude.Uninhabited.Uninhabited413
@@ -4815,7 +5641,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 1
+list 2
+literal symbol 31
+Prelude.Uninhabited.Uninhabited
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4828,7 +5656,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Language.Reflection.UniqueType
 constructor Defun 3
 literal string 7
 Unit415
@@ -4838,7 +5668,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 4
+Unit
 constructor Defun 3
 literal string 31
 Language.Reflection.Universe416
@@ -4848,7 +5680,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.Universe
 constructor Defun 3
 literal string 43
 Language.Reflection.Errors.UniverseError417
@@ -4858,7 +5692,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 40
+Language.Reflection.Errors.UniverseError
 constructor Defun 3
 literal string 45
 Language.Reflection.Errors.UnknownImplicit418
@@ -4868,7 +5704,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 42
+Language.Reflection.Errors.UnknownImplicit
 constructor Defun 3
 literal string 20
 Prelude.Show.User419
@@ -4878,7 +5716,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 17
+Prelude.Show.User
 constructor Defun 3
 literal string 24
 Language.Reflection.V420
@@ -4888,7 +5728,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 21
+Language.Reflection.V
 constructor Defun 3
 literal string 26
 Language.Reflection.Var421
@@ -4898,7 +5740,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Language.Reflection.Var
 constructor Defun 3
 literal string 7
 Void422
@@ -4908,7 +5752,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 4
+Void
 constructor Defun 3
 literal string 31
 Language.Reflection.VoidType423
@@ -4918,7 +5764,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Language.Reflection.VoidType
 constructor Defun 3
 literal string 34
 Prelude.WellFounded.WellFounded424
@@ -4932,7 +5780,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 2
+list 3
+literal symbol 31
+Prelude.WellFounded.WellFounded
 constructor Var 1
 literal string 18
 constructor_arg507
@@ -4948,7 +5798,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Language.Reflection.WhereN
 constructor Defun 3
 literal string 40
 Language.Reflection.Errors.WithFnType426
@@ -4958,7 +5810,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Language.Reflection.Errors.WithFnType
 constructor Defun 3
 literal string 28
 Language.Reflection.WithN427
@@ -4968,7 +5822,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Language.Reflection.WithN
 constructor Defun 3
 literal string 8
 World428
@@ -4978,7 +5834,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 5
+World
 constructor Defun 3
 literal string 32
 Language.Reflection.WorldType429
@@ -4988,7 +5846,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Language.Reflection.WorldType
 constructor Defun 3
 literal string 29
 Prelude.File.WriteTruncate430
@@ -4998,7 +5858,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 26
+Prelude.File.WriteTruncate
 constructor Defun 3
 literal string 21
 Prelude.Basics.Yes431
@@ -5008,7 +5870,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 18
+Prelude.Basics.Yes
 constructor Defun 3
 literal string 16
 Prelude.Nat.Z432
@@ -5018,7 +5882,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 13
+Prelude.Nat.Z
 constructor Defun 3
 literal string 21
 assert_unreachable433
@@ -5135,8 +6001,8 @@ list 2
 constructor Var 1
 literal string 9
 {in_0}507
-literal string 6
-hello
+literal string 12
+hello world
 
 constructor Return 1
 literal unit 0
@@ -5914,7 +6780,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+{__Infer_0}
 constructor Defun 3
 literal string 14
 {__infer_0}478
@@ -5924,7 +6792,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 11
+{__infer_0}
 constructor Defun 3
 literal string 14
 {runMain_0}479
@@ -5982,7 +6852,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Interfaces.Abs_ictor
 constructor Defun 3
 literal string 40
 Prelude.Applicative.Alternative_ictor482
@@ -5992,7 +6864,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Prelude.Applicative.Alternative_ictor
 constructor Defun 3
 literal string 40
 Prelude.Applicative.Applicative_ictor483
@@ -6002,7 +6876,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Prelude.Applicative.Applicative_ictor
 constructor Defun 3
 literal string 26
 Prelude.Cast.Cast_ictor484
@@ -6012,7 +6888,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.Cast.Cast_ictor
 constructor Defun 3
 literal string 33
 Decidable.Equality.DecEq_ictor485
@@ -6022,7 +6900,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 30
+Decidable.Equality.DecEq_ictor
 constructor Defun 3
 literal string 21
 Prelude.Enum_ictor486
@@ -6032,7 +6912,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 18
+Prelude.Enum_ictor
 constructor Defun 3
 literal string 30
 Prelude.Interfaces.Eq_ictor487
@@ -6042,7 +6924,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 27
+Prelude.Interfaces.Eq_ictor
 constructor Defun 3
 literal string 34
 Prelude.Foldable.Foldable_ictor488
@@ -6052,7 +6936,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Prelude.Foldable.Foldable_ictor
 constructor Defun 3
 literal string 38
 Prelude.Interfaces.Fractional_ictor489
@@ -6062,7 +6948,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Prelude.Interfaces.Fractional_ictor
 constructor Defun 3
 literal string 32
 Prelude.Functor.Functor_ictor490
@@ -6072,7 +6960,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 29
+Prelude.Functor.Functor_ictor
 constructor Defun 3
 literal string 36
 Prelude.Interfaces.Integral_ictor491
@@ -6082,7 +6972,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Prelude.Interfaces.Integral_ictor
 constructor Defun 3
 literal string 36
 Prelude.Interfaces.MaxBound_ictor492
@@ -6092,7 +6984,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Prelude.Interfaces.MaxBound_ictor
 constructor Defun 3
 literal string 36
 Prelude.Interfaces.MinBound_ictor493
@@ -6102,7 +6996,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 33
+Prelude.Interfaces.MinBound_ictor
 constructor Defun 3
 literal string 28
 Prelude.Monad.Monad_ictor494
@@ -6112,7 +7008,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 25
+Prelude.Monad.Monad_ictor
 constructor Defun 3
 literal string 31
 Prelude.Algebra.Monoid_ictor495
@@ -6122,7 +7020,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Algebra.Monoid_ictor
 constructor Defun 3
 literal string 31
 Prelude.Interfaces.Neg_ictor496
@@ -6132,7 +7032,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Interfaces.Neg_ictor
 constructor Defun 3
 literal string 31
 Prelude.Interfaces.Num_ictor497
@@ -6142,7 +7044,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Interfaces.Num_ictor
 constructor Defun 3
 literal string 31
 Prelude.Interfaces.Ord_ictor498
@@ -6152,7 +7056,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 28
+Prelude.Interfaces.Ord_ictor
 constructor Defun 3
 literal string 37
 Language.Reflection.Quotable_ictor499
@@ -6162,7 +7068,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 34
+Language.Reflection.Quotable_ictor
 constructor Defun 3
 literal string 38
 Language.Reflection.ReflConst_ictor500
@@ -6172,7 +7080,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 35
+Language.Reflection.ReflConst_ictor
 constructor Defun 3
 literal string 34
 Prelude.Algebra.Semigroup_ictor501
@@ -6182,7 +7092,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Prelude.Algebra.Semigroup_ictor
 constructor Defun 3
 literal string 26
 Prelude.Show.Show_ictor502
@@ -6192,7 +7104,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 23
+Prelude.Show.Show_ictor
 constructor Defun 3
 literal string 34
 Prelude.WellFounded.Sized_ictor503
@@ -6202,7 +7116,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 31
+Prelude.WellFounded.Sized_ictor
 constructor Defun 3
 literal string 40
 Prelude.Traversable.Traversable_ictor504
@@ -6212,7 +7128,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Prelude.Traversable.Traversable_ictor
 constructor Defun 3
 literal string 40
 Prelude.Uninhabited.Uninhabited_ictor505
@@ -6222,7 +7140,9 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Prelude.Uninhabited.Uninhabited_ictor
 constructor Defun 3
 literal string 40
 Prelude.WellFounded.WellFounded_ictor506
@@ -6232,4 +7152,6 @@ constructor Return 1
 constructor ExternalCall 2
 literal string 10
 make_tuple
-list 0
+list 1
+literal symbol 37
+Prelude.WellFounded.WellFounded_ictor

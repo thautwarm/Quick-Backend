@@ -24,31 +24,10 @@ type N = String
 type SymTb = Map.Map N Integer
 
 solveSymTb ::
-     forall a tag. Field a Me SymTb
-  => [SDDecl tag]
+     forall a. Field a Me SymTb
+  => [SDDecl N]
   -> State a ()
-solveSymTb xs =
-  forM_ xs $ \case
-    SDDefFun _ _ x -> solveExp x
-    SDDefCons n _ -> updateSymTb n
-
-solveAlt ::
-     forall a tag. Field a Me SymTb
-  => SDAlt tag
-  -> State a ()
-solveAlt =
-  \case
-    SDConCase n _ _ -> updateSymTb n
-    _ -> return ()
-
-solveExp ::
-     forall a tag. Field a Me SymTb
-  => SDExp tag
-  -> State a ()
-solveExp =
-  \case
-    SDCons n _ -> updateSymTb n
-    _ -> return ()
+solveSymTb xs = forM_ xs $ \x -> traverse updateSymTb x
 
 updateSymTb ::
      forall a tag. Field a Me SymTb

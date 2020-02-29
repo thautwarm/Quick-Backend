@@ -18,6 +18,7 @@ module Quick.Weakest
   , WExp(..)
   , Fix(..)
   , Prop(..)
+  , DefUse(..)
   , dumpWDecls
   ) where
 
@@ -29,18 +30,22 @@ import Text.Printf (printf)
 
 type N = String
 
-data WDecl where
-  WDefFun :: N -> [N] -> [WStmt a] -> WDecl
+data WDecl a where
+  WDefFun :: a -> [a] -> [WStmt a] -> WDecl a
 
 data Prop
   = IsANF
   | IsRecur
 
+data DefUse
+  = Def N
+  | Use N
+
 data WStmt a
   -- introduction of some variables
       where
-  WIntro :: N -> WStmt a
-  WUp :: N -> WExp a -> WStmt a
+  WIntro :: a -> WStmt a
+  WUp :: a -> WExp a -> WStmt a
   WSwitch :: WExp a -> [(CC, [WStmt a])] -> [WStmt a] -> WStmt a
   WIf :: WExp a -> [WStmt a] -> [WStmt a] -> WStmt a
   WExp :: WExp a -> WStmt a
@@ -49,10 +54,10 @@ data WStmt a
 
 data WExp a where
   WNone :: WExp a
-  WVar :: N -> WExp a
+  WVar :: a -> WExp a
   WExt :: Ext (WExp a) -> WExp a
   WC :: CC -> WExp a
-  WApp :: N -> [WExp a] -> WExp a
+  WApp :: a -> [WExp a] -> WExp a
   deriving (Functor, Foldable, Traversable)
 
 newtype Fix f =
@@ -60,18 +65,22 @@ newtype Fix f =
     { unbox :: f (Fix f)
     }
 
-dumpWDecls :: [WDecl] -> DumpTree
+dumpWDecls :: [WDecl DefUse] -> DumpTree
 dumpWDecls (ListNode . map dump -> res) = res
+
+instance Dumpable DefUse where
+  dump (Def n) = dump n
+  dump (Use n) = dump n
 
 instance Dumpable a => Dumpable (Ext a) where
   dump (EF fname xs) = CtorNode {treeCons = "ExternalCall", components = [dump fname, dump xs]}
   dump (EV name) = CtorNode {treeCons = "ExternalVariable", components = [dump name]}
 
-instance Dumpable WDecl where
+instance Dumpable (WDecl DefUse) where
   dump (WDefFun fname args stmts) =
     CtorNode {treeCons = "Defun", components = [dump fname, dumpList args, ListNode $ map dump stmts]}
 
-instance Dumpable (WExp a) where
+instance Dumpable (WExp DefUse) where
   dump =
     \case
       WNone -> dump ()
@@ -80,7 +89,7 @@ instance Dumpable (WExp a) where
       WC cc -> dump cc
       WApp name (dumpList -> args) -> CtorNode {treeCons = "Call", components = [dump name, args]}
 
-instance Dumpable (WStmt a) where
+instance Dumpable (WStmt DefUse) where
   dump =
     \case
       WIntro n -> CtorNode {treeCons = "Introduction", components = [dump n]}

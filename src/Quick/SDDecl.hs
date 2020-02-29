@@ -45,7 +45,7 @@ data SDExp a
   | SDLet N (SDExp a) (SDExp a)
   | SDUp N (SDExp a)
   | SDProj (SDExp a) Int
-  | SDCons N [SDExp a]
+  | SDCons a [SDExp a]
   | SDCase (SDExp a) [SDAlt a]
   | SDConst Const
   | SDOp PrimFn [SDExp a]
@@ -54,14 +54,14 @@ data SDExp a
   deriving (Functor, Foldable, Traversable)
 
 data SDAlt a
-  = SDConCase N [N] (SDExp a)
+  = SDConCase a [N] (SDExp a)
   | SDConstCase Const (SDExp a)
   | SDDefaultCase (SDExp a)
   deriving (Functor, Foldable, Traversable)
 
 data SDDecl a
   = SDDefFun N [N] (SDExp a)
-  | SDDefCons N Int
+  | SDDefCons a Int
   deriving (Functor, Foldable, Traversable)
 
 --specify :: N -> Maybe SDExp
@@ -69,14 +69,14 @@ data SDDecl a
 --specify "Prelude.Bool.True"  = Just (SDExt $ EV "True")
 --specify "Prelude.Bool.False" = Just (SDExt $ EV "False")
 --specify _                    = Nothing
-sdAlt :: DAlt -> SDAlt a
+sdAlt :: DAlt -> SDAlt N
 sdAlt =
   \case
     DConCase _ (showCG -> target) (map showCG -> binds) (sdExp -> body) -> SDConCase target binds body
     DConstCase const (sdExp -> body) -> SDConstCase const body
     DDefaultCase (sdExp -> body) -> SDDefaultCase body
 
-sdExp :: DExp -> SDExp a
+sdExp :: DExp -> SDExp N
 sdExp =
   \case
     DV (showCG -> name) -> SDVar name
@@ -102,7 +102,7 @@ sdExp =
           | show n == "FFunc" -> SDExt (EF name xs)
         _ -> error $ "Not supported FFI ops :" ++ show fname
 
-sdDecl :: DDecl -> SDDecl a
+sdDecl :: DDecl -> SDDecl N
 sdDecl =
   \case
     DFun (showCG -> fname) (map showCG -> args) (sdExp -> body) -> SDDefFun fname args body
