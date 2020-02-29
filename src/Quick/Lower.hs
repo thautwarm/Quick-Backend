@@ -168,7 +168,11 @@ caseSplit xs = caseSplitImpl (CaseSplit [] [] [] Nothing) xs
   where
     caseSplitImpl cs =
       \case
-        [] -> cs
+        [] -> let CaseSplit
+                    { constCases = (reverse -> constCases)
+                    , enumCases = (reverse -> enumCases)
+                    , constCases = (reverse -> constCases)
+                    } = cs in cs {constCases, enumCases, constCases}
         x:xs ->
           flip caseSplitImpl xs $
           case x

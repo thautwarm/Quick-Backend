@@ -10,7 +10,7 @@ def literal_map(kind, x)
     case kind
     when 'float'
         x.to_f
-    when "int",  "bigint"
+    when "int",  "bigInt"
         x.to_i
     when "char", "string"
         x
@@ -18,6 +18,8 @@ def literal_map(kind, x)
         x == "1" ? true : false
     when "unit"
         nil
+    else
+        raise
     end
 end
 
@@ -78,11 +80,12 @@ class Generate
     def Switch(var, xs, body)
         ret = []
         i = 0
-        cs.each do |cc, stmts|
+        xs.each do |cc, stmts|
             head = i == 0 ? "if" : "elsif"
             ret.push "#{head} #{var} == #{cc}"
             raise "error" unless stmts.is_a? Array
             ret.push [].concat(*stmts)
+            i += 1
         end
         ret.push "else"
         raise "error" unless body.is_a? Array
@@ -139,7 +142,13 @@ def read_and_gen(io)
                 kind = pats[1]
                 length = pats[2].to_i
                 buf = io.read(length)
-                io.readline
+                
+                if buf.end_with? "\r"
+                    buf += io.readline
+                else
+                    io.readline
+                end
+
                 obj_stack.push literal_map(kind, buf)
 
             when "list"
@@ -172,7 +181,7 @@ end
 
 =end
 def main(filename, out)
-    File.open(filename) do |file|
+    File.open(filename, universal_newline: true) do |file|
         code_secs = [].concat(*read_and_gen(file))
         if out.downcase == 'std'
             STDOUT.write("require_relative 'idris_rts'\n")
@@ -181,7 +190,7 @@ def main(filename, out)
                 code_list_to_string('', STDOUT, code_sec)
             end
         else
-            File.open(out, "w") do |wfile|
+            File.open(out, "w", universal_newline: true) do |wfile|
                 wfile.write("require_relative 'idris_rts'\n")
                 wfile.write("$__RTS = IdrisRTS::new\n")
                 code_secs.each do |code_sec|
