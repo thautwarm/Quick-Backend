@@ -48,13 +48,13 @@ preDecl (x:xs) = do
       | SDDefCons fn _ <- x = fn
 
 lower ::
-     forall s a. IsScope s
+     forall s a l. (IsScope s, IsTagStore s l)
   => [SDDecl a]
   -> State s [WDecl]
 lower decls = do
   preDecl decls
-  error ""
-
+  forM decls lowerDecl
+  
 lowerDecl ::
      forall s a l. (IsScope s, IsTagStore s l)
   => SDDecl a

@@ -21,19 +21,15 @@ module IRTS.CodegenQB
 import           Data.Map.Strict       (Map)
 import qualified Data.Map.Strict       as Map
 import qualified Data.Set              as Set
-import           Prelude               hiding (writeFile)
-
 import           Control.Arrow
 import           Control.Monad.State
-import           Data.Aeson
-import           Data.Aeson.Text       (encodeToLazyText)
-import           Data.Text.Lazy.IO     (writeFile)
 import           GHC.Generics
 import           Idris.Core.TT
 import           IRTS.CodegenCommon
 import           IRTS.Defunctionalise
 import           IRTS.Lang
 
+import           Quick.Dump            (serialize)
 import           Quick.Lower
 import           Quick.Reusable
 import           Quick.SDDecl
@@ -41,7 +37,7 @@ import           Quick.SymbolEmulation
 import           Quick.Weakest
 
 codegenQB :: Bool -> Bool -> Bool -> CodeGenerator
-codegenQB anf regOpt symEmu ci = writeFile filename (encodeToLazyText "")
+codegenQB anf regOpt symEmu ci = writeFile filename $ serialize tree
   where
     filename = outputFile ci
     sddecls = map (sdDecl . snd) (defunDecls ci)

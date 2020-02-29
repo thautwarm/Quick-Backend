@@ -38,30 +38,11 @@ class Dumpable a =>
       IsConst a
 
 
-instance Dumpable Int where
-  dump i = Leaf {litKind = Int, litStr = show i}
-
 instance IsConst Int
-
-instance Dumpable Integer where
-  dump i = Leaf {litKind = Int, litStr = show i}
 
 instance IsConst Integer
 
-instance Dumpable Bool where
-  dump i =
-    Leaf
-      { litKind = Boolean
-      , litStr =
-          if i
-            then "1"
-            else "0"
-      }
-
 instance IsConst Bool
-
-instance Dumpable String where
-  dump s = Leaf {litKind = Str, litStr = s}
 
 instance IsConst String
 
@@ -83,12 +64,7 @@ instance Dumpable CC where
 
 instance IsConst CC
 
-instance Dumpable () where
-  dump _ = Leaf {litKind = Unit, litStr = ""}
 
 instance IsConst ()
-
-instance Dumpable DumpTree where
-  dump l = l
 
 instance IsConst DumpTree
