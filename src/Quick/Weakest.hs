@@ -35,10 +35,6 @@ data WDecl a where
   WDefFun :: a -> [a] -> [WStmt a] -> WDecl a
   WTop :: WStmt a -> WDecl a
 
-data Prop
-  = IsANF
-  | IsRecur
-
 data DefUse
   = Def N
   | Use N
