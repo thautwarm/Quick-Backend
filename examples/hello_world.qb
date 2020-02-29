@@ -1,0 +1,6235 @@
+list 507
+constructor Defun 3
+literal string 14
+ForeignEnv.::0
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+Prelude.List.::1
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 18
+Prelude.Stream.::2
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 2
+=3
+list 4
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+literal string 18
+constructor_arg510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 4
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Var 1
+literal string 18
+constructor_arg510
+constructor Defun 3
+literal string 29
+Language.Reflection.ATDouble4
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.ATInt5
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.AType6
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Interfaces.Abs7
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 27
+Prelude.WellFounded.Access8
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Prelude.WellFounded.Accessible9
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 22
+Prelude.Nat.Additive10
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.AllTypes11
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Errors.AlreadyDefined12
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Prelude.Applicative.Alternative13
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 25
+Language.Reflection.App14
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+Prelude.Show.App15
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.File.Append16
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Prelude.Applicative.Applicative17
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 33
+Language.Reflection.ApplyTactic18
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.ArithTy19
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.B1620
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.B3221
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.B6422
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Language.Reflection.B823
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Language.Reflection.BI24
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Show.Backtick25
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Bind26
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Binder27
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 19
+Prelude.Bool.Bool28
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Ownership.Borrowed29
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 27
+Language.Reflection.Bound30
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.ByReflection31
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+CData32
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+FFI_C.CFnPtr33
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 13
+FFI_C.C_Any34
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 15
+FFI_C.C_CData35
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 15
+FFI_C.C_Float36
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 12
+FFI_C.C_Fn37
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+FFI_C.C_FnBase38
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+FFI_C.C_FnIO39
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+FFI_C.C_FnT40
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+FFI_C.C_FnTypes41
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 19
+FFI_C.C_IntBits1642
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+FFI_C.C_IntBits3243
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+FFI_C.C_IntBits6444
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+FFI_C.C_IntBits845
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+FFI_C.C_IntChar46
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+FFI_C.C_IntNative47
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+FFI_C.C_IntT48
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+FFI_C.C_IntTypes49
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 14
+FFI_C.C_MPtr50
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+FFI_C.C_Ptr51
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+FFI_C.C_Str52
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 15
+FFI_C.C_Types53
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 14
+FFI_C.C_Unit54
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Errors.CantConvert55
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.CantInferType56
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.CantIntroduce57
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Errors.CantMatch58
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Errors.CantResolve59
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 44
+Language.Reflection.Errors.CantResolveAlts60
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.CantSolveGoal61
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Errors.CantUnify62
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Case63
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.CaseN64
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Prelude.Cast.Cast65
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 24
+Language.Reflection.Ch66
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.Claim67
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Prelude.Nat.CmpEQ68
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Prelude.Nat.CmpGT69
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Prelude.Nat.CmpLT70
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Nat.CmpNat71
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 29
+Language.Reflection.Compute72
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.Const73
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Elab.Constraint74
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.Constructor75
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.ConstructorDefn76
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.CtorArg77
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.CtorField78
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.CtorParameter79
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.DCon80
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 22
+Prelude.File.DHandle81
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 18
+FFI_Export.DHere82
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+Builtins.DPair83
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 19
+FFI_Export.DThere84
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+FFI_Export.Data85
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 24
+FFI_Export.DataDefined86
+list 4
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+literal string 18
+constructor_arg510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 4
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Var 1
+literal string 18
+constructor_arg510
+constructor Defun 3
+literal string 35
+Language.Reflection.Elab.DataDefn87
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 35
+Language.Reflection.Elab.Datatype88
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Basics.Dec89
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 26
+Decidable.Equality.DecEq90
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Declare91
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.DefineDatatype92
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.DefineFun93
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+Delay94
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+DelayReason95
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 9
+Delayed96
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 24
+Prelude.File.Directory97
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.Show.Dollar98
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Interfaces.EQ99
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.Either.Either100
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 32
+Language.Reflection.Elab.Elab101
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 24
+Prelude.Pairs.Element102
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+FFI_Export.End103
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 15
+Prelude.Enum104
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 24
+Prelude.Interfaces.Eq105
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 18
+Prelude.Show.Eq106
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Erased107
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.Erased108
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 35
+Language.Reflection.Elab.Erasure109
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Language.Reflection.Errors.Err110
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Providers.Error111
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.ErrorReportPart112
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.Pairs.Evidence113
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Exact114
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Pairs.Exists115
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.Explicit116
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+ForeignEnv.FEnv117
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 6
+FFI118
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 22
+FFI_Export.FFI_Base119
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 25
+FFI_Export.FFI_ExpType120
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 24
+FFI_Export.FFI_Export121
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 28
+FFI_Export.FFI_Exportable122
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 21
+FFI_Export.FFI_Fun123
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 20
+FFI_Export.FFI_IO124
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 22
+FFI_Export.FFI_Prim125
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 21
+FFI_Export.FFI_Ret126
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 7
+FFun127
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.File.FHandle128
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 7
+FRet129
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 6
+FTy130
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 27
+Language.Reflection.Fail131
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.Bool.False132
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.File.File133
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.File.FileError134
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.FileLoc135
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Prelude.File.FileNotFound136
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Prelude.File.FileReadError137
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Prelude.File.FileWriteError138
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.Fill139
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Fixity140
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.Fl141
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Focus142
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Prelude.Foldable.Foldable143
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 29
+Language.Reflection.Forgot144
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Prelude.Interfaces.Fractional145
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 17
+FFI_Export.Fun146
+list 4
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+literal string 18
+constructor_arg510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 4
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Var 1
+literal string 18
+constructor_arg510
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.FunArg147
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Elab.FunClause148
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 35
+Language.Reflection.Elab.FunDefn149
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 26
+Prelude.Functor.Functor150
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 28
+Language.Reflection.GHole151
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.Interfaces.GT152
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Prelude.File.GenericFileError153
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Nat.GetAdditive154
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Prelude.Nat.GetMultiplicative155
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.GoalType156
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Guess157
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.Hole158
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Language.Reflection.I159
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 6
+IO'160
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 27
+Language.Reflection.IT16161
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.IT32162
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.IT64163
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.IT8164
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.ITBig165
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.ITChar166
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.ITFixed167
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.ITNative168
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Implementation169
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.ImplementationCtorN170
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.ImplementationN171
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.Implicit172
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.List.InBounds173
+list 3
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+literal string 18
+constructor_arg509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Var 1
+literal string 18
+constructor_arg509
+constructor Defun 3
+literal string 23
+Prelude.List.InFirst174
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.List.InLater175
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.Inaccessible176
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 44
+Language.Reflection.Errors.IncompleteTerm177
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Language.Reflection.Induction178
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 11
+Infinite179
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Errors.InfiniteUnify180
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Language.Reflection.Elab.Infix181
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Infixl182
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Infixr183
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.IntTy184
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Prelude.Interfaces.Integral185
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 41
+Language.Reflection.Errors.InternalMsg186
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Intro187
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.Intros188
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.InvalidTCArg189
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Maybe.IsJust190
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 26
+Prelude.List.IsNonEmpty191
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.Nat.IsSucc192
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 25
+Prelude.Maybe.ItIsJust193
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Nat.ItIsSucc194
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 11
+JS_Float195
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 8
+JS_Fn196
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 12
+JS_FnBase197
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 10
+JS_FnIO198
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 9
+JS_FnT199
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+JS_FnTypes200
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 13
+JS_IntChar201
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 15
+JS_IntNative202
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 10
+JS_IntT203
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+JS_IntTypes204
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 9
+JS_Ptr205
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 9
+JS_Str206
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 11
+JS_Types207
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 10
+JS_Unit208
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+JsFn209
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 21
+Prelude.Maybe.Just210
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 24
+Prelude.Interfaces.LT211
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+Prelude.Nat.LTE212
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 22
+Prelude.Nat.LTESucc213
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 22
+Prelude.Nat.LTEZero214
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Lam215
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 12
+LazyValue216
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 22
+Prelude.Either.Left217
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 28
+Prelude.Nat.LeftIsNotZero218
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Let219
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.LetTac220
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.LetTacTy221
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.List.List222
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 43
+Language.Reflection.Errors.LoadingFailed223
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.MN224
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 13
+ManagedPtr225
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Prelude.Interfaces.MaxBound226
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 22
+Prelude.Maybe.Maybe227
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 28
+Language.Reflection.MetaN228
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.MethodN229
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Prelude.Interfaces.MinBound230
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 17
+FFI_C.MkCFnPtr231
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 19
+Builtins.MkDPair232
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.MkDatatype233
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 8
+MkFFI234
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.MkFunArg235
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.MkFunClause236
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+MkIO237
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 46
+Language.Reflection.Elab.MkImpossibleClause238
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 9
+MkJsFn239
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 18
+Builtins.MkPair240
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 14
+FFI_C.MkRaw241
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 27
+Prelude.Strings.MkString242
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Builtins.MkUPair243
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 9
+MkUnit244
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.File.Mode245
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 22
+Prelude.Monad.Monad246
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 25
+Prelude.Algebra.Monoid247
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 33
+Language.Reflection.Errors.Msg248
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Prelude.Nat.Multiplicative249
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.NS250
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.NamePart251
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.NameType252
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 18
+Prelude.Nat.Nat253
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.NativeTy254
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.Interfaces.Neg255
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 17
+ForeignEnv.Nil256
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 19
+Prelude.List.Nil257
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Basics.No258
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Errors.NoRewriting259
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 44
+Language.Reflection.Errors.NoSuchVariable260
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Errors.NoTypeDecl261
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Errors.NoValidAlts262
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 53
+Language.Reflection.Errors.NonCollapsiblePostulate263
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.List.NonEmpty264
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 45
+Language.Reflection.Errors.NonFunctionType265
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Nat.NotBothZero266
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 41
+Language.Reflection.Errors.NotEquality267
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Elab.NotErased268
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Errors.NotInjective269
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.Maybe.Nothing270
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.NullType271
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.Interfaces.Num272
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 20
+Prelude.Show.Open273
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.Interfaces.Ord274
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 30
+Prelude.Interfaces.Ordering275
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Language.Reflection.P276
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.PVTy277
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.PVar278
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+Builtins.Pair279
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 30
+Language.Reflection.ParentN280
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Prelude.File.PermissionDenied281
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.Pi282
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 35
+Language.Reflection.Elab.Plicity283
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Show.Prec284
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.Prefix285
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Prelude.Show.PrefixMinus286
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 9
+PrimIO287
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 51
+Language.Reflection.Elab.Prim__AddImplementation288
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Apply289
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__Attack290
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__BindElab291
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Check292
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Claim293
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__Compute294
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__Converts295
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Debug296
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 49
+Language.Reflection.Elab.Prim__DeclareDatatype297
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 45
+Language.Reflection.Elab.Prim__DeclareType298
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 48
+Language.Reflection.Elab.Prim__DefineDatatype299
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 48
+Language.Reflection.Elab.Prim__DefineFunction300
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Elab.Prim__Env301
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.Prim__Fail302
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.Prim__Fill303
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__Fixity304
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Focus305
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__Forall306
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__Gensym307
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.Prim__Goal308
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Guess309
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Holes310
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 11
+Prim__IO311
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Intro312
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__IsTCName313
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__LetBind314
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 44
+Language.Reflection.Elab.Prim__LookupArgs315
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 48
+Language.Reflection.Elab.Prim__LookupDatatype316
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 47
+Language.Reflection.Elab.Prim__LookupFunDefn317
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__LookupTy318
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 44
+Language.Reflection.Elab.Prim__MatchApply319
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__Metavar320
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Elab.Prim__Namespace321
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Elab.Prim__Normalise322
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__PatBind323
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__PatVar324
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__PureElab325
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 47
+Language.Reflection.Elab.Prim__RecursiveElab326
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Elab.Prim__ResolveTC327
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__Rewrite328
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Elab.Prim__Search329
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 39
+Language.Reflection.Elab.Prim__Solve330
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 48
+Language.Reflection.Elab.Prim__SourceLocation331
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Elab.Prim__Try332
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.Prim__TryCatch333
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 41
+Language.Reflection.Elab.Prim__Unfocus334
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.Prim__Whnf335
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 48
+Language.Reflection.Errors.ProgramLineComment336
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 45
+Language.Reflection.Errors.ProofSearchFail337
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Prelude.Providers.Provide338
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Prelude.Providers.Provider339
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 43
+Language.Reflection.Errors.ProviderError340
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 6
+Ptr341
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.Quotable342
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 27
+Language.Reflection.RApp343
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.RBind344
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Language.Reflection.RConstant345
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.RType346
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.RUType347
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 12
+FFI_C.Raw348
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 26
+Language.Reflection.Raw349
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.RawPart350
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.File.Read351
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+Ownership.Read352
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.File.ReadAppend353
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Prelude.File.ReadWrite354
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Prelude.File.ReadWriteTruncate355
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Ref356
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.Refine357
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+Refl358
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Language.Reflection.ReflConst359
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 30
+Language.Reflection.Reflect360
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.Rewrite361
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Either.Right362
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 29
+Prelude.Nat.RightIsNotZero363
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+Prelude.Nat.S364
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.SN365
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.Search366
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Prelude.Algebra.Semigroup367
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 26
+Language.Reflection.Seq368
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Show.Show369
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 28
+Prelude.WellFounded.Sized370
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 27
+Language.Reflection.Skip371
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.Solve372
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.SourceFC373
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.SourceLocation374
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.SpecialName375
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Str376
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Strings.StrCons377
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Strings.StrM378
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 25
+Prelude.Strings.StrNil379
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.StrType380
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Prelude.Stream.Stream381
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 31
+Prelude.Strings.StringBuffer382
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Language.Reflection.SubReport383
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 23
+Prelude.Pairs.Subset384
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 10
+Symbol_385
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 27
+Language.Reflection.TCon386
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.TConst387
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.TT388
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.TTName389
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.TTUExp390
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.TType391
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Language.Reflection.Tactic392
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.TermPart393
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.TextPart394
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 11
+TheWorld395
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 31
+Language.Reflection.TheWorld396
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 46
+Language.Reflection.Errors.TooManyArguments397
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.Traversable.Traversable398
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 30
+Language.Reflection.Trivial399
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Bool.True400
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Try401
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Language.Reflection.Elab.TyConArg402
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.Elab.TyConIndex403
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 42
+Language.Reflection.Elab.TyConParameter404
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Language.Reflection.Elab.TyDecl405
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 25
+Language.Reflection.UN406
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 17
+Builtins.UPair407
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 28
+Language.Reflection.UType408
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.UVal409
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 27
+Language.Reflection.UVar410
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Language.Reflection.Unfocus411
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Errors.UnifyScope412
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.Uninhabited.Uninhabited413
+list 1
+literal string 18
+constructor_arg507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 1
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Defun 3
+literal string 33
+Language.Reflection.UniqueType414
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+Unit415
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.Universe416
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 43
+Language.Reflection.Errors.UniverseError417
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 45
+Language.Reflection.Errors.UnknownImplicit418
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 20
+Prelude.Show.User419
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 24
+Language.Reflection.V420
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Language.Reflection.Var421
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 7
+Void422
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Language.Reflection.VoidType423
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.WellFounded.WellFounded424
+list 2
+literal string 18
+constructor_arg507
+literal string 18
+constructor_arg508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Var 1
+literal string 18
+constructor_arg507
+constructor Var 1
+literal string 18
+constructor_arg508
+constructor Defun 3
+literal string 29
+Language.Reflection.WhereN425
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Language.Reflection.Errors.WithFnType426
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Language.Reflection.WithN427
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 8
+World428
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Language.Reflection.WorldType429
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 29
+Prelude.File.WriteTruncate430
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.Basics.Yes431
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 16
+Prelude.Nat.Z432
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+assert_unreachable433
+list 0
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 11
+call__IO434
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 10
+{arg_2}509
+literal unit 0
+
+constructor Defun 3
+literal string 14
+idris_crash435
+list 0
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 10
+io_bind436
+list 6
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+literal string 8
+{k_4}511
+literal string 8
+{w_5}512
+list 1
+constructor Return 1
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 8
+{k_4}511
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Var 1
+literal string 8
+{w_5}512
+constructor Var 1
+literal string 8
+{w_5}512
+constructor Defun 3
+literal string 10
+io_pure437
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 8
+{w_3}510
+list 1
+constructor Return 1
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 12
+Main.main438
+list 1
+literal string 9
+{in_0}507
+list 3
+constructor Introduction 1
+literal string 9
+{in_1}508
+constructor Update 2
+literal string 9
+{in_1}508
+constructor ExternalCall 2
+literal string 8
+op_write
+list 2
+constructor Var 1
+literal string 9
+{in_0}507
+literal string 6
+hello
+
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 16
+mkForeignPrim439
+list 0
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 14
+prim__asPtr440
+list 1
+literal string 10
+{arg_0}507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 1
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Defun 3
+literal string 21
+prim__eqManagedPtr441
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 14
+prim__eqPtr442
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 20
+prim__managedNull443
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 13
+prim__null444
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 15
+prim__peek16445
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 15
+prim__peek32446
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 15
+prim__peek64447
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 14
+prim__peek8448
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 19
+prim__peekDouble449
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 16
+prim__peekPtr450
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 19
+prim__peekSingle451
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 15
+prim__poke16452
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 15
+prim__poke32453
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 15
+prim__poke64454
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 14
+prim__poke8455
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 19
+prim__pokeDouble456
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 16
+prim__pokePtr457
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 19
+prim__pokeSingle458
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 4
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Defun 3
+literal string 18
+prim__ptrOffset459
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 18
+prim__readChars460
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 17
+prim__readFile461
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 20
+prim__registerPtr462
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 18
+prim__sizeofPtr463
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 15
+prim__stderr464
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 14
+prim__stdin465
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 15
+prim__stdout466
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 0
+constructor Defun 3
+literal string 11
+prim__vm467
+list 1
+literal string 10
+{arg_0}507
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 1
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Defun 3
+literal string 18
+prim__writeFile468
+list 3
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 11
+op_external
+list 3
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 20
+prim__writeString469
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 8
+op_write
+list 2
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Var 1
+literal string 10
+{arg_1}508
+constructor Defun 3
+literal string 15
+prim_io_bind470
+list 4
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+list 1
+constructor Return 1
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 10
+{arg_3}510
+constructor Var 1
+literal string 10
+{arg_2}509
+constructor Defun 3
+literal string 10
+run__IO471
+list 2
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+list 1
+constructor Return 1
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 10
+{arg_1}508
+literal unit 0
+
+constructor Defun 3
+literal string 22
+unsafePerformPrimIO472
+list 0
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 8
+world473
+list 1
+literal string 10
+{arg_0}507
+list 1
+constructor Return 1
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Defun 3
+literal string 12
+{APPLY_0}474
+list 2
+literal string 9
+{fn_0}507
+literal string 10
+{arg_0}508
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 13
+{APPLY2_0}475
+list 3
+literal string 9
+{fn_0}507
+literal string 11
+{arg0_0}508
+literal string 11
+{arg1_0}509
+list 1
+constructor Return 1
+literal unit 0
+
+constructor Defun 3
+literal string 11
+{EVAL_0}476
+list 1
+literal string 10
+{arg_0}507
+list 4
+constructor Introduction 1
+literal string 13
+valToMatch508
+constructor Update 2
+literal string 13
+valToMatch508
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Introduction 1
+literal string 13
+caseMerged509
+constructor Return 1
+constructor Var 1
+literal string 10
+{arg_0}507
+constructor Defun 3
+literal string 14
+{__Infer_0}477
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+{__infer_0}478
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 14
+{runMain_0}479
+list 0
+list 1
+constructor Return 1
+constructor Call 2
+literal string 11
+{EVAL_0}476
+list 1
+constructor Call 2
+literal string 12
+Main.main438
+list 1
+literal unit 0
+
+constructor Defun 3
+literal string 37
+io_bind_IO__idr_108_34_108_36_case480
+list 8
+literal string 10
+{arg_0}507
+literal string 10
+{arg_1}508
+literal string 10
+{arg_2}509
+literal string 10
+{arg_3}510
+literal string 10
+{arg_4}511
+literal string 10
+{arg_5}512
+literal string 10
+{arg_6}513
+literal string 10
+{arg_7}514
+list 1
+constructor Return 1
+constructor Call 2
+literal string 12
+{APPLY_0}474
+list 2
+constructor Var 1
+literal string 10
+{arg_7}514
+constructor Var 1
+literal string 10
+{arg_5}512
+constructor Defun 3
+literal string 31
+Prelude.Interfaces.Abs_ictor481
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Prelude.Applicative.Alternative_ictor482
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Prelude.Applicative.Applicative_ictor483
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Cast.Cast_ictor484
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 33
+Decidable.Equality.DecEq_ictor485
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 21
+Prelude.Enum_ictor486
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 30
+Prelude.Interfaces.Eq_ictor487
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.Foldable.Foldable_ictor488
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Prelude.Interfaces.Fractional_ictor489
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 32
+Prelude.Functor.Functor_ictor490
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Prelude.Interfaces.Integral_ictor491
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Prelude.Interfaces.MaxBound_ictor492
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 36
+Prelude.Interfaces.MinBound_ictor493
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 28
+Prelude.Monad.Monad_ictor494
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Prelude.Algebra.Monoid_ictor495
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Prelude.Interfaces.Neg_ictor496
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Prelude.Interfaces.Num_ictor497
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 31
+Prelude.Interfaces.Ord_ictor498
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 37
+Language.Reflection.Quotable_ictor499
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 38
+Language.Reflection.ReflConst_ictor500
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.Algebra.Semigroup_ictor501
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 26
+Prelude.Show.Show_ictor502
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 34
+Prelude.WellFounded.Sized_ictor503
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Prelude.Traversable.Traversable_ictor504
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Prelude.Uninhabited.Uninhabited_ictor505
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
+constructor Defun 3
+literal string 40
+Prelude.WellFounded.WellFounded_ictor506
+list 0
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 0
