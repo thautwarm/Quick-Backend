@@ -61,3 +61,6 @@ callff2 n src1 src2 = fcall FF2 (FFunc n) src1 src2
 %inline
 callff3 : String -> Unsafe ->  Unsafe -> Unsafe -> IO Unsafe
 callff3 n src1 src2 src3 = fcall FF3 (FFunc n) src1 src2 src3
+
+unsafe : a -> Unsafe
+unsafe = believe_me

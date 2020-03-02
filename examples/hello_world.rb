@@ -1,7 +1,7 @@
-require_relative 'idris_rts'
-$__RTS = IdrisRTS::new
+require_relative 'rts'
+$__RTS = RTS::new
 def ForeignEnv_46__58__58_()
-  return $__RTS.make_tuple(0)
+  return 0
 
 end
 def Prelude_46_List_46__58__58_(constructor_95_arg,_constructor_95_arg)
@@ -17,15 +17,15 @@ def _61_(constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___construc
 
 end
 def Language_46_Reflection_46_ATDouble()
-  return $__RTS.make_tuple(4)
+  return 4
 
 end
 def Language_46_Reflection_46_ATInt()
-  return $__RTS.make_tuple(5)
+  return 5
 
 end
 def Language_46_Reflection_46_AType()
-  return $__RTS.make_tuple(6)
+  return 6
 
 end
 def Prelude_46_Interfaces_46_Abs(constructor_95_arg)
@@ -33,7 +33,7 @@ def Prelude_46_Interfaces_46_Abs(constructor_95_arg)
 
 end
 def Prelude_46_WellFounded_46_Access()
-  return $__RTS.make_tuple(8)
+  return 8
 
 end
 def Prelude_46_WellFounded_46_Accessible(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
@@ -41,15 +41,15 @@ def Prelude_46_WellFounded_46_Accessible(constructor_95_arg,_constructor_95_arg,
 
 end
 def Prelude_46_Nat_46_Additive()
-  return $__RTS.make_tuple(10)
+  return 10
 
 end
 def Language_46_Reflection_46_AllTypes()
-  return $__RTS.make_tuple(11)
+  return 11
 
 end
 def Language_46_Reflection_46_Errors_46_AlreadyDefined()
-  return $__RTS.make_tuple(12)
+  return 12
 
 end
 def Prelude_46_Applicative_46_Alternative(constructor_95_arg)
@@ -57,15 +57,15 @@ def Prelude_46_Applicative_46_Alternative(constructor_95_arg)
 
 end
 def Language_46_Reflection_46_App()
-  return $__RTS.make_tuple(14)
+  return 14
 
 end
 def Prelude_46_Show_46_App()
-  return $__RTS.make_tuple(15)
+  return 15
 
 end
 def Prelude_46_File_46_Append()
-  return $__RTS.make_tuple(16)
+  return 16
 
 end
 def Prelude_46_Applicative_46_Applicative(constructor_95_arg)
@@ -73,39 +73,39 @@ def Prelude_46_Applicative_46_Applicative(constructor_95_arg)
 
 end
 def Language_46_Reflection_46_ApplyTactic()
-  return $__RTS.make_tuple(18)
+  return 18
 
 end
 def Language_46_Reflection_46_ArithTy()
-  return $__RTS.make_tuple(19)
+  return 19
 
 end
 def Language_46_Reflection_46_B16()
-  return $__RTS.make_tuple(20)
+  return 20
 
 end
 def Language_46_Reflection_46_B32()
-  return $__RTS.make_tuple(21)
+  return 21
 
 end
 def Language_46_Reflection_46_B64()
-  return $__RTS.make_tuple(22)
+  return 22
 
 end
 def Language_46_Reflection_46_B8()
-  return $__RTS.make_tuple(23)
+  return 23
 
 end
 def Language_46_Reflection_46_BI()
-  return $__RTS.make_tuple(24)
+  return 24
 
 end
 def Prelude_46_Show_46_Backtick()
-  return $__RTS.make_tuple(25)
+  return 25
 
 end
 def Language_46_Reflection_46_Bind()
-  return $__RTS.make_tuple(26)
+  return 26
 
 end
 def Language_46_Reflection_46_Binder(constructor_95_arg)
@@ -113,7 +113,7 @@ def Language_46_Reflection_46_Binder(constructor_95_arg)
 
 end
 def Prelude_46_Bool_46_Bool()
-  return $__RTS.make_tuple(28)
+  return 28
 
 end
 def Ownership_46_Borrowed(constructor_95_arg)
@@ -121,1615 +121,1647 @@ def Ownership_46_Borrowed(constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Bound()
-  return $__RTS.make_tuple(30)
+  return 30
+
+end
+def FFI_46_Boxed(constructor_95_arg)
+  return $__RTS.make_tuple(31,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_ByReflection()
-  return $__RTS.make_tuple(31)
+  return 32
 
 end
 def CData()
-  return $__RTS.make_tuple(32)
+  return 33
 
 end
 def FFI_95_C_46_CFnPtr(constructor_95_arg)
-  return $__RTS.make_tuple(33,constructor_95_arg)
+  return $__RTS.make_tuple(34,constructor_95_arg)
 
 end
 def FFI_95_C_46_C_95_Any()
-  return $__RTS.make_tuple(34)
+  return 35
 
 end
 def FFI_95_C_46_C_95_CData()
-  return $__RTS.make_tuple(35)
+  return 36
 
 end
 def FFI_95_C_46_C_95_Float()
-  return $__RTS.make_tuple(36)
+  return 37
 
 end
 def FFI_95_C_46_C_95_Fn()
-  return $__RTS.make_tuple(37)
+  return 38
 
 end
 def FFI_95_C_46_C_95_FnBase()
-  return $__RTS.make_tuple(38)
+  return 39
 
 end
 def FFI_95_C_46_C_95_FnIO()
-  return $__RTS.make_tuple(39)
+  return 40
 
 end
 def FFI_95_C_46_C_95_FnT()
-  return $__RTS.make_tuple(40)
+  return 41
 
 end
 def FFI_95_C_46_C_95_FnTypes(constructor_95_arg)
-  return $__RTS.make_tuple(41,constructor_95_arg)
+  return $__RTS.make_tuple(42,constructor_95_arg)
 
 end
 def FFI_95_C_46_C_95_IntBits16()
-  return $__RTS.make_tuple(42)
+  return 43
 
 end
 def FFI_95_C_46_C_95_IntBits32()
-  return $__RTS.make_tuple(43)
+  return 44
 
 end
 def FFI_95_C_46_C_95_IntBits64()
-  return $__RTS.make_tuple(44)
+  return 45
 
 end
 def FFI_95_C_46_C_95_IntBits8()
-  return $__RTS.make_tuple(45)
+  return 46
 
 end
 def FFI_95_C_46_C_95_IntChar()
-  return $__RTS.make_tuple(46)
+  return 47
 
 end
 def FFI_95_C_46_C_95_IntNative()
-  return $__RTS.make_tuple(47)
+  return 48
 
 end
 def FFI_95_C_46_C_95_IntT()
-  return $__RTS.make_tuple(48)
+  return 49
 
 end
 def FFI_95_C_46_C_95_IntTypes(constructor_95_arg)
-  return $__RTS.make_tuple(49,constructor_95_arg)
+  return $__RTS.make_tuple(50,constructor_95_arg)
 
 end
 def FFI_95_C_46_C_95_MPtr()
-  return $__RTS.make_tuple(50)
+  return 51
 
 end
 def FFI_95_C_46_C_95_Ptr()
-  return $__RTS.make_tuple(51)
+  return 52
 
 end
 def FFI_95_C_46_C_95_Str()
-  return $__RTS.make_tuple(52)
+  return 53
 
 end
 def FFI_95_C_46_C_95_Types(constructor_95_arg)
-  return $__RTS.make_tuple(53,constructor_95_arg)
+  return $__RTS.make_tuple(54,constructor_95_arg)
 
 end
 def FFI_95_C_46_C_95_Unit()
-  return $__RTS.make_tuple(54)
+  return 55
 
 end
 def Language_46_Reflection_46_Errors_46_CantConvert()
-  return $__RTS.make_tuple(55)
+  return 56
 
 end
 def Language_46_Reflection_46_Errors_46_CantInferType()
-  return $__RTS.make_tuple(56)
+  return 57
 
 end
 def Language_46_Reflection_46_Errors_46_CantIntroduce()
-  return $__RTS.make_tuple(57)
+  return 58
 
 end
 def Language_46_Reflection_46_Errors_46_CantMatch()
-  return $__RTS.make_tuple(58)
+  return 59
 
 end
 def Language_46_Reflection_46_Errors_46_CantResolve()
-  return $__RTS.make_tuple(59)
+  return 60
 
 end
 def Language_46_Reflection_46_Errors_46_CantResolveAlts()
-  return $__RTS.make_tuple(60)
+  return 61
 
 end
 def Language_46_Reflection_46_Errors_46_CantSolveGoal()
-  return $__RTS.make_tuple(61)
+  return 62
 
 end
 def Language_46_Reflection_46_Errors_46_CantUnify()
-  return $__RTS.make_tuple(62)
+  return 63
 
 end
 def Language_46_Reflection_46_Case()
-  return $__RTS.make_tuple(63)
+  return 64
 
 end
 def Language_46_Reflection_46_CaseN()
-  return $__RTS.make_tuple(64)
+  return 65
 
 end
 def Prelude_46_Cast_46_Cast(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(65,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(66,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Ch()
-  return $__RTS.make_tuple(66)
+  return 67
 
 end
 def Language_46_Reflection_46_Claim()
-  return $__RTS.make_tuple(67)
+  return 68
 
 end
 def Prelude_46_Nat_46_CmpEQ()
-  return $__RTS.make_tuple(68)
+  return 69
 
 end
 def Prelude_46_Nat_46_CmpGT()
-  return $__RTS.make_tuple(69)
+  return 70
 
 end
 def Prelude_46_Nat_46_CmpLT()
-  return $__RTS.make_tuple(70)
+  return 71
 
 end
 def Prelude_46_Nat_46_CmpNat(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(71,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(72,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Compute()
-  return $__RTS.make_tuple(72)
+  return 73
 
 end
 def Language_46_Reflection_46_Const()
-  return $__RTS.make_tuple(73)
+  return 74
 
 end
 def Language_46_Reflection_46_Elab_46_Constraint()
-  return $__RTS.make_tuple(74)
+  return 75
 
 end
 def Language_46_Reflection_46_Elab_46_Constructor()
-  return $__RTS.make_tuple(75)
+  return 76
 
 end
 def Language_46_Reflection_46_Elab_46_ConstructorDefn()
-  return $__RTS.make_tuple(76)
+  return 77
 
 end
 def Language_46_Reflection_46_Elab_46_CtorArg()
-  return $__RTS.make_tuple(77)
+  return 78
 
 end
 def Language_46_Reflection_46_Elab_46_CtorField()
-  return $__RTS.make_tuple(78)
+  return 79
 
 end
 def Language_46_Reflection_46_Elab_46_CtorParameter()
-  return $__RTS.make_tuple(79)
+  return 80
 
 end
 def Language_46_Reflection_46_DCon()
-  return $__RTS.make_tuple(80)
+  return 81
 
 end
 def Prelude_46_File_46_DHandle(constructor_95_arg)
-  return $__RTS.make_tuple(81,constructor_95_arg)
+  return $__RTS.make_tuple(82,constructor_95_arg)
 
 end
 def FFI_95_Export_46_DHere()
-  return $__RTS.make_tuple(82)
+  return 83
 
 end
 def Builtins_46_DPair(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(83,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(84,constructor_95_arg,_constructor_95_arg)
 
 end
 def FFI_95_Export_46_DThere()
-  return $__RTS.make_tuple(84)
+  return 85
 
 end
 def FFI_95_Export_46_Data(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-  return $__RTS.make_tuple(85,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+  return $__RTS.make_tuple(86,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
 
 end
 def FFI_95_Export_46_DataDefined(constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
-  return $__RTS.make_tuple(86,constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
+  return $__RTS.make_tuple(87,constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_DataDefn()
-  return $__RTS.make_tuple(87)
+  return 88
 
 end
 def Language_46_Reflection_46_Elab_46_Datatype()
-  return $__RTS.make_tuple(88)
+  return 89
 
 end
 def Prelude_46_Basics_46_Dec(constructor_95_arg)
-  return $__RTS.make_tuple(89,constructor_95_arg)
-
-end
-def Decidable_46_Equality_46_DecEq(constructor_95_arg)
   return $__RTS.make_tuple(90,constructor_95_arg)
 
 end
+def Decidable_46_Equality_46_DecEq(constructor_95_arg)
+  return $__RTS.make_tuple(91,constructor_95_arg)
+
+end
 def Language_46_Reflection_46_Elab_46_Declare()
-  return $__RTS.make_tuple(91)
+  return 92
 
 end
 def Language_46_Reflection_46_Elab_46_DefineDatatype()
-  return $__RTS.make_tuple(92)
+  return 93
 
 end
 def Language_46_Reflection_46_Elab_46_DefineFun()
-  return $__RTS.make_tuple(93)
+  return 94
 
 end
 def Delay()
-  return $__RTS.make_tuple(94)
+  return 95
 
 end
 def DelayReason()
-  return $__RTS.make_tuple(95)
+  return 96
 
 end
 def Delayed(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(96,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(97,constructor_95_arg,_constructor_95_arg)
 
 end
 def Prelude_46_File_46_Directory()
-  return $__RTS.make_tuple(97)
+  return 98
 
 end
 def Prelude_46_Show_46_Dollar()
-  return $__RTS.make_tuple(98)
+  return 99
 
 end
 def Prelude_46_Interfaces_46_EQ()
-  return $__RTS.make_tuple(99)
+  return 100
 
 end
 def Prelude_46_Either_46_Either(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(100,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(101,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_Elab(constructor_95_arg)
-  return $__RTS.make_tuple(101,constructor_95_arg)
+  return $__RTS.make_tuple(102,constructor_95_arg)
 
 end
 def Prelude_46_Pairs_46_Element()
-  return $__RTS.make_tuple(102)
+  return 103
 
 end
 def FFI_95_Export_46_End()
-  return $__RTS.make_tuple(103)
+  return 104
 
 end
 def Prelude_46_Enum(constructor_95_arg)
-  return $__RTS.make_tuple(104,constructor_95_arg)
-
-end
-def Prelude_46_Interfaces_46_Eq(constructor_95_arg)
   return $__RTS.make_tuple(105,constructor_95_arg)
 
 end
+def Prelude_46_Interfaces_46_Eq(constructor_95_arg)
+  return $__RTS.make_tuple(106,constructor_95_arg)
+
+end
 def Prelude_46_Show_46_Eq()
-  return $__RTS.make_tuple(106)
+  return 107
 
 end
 def Language_46_Reflection_46_Elab_46_Erased()
-  return $__RTS.make_tuple(107)
+  return 108
 
 end
 def Language_46_Reflection_46_Erased()
-  return $__RTS.make_tuple(108)
+  return 109
 
 end
 def Language_46_Reflection_46_Elab_46_Erasure()
-  return $__RTS.make_tuple(109)
+  return 110
 
 end
 def Language_46_Reflection_46_Errors_46_Err()
-  return $__RTS.make_tuple(110)
+  return 111
 
 end
 def Prelude_46_Providers_46_Error()
-  return $__RTS.make_tuple(111)
+  return 112
 
 end
 def Language_46_Reflection_46_ErrorReportPart()
-  return $__RTS.make_tuple(112)
+  return 113
 
 end
 def Prelude_46_Pairs_46_Evidence()
-  return $__RTS.make_tuple(113)
+  return 114
 
 end
 def Language_46_Reflection_46_Exact()
-  return $__RTS.make_tuple(114)
+  return 115
 
 end
 def Prelude_46_Pairs_46_Exists(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(115,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(116,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_Explicit()
-  return $__RTS.make_tuple(116)
+  return 117
 
 end
 def ForeignEnv_46_FEnv(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(117,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(118,constructor_95_arg,_constructor_95_arg)
 
 end
 def FFI()
-  return $__RTS.make_tuple(118)
+  return 119
 
 end
 def FFI_95_Export_46_FFI_95_Base(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-  return $__RTS.make_tuple(119,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+  return $__RTS.make_tuple(120,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
 
 end
 def FFI_95_Export_46_FFI_95_ExpType(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(120,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(121,constructor_95_arg,_constructor_95_arg)
 
 end
 def FFI_95_Export_46_FFI_95_Export(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-  return $__RTS.make_tuple(121,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-
-end
-def FFI_95_Export_46_FFI_95_Exportable(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
   return $__RTS.make_tuple(122,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
 
 end
+def FFI_95_Export_46_FFI_95_Exportable(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+  return $__RTS.make_tuple(123,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+
+end
 def FFI_95_Export_46_FFI_95_Fun(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(123,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(124,constructor_95_arg,_constructor_95_arg)
 
 end
 def FFI_95_Export_46_FFI_95_IO(constructor_95_arg)
-  return $__RTS.make_tuple(124,constructor_95_arg)
-
-end
-def FFI_95_Export_46_FFI_95_Prim(constructor_95_arg)
   return $__RTS.make_tuple(125,constructor_95_arg)
 
 end
-def FFI_95_Export_46_FFI_95_Ret(constructor_95_arg)
+def FFI_95_Export_46_FFI_95_Prim(constructor_95_arg)
   return $__RTS.make_tuple(126,constructor_95_arg)
 
 end
+def FFI_95_Export_46_FFI_95_Ret(constructor_95_arg)
+  return $__RTS.make_tuple(127,constructor_95_arg)
+
+end
 def FFun()
-  return $__RTS.make_tuple(127)
+  return 128
+
+end
+def FFI_46_FFunc()
+  return 129
 
 end
 def Prelude_46_File_46_FHandle(constructor_95_arg)
-  return $__RTS.make_tuple(128,constructor_95_arg)
+  return $__RTS.make_tuple(130,constructor_95_arg)
 
 end
 def FRet()
-  return $__RTS.make_tuple(129)
+  return 131
 
 end
 def FTy(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-  return $__RTS.make_tuple(130,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+  return $__RTS.make_tuple(132,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+
+end
+def FFI_46_FVar()
+  return 133
 
 end
 def Language_46_Reflection_46_Fail()
-  return $__RTS.make_tuple(131)
+  return 134
 
 end
 def Prelude_46_Bool_46_False()
-  return $__RTS.make_tuple(132)
+  return 135
 
 end
 def Prelude_46_File_46_File()
-  return $__RTS.make_tuple(133)
+  return 136
 
 end
 def Prelude_46_File_46_FileError()
-  return $__RTS.make_tuple(134)
+  return 137
 
 end
 def Language_46_Reflection_46_FileLoc()
-  return $__RTS.make_tuple(135)
+  return 138
 
 end
 def Prelude_46_File_46_FileNotFound()
-  return $__RTS.make_tuple(136)
+  return 139
 
 end
 def Prelude_46_File_46_FileReadError()
-  return $__RTS.make_tuple(137)
+  return 140
 
 end
 def Prelude_46_File_46_FileWriteError()
-  return $__RTS.make_tuple(138)
+  return 141
 
 end
 def Language_46_Reflection_46_Fill()
-  return $__RTS.make_tuple(139)
+  return 142
 
 end
 def Language_46_Reflection_46_Elab_46_Fixity()
-  return $__RTS.make_tuple(140)
+  return 143
 
 end
 def Language_46_Reflection_46_Fl()
-  return $__RTS.make_tuple(141)
+  return 144
 
 end
 def Language_46_Reflection_46_Focus()
-  return $__RTS.make_tuple(142)
+  return 145
 
 end
 def Prelude_46_Foldable_46_Foldable(constructor_95_arg)
-  return $__RTS.make_tuple(143,constructor_95_arg)
+  return $__RTS.make_tuple(146,constructor_95_arg)
+
+end
+def FFI_46_ForeignName()
+  return 147
 
 end
 def Language_46_Reflection_46_Forgot()
-  return $__RTS.make_tuple(144)
+  return 148
 
 end
 def Prelude_46_Interfaces_46_Fractional(constructor_95_arg)
-  return $__RTS.make_tuple(145,constructor_95_arg)
-
-end
-def FFI_95_Export_46_Fun(constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
-  return $__RTS.make_tuple(146,constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
-
-end
-def Language_46_Reflection_46_Elab_46_FunArg()
-  return $__RTS.make_tuple(147)
-
-end
-def Language_46_Reflection_46_Elab_46_FunClause(constructor_95_arg)
-  return $__RTS.make_tuple(148,constructor_95_arg)
-
-end
-def Language_46_Reflection_46_Elab_46_FunDefn(constructor_95_arg)
   return $__RTS.make_tuple(149,constructor_95_arg)
 
 end
+def FFI_95_Export_46_Fun(constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
+  return $__RTS.make_tuple(150,constructor_95_arg,_constructor_95_arg,__constructor_95_arg,___constructor_95_arg)
+
+end
+def Language_46_Reflection_46_Elab_46_FunArg()
+  return 151
+
+end
+def Language_46_Reflection_46_Elab_46_FunClause(constructor_95_arg)
+  return $__RTS.make_tuple(152,constructor_95_arg)
+
+end
+def Language_46_Reflection_46_Elab_46_FunDefn(constructor_95_arg)
+  return $__RTS.make_tuple(153,constructor_95_arg)
+
+end
 def Prelude_46_Functor_46_Functor(constructor_95_arg)
-  return $__RTS.make_tuple(150,constructor_95_arg)
+  return $__RTS.make_tuple(154,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_GHole()
-  return $__RTS.make_tuple(151)
+  return 155
 
 end
 def Prelude_46_Interfaces_46_GT()
-  return $__RTS.make_tuple(152)
+  return 156
 
 end
 def Prelude_46_File_46_GenericFileError()
-  return $__RTS.make_tuple(153)
+  return 157
 
 end
 def Prelude_46_Nat_46_GetAdditive()
-  return $__RTS.make_tuple(154)
+  return 158
 
 end
 def Prelude_46_Nat_46_GetMultiplicative()
-  return $__RTS.make_tuple(155)
+  return 159
 
 end
 def Language_46_Reflection_46_GoalType()
-  return $__RTS.make_tuple(156)
+  return 160
 
 end
 def Language_46_Reflection_46_Guess()
-  return $__RTS.make_tuple(157)
+  return 161
 
 end
 def Language_46_Reflection_46_Hole()
-  return $__RTS.make_tuple(158)
+  return 162
 
 end
 def Language_46_Reflection_46_I()
-  return $__RTS.make_tuple(159)
+  return 163
 
 end
 def IO_39_(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(160,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(164,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_IT16()
-  return $__RTS.make_tuple(161)
+  return 165
 
 end
 def Language_46_Reflection_46_IT32()
-  return $__RTS.make_tuple(162)
+  return 166
 
 end
 def Language_46_Reflection_46_IT64()
-  return $__RTS.make_tuple(163)
+  return 167
 
 end
 def Language_46_Reflection_46_IT8()
-  return $__RTS.make_tuple(164)
+  return 168
 
 end
 def Language_46_Reflection_46_ITBig()
-  return $__RTS.make_tuple(165)
+  return 169
 
 end
 def Language_46_Reflection_46_ITChar()
-  return $__RTS.make_tuple(166)
+  return 170
 
 end
 def Language_46_Reflection_46_ITFixed()
-  return $__RTS.make_tuple(167)
+  return 171
 
 end
 def Language_46_Reflection_46_ITNative()
-  return $__RTS.make_tuple(168)
+  return 172
 
 end
 def Language_46_Reflection_46_Implementation()
-  return $__RTS.make_tuple(169)
+  return 173
 
 end
 def Language_46_Reflection_46_ImplementationCtorN()
-  return $__RTS.make_tuple(170)
+  return 174
 
 end
 def Language_46_Reflection_46_ImplementationN()
-  return $__RTS.make_tuple(171)
+  return 175
 
 end
 def Language_46_Reflection_46_Elab_46_Implicit()
-  return $__RTS.make_tuple(172)
+  return 176
 
 end
 def Prelude_46_List_46_InBounds(constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
-  return $__RTS.make_tuple(173,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
+  return $__RTS.make_tuple(177,constructor_95_arg,_constructor_95_arg,__constructor_95_arg)
 
 end
 def Prelude_46_List_46_InFirst()
-  return $__RTS.make_tuple(174)
+  return 178
 
 end
 def Prelude_46_List_46_InLater()
-  return $__RTS.make_tuple(175)
+  return 179
 
 end
 def Language_46_Reflection_46_Errors_46_Inaccessible()
-  return $__RTS.make_tuple(176)
+  return 180
 
 end
 def Language_46_Reflection_46_Errors_46_IncompleteTerm()
-  return $__RTS.make_tuple(177)
+  return 181
 
 end
 def Language_46_Reflection_46_Induction()
-  return $__RTS.make_tuple(178)
+  return 182
 
 end
 def Infinite()
-  return $__RTS.make_tuple(179)
+  return 183
 
 end
 def Language_46_Reflection_46_Errors_46_InfiniteUnify()
-  return $__RTS.make_tuple(180)
+  return 184
 
 end
 def Language_46_Reflection_46_Elab_46_Infix()
-  return $__RTS.make_tuple(181)
+  return 185
 
 end
 def Language_46_Reflection_46_Elab_46_Infixl()
-  return $__RTS.make_tuple(182)
+  return 186
 
 end
 def Language_46_Reflection_46_Elab_46_Infixr()
-  return $__RTS.make_tuple(183)
+  return 187
 
 end
 def Language_46_Reflection_46_IntTy()
-  return $__RTS.make_tuple(184)
+  return 188
 
 end
 def Prelude_46_Interfaces_46_Integral(constructor_95_arg)
-  return $__RTS.make_tuple(185,constructor_95_arg)
+  return $__RTS.make_tuple(189,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Errors_46_InternalMsg()
-  return $__RTS.make_tuple(186)
+  return 190
 
 end
 def Language_46_Reflection_46_Intro()
-  return $__RTS.make_tuple(187)
+  return 191
 
 end
 def Language_46_Reflection_46_Intros()
-  return $__RTS.make_tuple(188)
+  return 192
 
 end
 def Language_46_Reflection_46_Errors_46_InvalidTCArg()
-  return $__RTS.make_tuple(189)
+  return 193
 
 end
 def Prelude_46_Maybe_46_IsJust(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(190,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(194,constructor_95_arg,_constructor_95_arg)
 
 end
 def Prelude_46_List_46_IsNonEmpty()
-  return $__RTS.make_tuple(191)
+  return 195
 
 end
 def Prelude_46_Nat_46_IsSucc(constructor_95_arg)
-  return $__RTS.make_tuple(192,constructor_95_arg)
+  return $__RTS.make_tuple(196,constructor_95_arg)
 
 end
 def Prelude_46_Maybe_46_ItIsJust()
-  return $__RTS.make_tuple(193)
+  return 197
 
 end
 def Prelude_46_Nat_46_ItIsSucc()
-  return $__RTS.make_tuple(194)
+  return 198
 
 end
 def JS_95_Float()
-  return $__RTS.make_tuple(195)
+  return 199
 
 end
 def JS_95_Fn()
-  return $__RTS.make_tuple(196)
+  return 200
 
 end
 def JS_95_FnBase()
-  return $__RTS.make_tuple(197)
+  return 201
 
 end
 def JS_95_FnIO()
-  return $__RTS.make_tuple(198)
+  return 202
 
 end
 def JS_95_FnT()
-  return $__RTS.make_tuple(199)
+  return 203
 
 end
 def JS_95_FnTypes(constructor_95_arg)
-  return $__RTS.make_tuple(200,constructor_95_arg)
-
-end
-def JS_95_IntChar()
-  return $__RTS.make_tuple(201)
-
-end
-def JS_95_IntNative()
-  return $__RTS.make_tuple(202)
-
-end
-def JS_95_IntT()
-  return $__RTS.make_tuple(203)
-
-end
-def JS_95_IntTypes(constructor_95_arg)
   return $__RTS.make_tuple(204,constructor_95_arg)
 
 end
+def JS_95_IntChar()
+  return 205
+
+end
+def JS_95_IntNative()
+  return 206
+
+end
+def JS_95_IntT()
+  return 207
+
+end
+def JS_95_IntTypes(constructor_95_arg)
+  return $__RTS.make_tuple(208,constructor_95_arg)
+
+end
 def JS_95_Ptr()
-  return $__RTS.make_tuple(205)
+  return 209
 
 end
 def JS_95_Str()
-  return $__RTS.make_tuple(206)
+  return 210
 
 end
 def JS_95_Types(constructor_95_arg)
-  return $__RTS.make_tuple(207,constructor_95_arg)
+  return $__RTS.make_tuple(211,constructor_95_arg)
 
 end
 def JS_95_Unit()
-  return $__RTS.make_tuple(208)
+  return 212
 
 end
 def JsFn(constructor_95_arg)
-  return $__RTS.make_tuple(209,constructor_95_arg)
+  return $__RTS.make_tuple(213,constructor_95_arg)
 
 end
 def Prelude_46_Maybe_46_Just(constructor_95_arg)
-  return $__RTS.make_tuple(210,constructor_95_arg)
+  return $__RTS.make_tuple(214,constructor_95_arg)
 
 end
 def Prelude_46_Interfaces_46_LT()
-  return $__RTS.make_tuple(211)
+  return 215
 
 end
 def Prelude_46_Nat_46_LTE(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(212,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(216,constructor_95_arg,_constructor_95_arg)
 
 end
 def Prelude_46_Nat_46_LTESucc()
-  return $__RTS.make_tuple(213)
+  return 217
 
 end
 def Prelude_46_Nat_46_LTEZero()
-  return $__RTS.make_tuple(214)
+  return 218
 
 end
 def Language_46_Reflection_46_Lam()
-  return $__RTS.make_tuple(215)
+  return 219
 
 end
 def LazyValue()
-  return $__RTS.make_tuple(216)
+  return 220
 
 end
 def Prelude_46_Either_46_Left(constructor_95_arg)
-  return $__RTS.make_tuple(217,constructor_95_arg)
+  return $__RTS.make_tuple(221,constructor_95_arg)
 
 end
 def Prelude_46_Nat_46_LeftIsNotZero()
-  return $__RTS.make_tuple(218)
+  return 222
 
 end
 def Language_46_Reflection_46_Let()
-  return $__RTS.make_tuple(219)
+  return 223
 
 end
 def Language_46_Reflection_46_LetTac()
-  return $__RTS.make_tuple(220)
+  return 224
 
 end
 def Language_46_Reflection_46_LetTacTy()
-  return $__RTS.make_tuple(221)
+  return 225
 
 end
 def Prelude_46_List_46_List(constructor_95_arg)
-  return $__RTS.make_tuple(222,constructor_95_arg)
-
-end
-def Language_46_Reflection_46_Errors_46_LoadingFailed()
-  return $__RTS.make_tuple(223)
-
-end
-def Language_46_Reflection_46_MN()
-  return $__RTS.make_tuple(224)
-
-end
-def ManagedPtr()
-  return $__RTS.make_tuple(225)
-
-end
-def Prelude_46_Interfaces_46_MaxBound(constructor_95_arg)
   return $__RTS.make_tuple(226,constructor_95_arg)
 
 end
-def Prelude_46_Maybe_46_Maybe(constructor_95_arg)
-  return $__RTS.make_tuple(227,constructor_95_arg)
+def Language_46_Reflection_46_Errors_46_LoadingFailed()
+  return 227
 
 end
-def Language_46_Reflection_46_MetaN()
-  return $__RTS.make_tuple(228)
+def Language_46_Reflection_46_MN()
+  return 228
 
 end
-def Language_46_Reflection_46_MethodN()
-  return $__RTS.make_tuple(229)
+def ManagedPtr()
+  return 229
 
 end
-def Prelude_46_Interfaces_46_MinBound(constructor_95_arg)
+def Prelude_46_Interfaces_46_MaxBound(constructor_95_arg)
   return $__RTS.make_tuple(230,constructor_95_arg)
 
 end
-def FFI_95_C_46_MkCFnPtr(constructor_95_arg)
+def Prelude_46_Maybe_46_Maybe(constructor_95_arg)
   return $__RTS.make_tuple(231,constructor_95_arg)
 
 end
+def Language_46_Reflection_46_MetaN()
+  return 232
+
+end
+def Language_46_Reflection_46_MethodN()
+  return 233
+
+end
+def Prelude_46_Interfaces_46_MinBound(constructor_95_arg)
+  return $__RTS.make_tuple(234,constructor_95_arg)
+
+end
+def FFI_46_MkBoxed()
+  return 235
+
+end
+def FFI_95_C_46_MkCFnPtr(constructor_95_arg)
+  return $__RTS.make_tuple(236,constructor_95_arg)
+
+end
 def Builtins_46_MkDPair()
-  return $__RTS.make_tuple(232)
+  return 237
 
 end
 def Language_46_Reflection_46_Elab_46_MkDatatype()
-  return $__RTS.make_tuple(233)
+  return 238
 
 end
 def MkFFI()
-  return $__RTS.make_tuple(234)
+  return 239
 
 end
 def Language_46_Reflection_46_Elab_46_MkFunArg()
-  return $__RTS.make_tuple(235)
+  return 240
 
 end
 def Language_46_Reflection_46_Elab_46_MkFunClause()
-  return $__RTS.make_tuple(236)
+  return 241
 
 end
 def MkIO(constructor_95_arg)
-  return $__RTS.make_tuple(237,constructor_95_arg)
+  return $__RTS.make_tuple(242,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_MkImpossibleClause()
-  return $__RTS.make_tuple(238)
+  return 243
 
 end
 def MkJsFn(constructor_95_arg)
-  return $__RTS.make_tuple(239,constructor_95_arg)
+  return $__RTS.make_tuple(244,constructor_95_arg)
 
 end
 def Builtins_46_MkPair(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(240,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(245,constructor_95_arg,_constructor_95_arg)
 
 end
 def FFI_95_C_46_MkRaw(constructor_95_arg)
-  return $__RTS.make_tuple(241,constructor_95_arg)
-
-end
-def Prelude_46_Strings_46_MkString()
-  return $__RTS.make_tuple(242)
-
-end
-def Builtins_46_MkUPair(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(243,constructor_95_arg,_constructor_95_arg)
-
-end
-def MkUnit()
-  return $__RTS.make_tuple(244)
-
-end
-def Prelude_46_File_46_Mode()
-  return $__RTS.make_tuple(245)
-
-end
-def Prelude_46_Monad_46_Monad(constructor_95_arg)
   return $__RTS.make_tuple(246,constructor_95_arg)
 
 end
+def Prelude_46_Strings_46_MkString()
+  return 247
+
+end
+def Builtins_46_MkUPair(constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(248,constructor_95_arg,_constructor_95_arg)
+
+end
+def MkUnit()
+  return 249
+
+end
+def Prelude_46_File_46_Mode()
+  return 250
+
+end
+def Prelude_46_Monad_46_Monad(constructor_95_arg)
+  return $__RTS.make_tuple(251,constructor_95_arg)
+
+end
 def Prelude_46_Algebra_46_Monoid(constructor_95_arg)
-  return $__RTS.make_tuple(247,constructor_95_arg)
+  return $__RTS.make_tuple(252,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Errors_46_Msg()
-  return $__RTS.make_tuple(248)
+  return 253
 
 end
 def Prelude_46_Nat_46_Multiplicative()
-  return $__RTS.make_tuple(249)
+  return 254
 
 end
 def Language_46_Reflection_46_NS()
-  return $__RTS.make_tuple(250)
+  return 255
 
 end
 def Language_46_Reflection_46_NamePart()
-  return $__RTS.make_tuple(251)
+  return 256
 
 end
 def Language_46_Reflection_46_NameType()
-  return $__RTS.make_tuple(252)
+  return 257
 
 end
 def Prelude_46_Nat_46_Nat()
-  return $__RTS.make_tuple(253)
+  return 258
 
 end
 def Language_46_Reflection_46_NativeTy()
-  return $__RTS.make_tuple(254)
+  return 259
 
 end
 def Prelude_46_Interfaces_46_Neg(constructor_95_arg)
-  return $__RTS.make_tuple(255,constructor_95_arg)
+  return $__RTS.make_tuple(260,constructor_95_arg)
 
 end
 def ForeignEnv_46_Nil()
-  return $__RTS.make_tuple(256)
+  return 261
 
 end
 def Prelude_46_List_46_Nil()
-  return $__RTS.make_tuple(257)
+  return 262
 
 end
 def Prelude_46_Basics_46_No()
-  return $__RTS.make_tuple(258)
+  return 263
 
 end
 def Language_46_Reflection_46_Errors_46_NoRewriting()
-  return $__RTS.make_tuple(259)
+  return 264
 
 end
 def Language_46_Reflection_46_Errors_46_NoSuchVariable()
-  return $__RTS.make_tuple(260)
+  return 265
 
 end
 def Language_46_Reflection_46_Errors_46_NoTypeDecl()
-  return $__RTS.make_tuple(261)
+  return 266
 
 end
 def Language_46_Reflection_46_Errors_46_NoValidAlts()
-  return $__RTS.make_tuple(262)
+  return 267
 
 end
 def Language_46_Reflection_46_Errors_46_NonCollapsiblePostulate()
-  return $__RTS.make_tuple(263)
+  return 268
 
 end
 def Prelude_46_List_46_NonEmpty(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(264,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(269,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Errors_46_NonFunctionType()
-  return $__RTS.make_tuple(265)
+  return 270
 
 end
 def Prelude_46_Nat_46_NotBothZero(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(266,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(271,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Errors_46_NotEquality()
-  return $__RTS.make_tuple(267)
+  return 272
 
 end
 def Language_46_Reflection_46_Elab_46_NotErased()
-  return $__RTS.make_tuple(268)
+  return 273
 
 end
 def Language_46_Reflection_46_Errors_46_NotInjective()
-  return $__RTS.make_tuple(269)
+  return 274
 
 end
 def Prelude_46_Maybe_46_Nothing()
-  return $__RTS.make_tuple(270)
+  return 275
 
 end
 def Language_46_Reflection_46_NullType()
-  return $__RTS.make_tuple(271)
+  return 276
 
 end
 def Prelude_46_Interfaces_46_Num(constructor_95_arg)
-  return $__RTS.make_tuple(272,constructor_95_arg)
+  return $__RTS.make_tuple(277,constructor_95_arg)
 
 end
 def Prelude_46_Show_46_Open()
-  return $__RTS.make_tuple(273)
+  return 278
 
 end
 def Prelude_46_Interfaces_46_Ord(constructor_95_arg)
-  return $__RTS.make_tuple(274,constructor_95_arg)
+  return $__RTS.make_tuple(279,constructor_95_arg)
 
 end
 def Prelude_46_Interfaces_46_Ordering()
-  return $__RTS.make_tuple(275)
+  return 280
 
 end
 def Language_46_Reflection_46_P()
-  return $__RTS.make_tuple(276)
+  return 281
 
 end
 def Language_46_Reflection_46_PVTy()
-  return $__RTS.make_tuple(277)
+  return 282
 
 end
 def Language_46_Reflection_46_PVar()
-  return $__RTS.make_tuple(278)
+  return 283
 
 end
 def Builtins_46_Pair(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(279,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(284,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_ParentN()
-  return $__RTS.make_tuple(280)
+  return 285
 
 end
 def Prelude_46_File_46_PermissionDenied()
-  return $__RTS.make_tuple(281)
+  return 286
 
 end
 def Language_46_Reflection_46_Pi()
-  return $__RTS.make_tuple(282)
+  return 287
 
 end
 def Language_46_Reflection_46_Elab_46_Plicity()
-  return $__RTS.make_tuple(283)
+  return 288
 
 end
 def Prelude_46_Show_46_Prec()
-  return $__RTS.make_tuple(284)
+  return 289
 
 end
 def Language_46_Reflection_46_Elab_46_Prefix()
-  return $__RTS.make_tuple(285)
+  return 290
 
 end
 def Prelude_46_Show_46_PrefixMinus()
-  return $__RTS.make_tuple(286)
+  return 291
 
 end
 def PrimIO(constructor_95_arg)
-  return $__RTS.make_tuple(287,constructor_95_arg)
+  return $__RTS.make_tuple(292,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_AddImplementation()
-  return $__RTS.make_tuple(288)
+  return 293
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Apply()
-  return $__RTS.make_tuple(289)
+  return 294
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Attack()
-  return $__RTS.make_tuple(290)
+  return 295
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_BindElab()
-  return $__RTS.make_tuple(291)
+  return 296
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Check()
-  return $__RTS.make_tuple(292)
+  return 297
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Claim()
-  return $__RTS.make_tuple(293)
+  return 298
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Compute()
-  return $__RTS.make_tuple(294)
+  return 299
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Converts()
-  return $__RTS.make_tuple(295)
+  return 300
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Debug()
-  return $__RTS.make_tuple(296)
+  return 301
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_DeclareDatatype()
-  return $__RTS.make_tuple(297)
+  return 302
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_DeclareType()
-  return $__RTS.make_tuple(298)
+  return 303
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_DefineDatatype()
-  return $__RTS.make_tuple(299)
+  return 304
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_DefineFunction()
-  return $__RTS.make_tuple(300)
+  return 305
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Env()
-  return $__RTS.make_tuple(301)
+  return 306
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Fail()
-  return $__RTS.make_tuple(302)
+  return 307
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Fill()
-  return $__RTS.make_tuple(303)
+  return 308
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Fixity()
-  return $__RTS.make_tuple(304)
+  return 309
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Focus()
-  return $__RTS.make_tuple(305)
+  return 310
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Forall()
-  return $__RTS.make_tuple(306)
+  return 311
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Gensym()
-  return $__RTS.make_tuple(307)
+  return 312
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Goal()
-  return $__RTS.make_tuple(308)
+  return 313
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Guess()
-  return $__RTS.make_tuple(309)
+  return 314
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Holes()
-  return $__RTS.make_tuple(310)
+  return 315
 
 end
 def Prim_95__95_IO(constructor_95_arg)
-  return $__RTS.make_tuple(311,constructor_95_arg)
+  return $__RTS.make_tuple(316,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Intro()
-  return $__RTS.make_tuple(312)
+  return 317
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_IsTCName()
-  return $__RTS.make_tuple(313)
+  return 318
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_LetBind()
-  return $__RTS.make_tuple(314)
+  return 319
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_LookupArgs()
-  return $__RTS.make_tuple(315)
+  return 320
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_LookupDatatype()
-  return $__RTS.make_tuple(316)
+  return 321
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_LookupFunDefn()
-  return $__RTS.make_tuple(317)
+  return 322
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_LookupTy()
-  return $__RTS.make_tuple(318)
+  return 323
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_MatchApply()
-  return $__RTS.make_tuple(319)
+  return 324
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Metavar()
-  return $__RTS.make_tuple(320)
+  return 325
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Namespace()
-  return $__RTS.make_tuple(321)
+  return 326
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Normalise()
-  return $__RTS.make_tuple(322)
+  return 327
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_PatBind()
-  return $__RTS.make_tuple(323)
+  return 328
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_PatVar()
-  return $__RTS.make_tuple(324)
+  return 329
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_PureElab()
-  return $__RTS.make_tuple(325)
+  return 330
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_RecursiveElab()
-  return $__RTS.make_tuple(326)
+  return 331
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_ResolveTC()
-  return $__RTS.make_tuple(327)
+  return 332
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Rewrite()
-  return $__RTS.make_tuple(328)
+  return 333
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Search()
-  return $__RTS.make_tuple(329)
+  return 334
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Solve()
-  return $__RTS.make_tuple(330)
+  return 335
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_SourceLocation()
-  return $__RTS.make_tuple(331)
+  return 336
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Try()
-  return $__RTS.make_tuple(332)
+  return 337
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_TryCatch()
-  return $__RTS.make_tuple(333)
+  return 338
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Unfocus()
-  return $__RTS.make_tuple(334)
+  return 339
 
 end
 def Language_46_Reflection_46_Elab_46_Prim_95__95_Whnf()
-  return $__RTS.make_tuple(335)
+  return 340
 
 end
 def Language_46_Reflection_46_Errors_46_ProgramLineComment()
-  return $__RTS.make_tuple(336)
+  return 341
 
 end
 def Language_46_Reflection_46_Errors_46_ProofSearchFail()
-  return $__RTS.make_tuple(337)
+  return 342
 
 end
 def Prelude_46_Providers_46_Provide()
-  return $__RTS.make_tuple(338)
+  return 343
 
 end
 def Prelude_46_Providers_46_Provider(constructor_95_arg)
-  return $__RTS.make_tuple(339,constructor_95_arg)
+  return $__RTS.make_tuple(344,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Errors_46_ProviderError()
-  return $__RTS.make_tuple(340)
+  return 345
 
 end
 def Ptr()
-  return $__RTS.make_tuple(341)
+  return 346
+
+end
+def FFI_46_QuickTypes(constructor_95_arg)
+  return $__RTS.make_tuple(347,constructor_95_arg)
+
+end
+def FFI_46_Quick_95_Unsafe()
+  return 348
 
 end
 def Language_46_Reflection_46_Quotable(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(342,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(349,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_RApp()
-  return $__RTS.make_tuple(343)
+  return 350
 
 end
 def Language_46_Reflection_46_RBind()
-  return $__RTS.make_tuple(344)
+  return 351
 
 end
 def Language_46_Reflection_46_RConstant()
-  return $__RTS.make_tuple(345)
+  return 352
 
 end
 def Language_46_Reflection_46_RType()
-  return $__RTS.make_tuple(346)
+  return 353
 
 end
 def Language_46_Reflection_46_RUType()
-  return $__RTS.make_tuple(347)
+  return 354
 
 end
 def FFI_95_C_46_Raw(constructor_95_arg)
-  return $__RTS.make_tuple(348,constructor_95_arg)
+  return $__RTS.make_tuple(355,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Raw()
-  return $__RTS.make_tuple(349)
+  return 356
 
 end
 def Language_46_Reflection_46_RawPart()
-  return $__RTS.make_tuple(350)
+  return 357
 
 end
 def Prelude_46_File_46_Read()
-  return $__RTS.make_tuple(351)
+  return 358
 
 end
 def Ownership_46_Read()
-  return $__RTS.make_tuple(352)
+  return 359
 
 end
 def Prelude_46_File_46_ReadAppend()
-  return $__RTS.make_tuple(353)
+  return 360
 
 end
 def Prelude_46_File_46_ReadWrite()
-  return $__RTS.make_tuple(354)
+  return 361
 
 end
 def Prelude_46_File_46_ReadWriteTruncate()
-  return $__RTS.make_tuple(355)
+  return 362
 
 end
 def Language_46_Reflection_46_Ref()
-  return $__RTS.make_tuple(356)
+  return 363
 
 end
 def Language_46_Reflection_46_Refine()
-  return $__RTS.make_tuple(357)
+  return 364
 
 end
 def Refl()
-  return $__RTS.make_tuple(358)
+  return 365
 
 end
 def Language_46_Reflection_46_ReflConst(constructor_95_arg)
-  return $__RTS.make_tuple(359,constructor_95_arg)
+  return $__RTS.make_tuple(366,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Reflect()
-  return $__RTS.make_tuple(360)
+  return 367
 
 end
 def Language_46_Reflection_46_Rewrite()
-  return $__RTS.make_tuple(361)
+  return 368
 
 end
 def Prelude_46_Either_46_Right(constructor_95_arg)
-  return $__RTS.make_tuple(362,constructor_95_arg)
-
-end
-def Prelude_46_Nat_46_RightIsNotZero()
-  return $__RTS.make_tuple(363)
-
-end
-def Prelude_46_Nat_46_S()
-  return $__RTS.make_tuple(364)
-
-end
-def Language_46_Reflection_46_SN()
-  return $__RTS.make_tuple(365)
-
-end
-def Language_46_Reflection_46_Search()
-  return $__RTS.make_tuple(366)
-
-end
-def Prelude_46_Algebra_46_Semigroup(constructor_95_arg)
-  return $__RTS.make_tuple(367,constructor_95_arg)
-
-end
-def Language_46_Reflection_46_Seq()
-  return $__RTS.make_tuple(368)
-
-end
-def Prelude_46_Show_46_Show(constructor_95_arg)
   return $__RTS.make_tuple(369,constructor_95_arg)
 
 end
+def Prelude_46_Nat_46_RightIsNotZero()
+  return 370
+
+end
+def Prelude_46_Nat_46_S()
+  return 371
+
+end
+def Language_46_Reflection_46_SN()
+  return 372
+
+end
+def Language_46_Reflection_46_Search()
+  return 373
+
+end
+def Prelude_46_Algebra_46_Semigroup(constructor_95_arg)
+  return $__RTS.make_tuple(374,constructor_95_arg)
+
+end
+def Language_46_Reflection_46_Seq()
+  return 375
+
+end
+def Prelude_46_Show_46_Show(constructor_95_arg)
+  return $__RTS.make_tuple(376,constructor_95_arg)
+
+end
 def Prelude_46_WellFounded_46_Sized(constructor_95_arg)
-  return $__RTS.make_tuple(370,constructor_95_arg)
+  return $__RTS.make_tuple(377,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Skip()
-  return $__RTS.make_tuple(371)
+  return 378
 
 end
 def Language_46_Reflection_46_Solve()
-  return $__RTS.make_tuple(372)
+  return 379
 
 end
 def Language_46_Reflection_46_SourceFC()
-  return $__RTS.make_tuple(373)
+  return 380
 
 end
 def Language_46_Reflection_46_SourceLocation()
-  return $__RTS.make_tuple(374)
+  return 381
 
 end
 def Language_46_Reflection_46_SpecialName()
-  return $__RTS.make_tuple(375)
+  return 382
 
 end
 def Language_46_Reflection_46_Str()
-  return $__RTS.make_tuple(376)
+  return 383
 
 end
 def Prelude_46_Strings_46_StrCons()
-  return $__RTS.make_tuple(377)
+  return 384
 
 end
 def Prelude_46_Strings_46_StrM(constructor_95_arg)
-  return $__RTS.make_tuple(378,constructor_95_arg)
-
-end
-def Prelude_46_Strings_46_StrNil()
-  return $__RTS.make_tuple(379)
-
-end
-def Language_46_Reflection_46_StrType()
-  return $__RTS.make_tuple(380)
-
-end
-def Prelude_46_Stream_46_Stream(constructor_95_arg)
-  return $__RTS.make_tuple(381,constructor_95_arg)
-
-end
-def Prelude_46_Strings_46_StringBuffer()
-  return $__RTS.make_tuple(382)
-
-end
-def Language_46_Reflection_46_SubReport()
-  return $__RTS.make_tuple(383)
-
-end
-def Prelude_46_Pairs_46_Subset(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(384,constructor_95_arg,_constructor_95_arg)
-
-end
-def Symbol_95_(constructor_95_arg)
   return $__RTS.make_tuple(385,constructor_95_arg)
 
 end
+def Prelude_46_Strings_46_StrNil()
+  return 386
+
+end
+def Language_46_Reflection_46_StrType()
+  return 387
+
+end
+def Prelude_46_Stream_46_Stream(constructor_95_arg)
+  return $__RTS.make_tuple(388,constructor_95_arg)
+
+end
+def Prelude_46_Strings_46_StringBuffer()
+  return 389
+
+end
+def Language_46_Reflection_46_SubReport()
+  return 390
+
+end
+def Prelude_46_Pairs_46_Subset(constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(391,constructor_95_arg,_constructor_95_arg)
+
+end
+def Symbol_95_(constructor_95_arg)
+  return $__RTS.make_tuple(392,constructor_95_arg)
+
+end
 def Language_46_Reflection_46_TCon()
-  return $__RTS.make_tuple(386)
+  return 393
 
 end
 def Language_46_Reflection_46_TConst()
-  return $__RTS.make_tuple(387)
+  return 394
 
 end
 def Language_46_Reflection_46_TT()
-  return $__RTS.make_tuple(388)
+  return 395
 
 end
 def Language_46_Reflection_46_TTName()
-  return $__RTS.make_tuple(389)
+  return 396
 
 end
 def Language_46_Reflection_46_TTUExp()
-  return $__RTS.make_tuple(390)
+  return 397
 
 end
 def Language_46_Reflection_46_TType()
-  return $__RTS.make_tuple(391)
+  return 398
 
 end
 def Language_46_Reflection_46_Tactic()
-  return $__RTS.make_tuple(392)
+  return 399
 
 end
 def Language_46_Reflection_46_TermPart()
-  return $__RTS.make_tuple(393)
+  return 400
 
 end
 def Language_46_Reflection_46_TextPart()
-  return $__RTS.make_tuple(394)
+  return 401
 
 end
 def TheWorld(constructor_95_arg)
-  return $__RTS.make_tuple(395,constructor_95_arg)
+  return $__RTS.make_tuple(402,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_TheWorld()
-  return $__RTS.make_tuple(396)
+  return 403
 
 end
 def Language_46_Reflection_46_Errors_46_TooManyArguments()
-  return $__RTS.make_tuple(397)
+  return 404
 
 end
 def Prelude_46_Traversable_46_Traversable(constructor_95_arg)
-  return $__RTS.make_tuple(398,constructor_95_arg)
+  return $__RTS.make_tuple(405,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_Trivial()
-  return $__RTS.make_tuple(399)
+  return 406
 
 end
 def Prelude_46_Bool_46_True()
-  return $__RTS.make_tuple(400)
+  return 407
 
 end
 def Language_46_Reflection_46_Try()
-  return $__RTS.make_tuple(401)
+  return 408
 
 end
 def Language_46_Reflection_46_Elab_46_TyConArg()
-  return $__RTS.make_tuple(402)
+  return 409
 
 end
 def Language_46_Reflection_46_Elab_46_TyConIndex()
-  return $__RTS.make_tuple(403)
+  return 410
 
 end
 def Language_46_Reflection_46_Elab_46_TyConParameter()
-  return $__RTS.make_tuple(404)
+  return 411
 
 end
 def Language_46_Reflection_46_Elab_46_TyDecl()
-  return $__RTS.make_tuple(405)
+  return 412
 
 end
 def Language_46_Reflection_46_UN()
-  return $__RTS.make_tuple(406)
+  return 413
 
 end
 def Builtins_46_UPair(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(407,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(414,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_UType()
-  return $__RTS.make_tuple(408)
+  return 415
 
 end
 def Language_46_Reflection_46_UVal()
-  return $__RTS.make_tuple(409)
+  return 416
 
 end
 def Language_46_Reflection_46_UVar()
-  return $__RTS.make_tuple(410)
+  return 417
 
 end
 def Language_46_Reflection_46_Unfocus()
-  return $__RTS.make_tuple(411)
+  return 418
 
 end
 def Language_46_Reflection_46_Errors_46_UnifyScope()
-  return $__RTS.make_tuple(412)
+  return 419
 
 end
 def Prelude_46_Uninhabited_46_Uninhabited(constructor_95_arg)
-  return $__RTS.make_tuple(413,constructor_95_arg)
+  return $__RTS.make_tuple(420,constructor_95_arg)
 
 end
 def Language_46_Reflection_46_UniqueType()
-  return $__RTS.make_tuple(414)
+  return 421
 
 end
 def Unit()
-  return $__RTS.make_tuple(415)
+  return 422
 
 end
 def Language_46_Reflection_46_Universe()
-  return $__RTS.make_tuple(416)
+  return 423
 
 end
 def Language_46_Reflection_46_Errors_46_UniverseError()
-  return $__RTS.make_tuple(417)
+  return 424
 
 end
 def Language_46_Reflection_46_Errors_46_UnknownImplicit()
-  return $__RTS.make_tuple(418)
+  return 425
+
+end
+def FFI_46_UnsafeRaw()
+  return 426
 
 end
 def Prelude_46_Show_46_User()
-  return $__RTS.make_tuple(419)
+  return 427
 
 end
 def Language_46_Reflection_46_V()
-  return $__RTS.make_tuple(420)
+  return 428
 
 end
 def Language_46_Reflection_46_Var()
-  return $__RTS.make_tuple(421)
+  return 429
 
 end
 def Void()
-  return $__RTS.make_tuple(422)
+  return 430
 
 end
 def Language_46_Reflection_46_VoidType()
-  return $__RTS.make_tuple(423)
+  return 431
 
 end
 def Prelude_46_WellFounded_46_WellFounded(constructor_95_arg,_constructor_95_arg)
-  return $__RTS.make_tuple(424,constructor_95_arg,_constructor_95_arg)
+  return $__RTS.make_tuple(432,constructor_95_arg,_constructor_95_arg)
 
 end
 def Language_46_Reflection_46_WhereN()
-  return $__RTS.make_tuple(425)
+  return 433
 
 end
 def Language_46_Reflection_46_Errors_46_WithFnType()
-  return $__RTS.make_tuple(426)
+  return 434
 
 end
 def Language_46_Reflection_46_WithN()
-  return $__RTS.make_tuple(427)
+  return 435
 
 end
 def World()
-  return $__RTS.make_tuple(428)
+  return 436
 
 end
 def Language_46_Reflection_46_WorldType()
-  return $__RTS.make_tuple(429)
+  return 437
 
 end
 def Prelude_46_File_46_WriteTruncate()
-  return $__RTS.make_tuple(430)
+  return 438
 
 end
 def Prelude_46_Basics_46_Yes()
-  return $__RTS.make_tuple(431)
+  return 439
 
 end
 def Prelude_46_Nat_46_Z()
-  return $__RTS.make_tuple(432)
+  return 440
 
 end
 def assert_95_unreachable()
@@ -1754,7 +1786,7 @@ def io_95_pure(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_arg_95_2_125_,_123_w_9
 end
 def Main_46_main(_123_in_95_0_125_)
   _123_in_95_1_125_ = nil
-  _123_in_95_1_125_ = $__RTS.op_write_str(_123_in_95_0_125_,"hello world\r")
+  _123_in_95_1_125_ = $__RTS.op_write_str(_123_in_95_0_125_,"hello world\n")
   return nil
 
 end
@@ -1914,11 +1946,11 @@ def _123_EVAL_95_0_125_(_123_arg_95_0_125_)
 
 end
 def _123__95__95_Infer_95_0_125_()
-  return $__RTS.make_tuple(433)
+  return 441
 
 end
 def _123__95__95_infer_95_0_125_()
-  return $__RTS.make_tuple(434)
+  return 442
 
 end
 def _123_runMain_95_0_125_()
@@ -1930,107 +1962,107 @@ def io_95_bind_95_IO_95__95_idr_95_108_95_34_95_108_95_36_95_case(_123_arg_95_0_
 
 end
 def Prelude_46_Interfaces_46_Abs_95_ictor()
-  return $__RTS.make_tuple(435)
+  return 443
 
 end
 def Prelude_46_Applicative_46_Alternative_95_ictor()
-  return $__RTS.make_tuple(436)
+  return 444
 
 end
 def Prelude_46_Applicative_46_Applicative_95_ictor()
-  return $__RTS.make_tuple(437)
+  return 445
 
 end
 def Prelude_46_Cast_46_Cast_95_ictor()
-  return $__RTS.make_tuple(438)
+  return 446
 
 end
 def Decidable_46_Equality_46_DecEq_95_ictor()
-  return $__RTS.make_tuple(439)
+  return 447
 
 end
 def Prelude_46_Enum_95_ictor()
-  return $__RTS.make_tuple(440)
+  return 448
 
 end
 def Prelude_46_Interfaces_46_Eq_95_ictor()
-  return $__RTS.make_tuple(441)
+  return 449
 
 end
 def Prelude_46_Foldable_46_Foldable_95_ictor()
-  return $__RTS.make_tuple(442)
+  return 450
 
 end
 def Prelude_46_Interfaces_46_Fractional_95_ictor()
-  return $__RTS.make_tuple(443)
+  return 451
 
 end
 def Prelude_46_Functor_46_Functor_95_ictor()
-  return $__RTS.make_tuple(444)
+  return 452
 
 end
 def Prelude_46_Interfaces_46_Integral_95_ictor()
-  return $__RTS.make_tuple(445)
+  return 453
 
 end
 def Prelude_46_Interfaces_46_MaxBound_95_ictor()
-  return $__RTS.make_tuple(446)
+  return 454
 
 end
 def Prelude_46_Interfaces_46_MinBound_95_ictor()
-  return $__RTS.make_tuple(447)
+  return 455
 
 end
 def Prelude_46_Monad_46_Monad_95_ictor()
-  return $__RTS.make_tuple(448)
+  return 456
 
 end
 def Prelude_46_Algebra_46_Monoid_95_ictor()
-  return $__RTS.make_tuple(449)
+  return 457
 
 end
 def Prelude_46_Interfaces_46_Neg_95_ictor()
-  return $__RTS.make_tuple(450)
+  return 458
 
 end
 def Prelude_46_Interfaces_46_Num_95_ictor()
-  return $__RTS.make_tuple(451)
+  return 459
 
 end
 def Prelude_46_Interfaces_46_Ord_95_ictor()
-  return $__RTS.make_tuple(452)
+  return 460
 
 end
 def Language_46_Reflection_46_Quotable_95_ictor()
-  return $__RTS.make_tuple(453)
+  return 461
 
 end
 def Language_46_Reflection_46_ReflConst_95_ictor()
-  return $__RTS.make_tuple(454)
+  return 462
 
 end
 def Prelude_46_Algebra_46_Semigroup_95_ictor()
-  return $__RTS.make_tuple(455)
+  return 463
 
 end
 def Prelude_46_Show_46_Show_95_ictor()
-  return $__RTS.make_tuple(456)
+  return 464
 
 end
 def Prelude_46_WellFounded_46_Sized_95_ictor()
-  return $__RTS.make_tuple(457)
+  return 465
 
 end
 def Prelude_46_Traversable_46_Traversable_95_ictor()
-  return $__RTS.make_tuple(458)
+  return 466
 
 end
 def Prelude_46_Uninhabited_46_Uninhabited_95_ictor()
-  return $__RTS.make_tuple(459)
+  return 467
 
 end
 def Prelude_46_WellFounded_46_WellFounded_95_ictor()
-  return $__RTS.make_tuple(460)
+  return 468
 
 end
 _123_runMain_95_0_125_()

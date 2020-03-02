@@ -16,7 +16,7 @@ literal_map(kind, x) =
         "string" => x
         "bool" => parse(Bool, x)
         "unit" => nothing
-        "symbol" => Symbol(x)
+        "symbol" => QuoteNode(Symbol(x))
         _ => error(kind)
     end
 

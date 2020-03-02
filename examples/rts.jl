@@ -1,5 +1,4 @@
 module __RTS
-
     function  make_tuple(args...)
         return args
     end
@@ -7,6 +6,10 @@ module __RTS
     op_eq = (==)
 
     op_slt = (<)
+
+    op_minus = (-)
+
+    op_plus = (+)
 
     function op_external(args...)
         error(join(", ", map(repr, args)))
@@ -16,6 +19,10 @@ module __RTS
         print(s)
     end
 
+    function is_tuple(a)
+        a isa Tuple
+    end
+
     function op_str_concat(a, b)
         a = a === nothing ? "" : a
         return a * b
@@ -23,4 +30,7 @@ module __RTS
 
     op_int_str = string
 
+    function assert2(a, b)
+        @assert a == b
+    end
 end

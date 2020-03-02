@@ -21,7 +21,7 @@ def literal_map(kind, x)
     when "symbol"
         x.to_sym
     else
-        raise
+        raise TypeError::new
     end
 end
 
@@ -35,7 +35,7 @@ def code_list_to_string(prefix, io, xs)
         io.write("\n") unless xs.empty?
         return
     else
-        raise xs unless xs.is_a? String
+        raise Exception::new(xs) unless xs.is_a? String
         io.write prefix
         io.write(xs)
         io.write("\n")
@@ -71,7 +71,7 @@ class Generate
     end
 
     def Update(n, exp)
-        raise "error" unless exp.is_a? String
+        raise Exception::new("error") unless exp.is_a? String
         return ["#{n} = #{exp}"]
     end
 
@@ -85,26 +85,26 @@ class Generate
         xs.each do |cc, stmts|
             head = i == 0 ? "if" : "elsif"
             ret.push "#{head} #{var} == #{cc}"
-            raise "error" unless stmts.is_a? Array
+            raise Exception::new("error") unless stmts.is_a? Array
             ret.push [].concat(*stmts)
             i += 1
         end
         ret.push "else"
-        raise "error" unless body.is_a? Array
+        raise Exception::new("error") unless body.is_a? Array
         ret.push [].concat(*body)
         ret.push("end")
         return ret
     end
 
     def If(cond, t, e)
-        raise "error" unless cond.is_a? String
-        raise "error" unless t.is_a? Array
-        raise "error" unless e.is_a? Array
+        raise Exception::new("error") unless cond.is_a? String
+        raise Exception::new("error") unless t.is_a? Array
+        raise Exception::new("error") unless e.is_a? Array
         return ["if #{cond}", [].concat(*t), "else", [].concat(*e), "end"]
     end
 
     def EffectExpr(exp)
-        raise "error" unless exp.is_a? String
+        raise Exception::new("error") unless exp.is_a? String
         return [exp]
     end
 
@@ -149,7 +149,7 @@ def read_and_gen(io)
                 left = n
                 ctor_stack.push [nil, n]
             else
-                raise "malformed qb format"
+                raise Exception::new("malformed qb format")
             end
         end
         return obj_stack[0] if ctor_stack.empty?
@@ -176,15 +176,15 @@ def main(filename, out)
     File.open(filename) do |file|
         code_secs = [].concat(*read_and_gen(file))
         if out.downcase == 'std'
-            STDOUT.write("require_relative 'idris_rts'\n")
-            STDOUT.write("$__RTS = IdrisRTS::new\n")
+            STDOUT.write("require_relative 'rts'\n")
+            STDOUT.write("$__RTS = RTS::new\n")
             code_secs.each do |code_sec|
                 code_list_to_string('', STDOUT, code_sec)
             end
         else
             File.open(out, "w") do |wfile|
-                wfile.write("require_relative 'idris_rts'\n")
-                wfile.write("$__RTS = IdrisRTS::new\n")
+                wfile.write("require_relative 'rts'\n")
+                wfile.write("$__RTS = RTS::new\n")
                 code_secs.each do |code_sec|
                     code_list_to_string('', wfile, code_sec)
                 end

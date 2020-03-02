@@ -13,6 +13,15 @@ class RTS:
     def op_slt(a, b):
         return a < b
 
+    def op_minus(a, b):
+        return a - b
+
+    def op_plus(a, b):
+        return a + b
+
+    def is_tuple(a):
+        return isinstance(a, tuple)
+
     def op_external(*args):
         raise Exception(*args)
 
@@ -26,4 +35,5 @@ class RTS:
     op_int_str = str
     
     
-    
+    def assert2(a, b):
+        assert a == b
