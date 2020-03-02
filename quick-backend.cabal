@@ -41,7 +41,6 @@ executable idris-codegen-qb
       , haskeline >= 0.7
       , mtl
       , transformers
-      , aeson
       , text
       , lens
 

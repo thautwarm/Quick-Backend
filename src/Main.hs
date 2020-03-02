@@ -43,7 +43,7 @@ getOpts = process (Opts [] "a.out" False False False False) <$> getArgs
     process opts ("--anf":xs) = process (opts {anf = True}) xs
     process opts ("--regopt":xs) = process (opts {regOpt = True}) xs
     process opts ("--symemu":xs) = process (opts {symEmu = True}) xs
-    process opts ("--javaName":xs) = process (opts {javaName = True}) xs
+    process opts ("--javaname":xs) = process (opts {javaName = True}) xs
     process opts (x:xs) = process (opts {inputs = x : inputs opts}) xs
     process opts [] = opts
 

@@ -169,10 +169,10 @@ caseSplit xs = caseSplitImpl (CaseSplit [] [] [] Nothing) xs
     caseSplitImpl cs =
       \case
         [] -> let CaseSplit
-                    { constCases = (reverse -> constCases)
-                    , enumCases = (reverse -> enumCases)
-                    , constCases = (reverse -> constCases)
-                    } = cs in cs {constCases, enumCases, constCases}
+                    { constCases = (reverse -> a')
+                    , enumCases = (reverse -> b')
+                    , ctorCases = (reverse -> c')
+                    } = cs in cs {constCases=a', enumCases=b', ctorCases=c'}
         x:xs ->
           flip caseSplitImpl xs $
           case x

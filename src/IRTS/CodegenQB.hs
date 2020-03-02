@@ -28,6 +28,7 @@ import           Idris.Core.TT
 import           IRTS.CodegenCommon
 import           IRTS.Defunctionalise
 import           IRTS.Lang
+import           System.IO (withFile, hSetNewlineMode, IOMode(..), noNewlineTranslation, hPutStr)
 
 import           Quick.Dump            (serialize)
 import           Quick.Lower
@@ -37,7 +38,10 @@ import           Quick.SymbolEmulation
 import           Quick.Weakest
 
 codegenQB :: (Bool, Bool, Bool, Bool) -> CodeGenerator
-codegenQB (anf, regOpt, symEmu, javaName) ci = writeFile filename $ serialize tree
+codegenQB (anf, regOpt, symEmu, javaName) ci =
+  withFile filename WriteMode $ \handle -> do
+    hSetNewlineMode handle noNewlineTranslation
+    hPutStr handle $ serialize tree
   where
     filename = outputFile ci
     sddecls = map (sdDecl . snd) (defunDecls ci)

@@ -4,11 +4,11 @@ def Prelude_46_Bool_46__38__38_(_123_arg_95_0_125_,_123_arg_95_1_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_0_125_
   caseMerged = nil
-  if valToMatch == true
-    caseMerged = _123_EVAL_95_0_125_(_123_arg_95_1_125_)
-
-  elsif valToMatch == false
+  if valToMatch == false
     caseMerged = _123_arg_95_0_125_
+
+  elsif valToMatch == true
+    caseMerged = _123_EVAL_95_0_125_(_123_arg_95_1_125_)
 
   else
     $__RTS.error("pattern matching failed")
@@ -1770,11 +1770,11 @@ def Prelude_46_Bool_46_ifThenElse(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_arg
   valToMatch = nil
   valToMatch = _123_arg_95_1_125_
   caseMerged = nil
-  if valToMatch == true
-    caseMerged = _123_EVAL_95_0_125_(_123_arg_95_2_125_)
-
-  elsif valToMatch == false
+  if valToMatch == false
     caseMerged = _123_EVAL_95_0_125_(_123_arg_95_3_125_)
+
+  elsif valToMatch == true
+    caseMerged = _123_EVAL_95_0_125_(_123_arg_95_2_125_)
 
   else
     $__RTS.error("pattern matching failed")
@@ -1808,11 +1808,11 @@ def io_95_pure(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_arg_95_2_125_,_123_w_9
 end
 def Main_46_main(_123_in_95_0_125_)
   _123_in_95_1_125_ = nil
-  _123_in_95_1_125_ = $__RTS.op_write_str(_123_in_95_0_125_,"calc:\r\n")
+  _123_in_95_1_125_ = $__RTS.op_write_str(_123_in_95_0_125_,"calc:\n")
   _123_in_95_2_125_ = nil
   _123_in_95_2_125_ = nil
   _123_in_95_3_125_ = nil
-  _123_in_95_3_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),274,14),"\r\n"))
+  _123_in_95_3_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),274,14),"\n"))
   return nil
 
 end
@@ -1824,11 +1824,11 @@ def Prelude_46_Bool_46_not(_123_arg_95_0_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_0_125_
   caseMerged = nil
-  if valToMatch == true
-    caseMerged = false
-
-  elsif valToMatch == false
+  if valToMatch == false
     caseMerged = true
+
+  elsif valToMatch == true
+    caseMerged = false
 
   else
     $__RTS.error("pattern matching failed")
@@ -1842,26 +1842,26 @@ def Prelude_46_Show_46_precCon(_123_arg_95_0_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_0_125_
   caseMerged = nil
-  if valToMatch == 419
-    caseMerged = 4
-
-  elsif valToMatch == 287
-    caseMerged = 5
-
-  elsif valToMatch == 274
-    caseMerged = 0
-
-  elsif valToMatch == 108
-    caseMerged = 1
-
-  elsif valToMatch == 100
-    caseMerged = 2
+  if valToMatch == 17
+    caseMerged = 6
 
   elsif valToMatch == 27
     caseMerged = 3
 
-  elsif valToMatch == 17
-    caseMerged = 6
+  elsif valToMatch == 100
+    caseMerged = 2
+
+  elsif valToMatch == 108
+    caseMerged = 1
+
+  elsif valToMatch == 274
+    caseMerged = 0
+
+  elsif valToMatch == 287
+    caseMerged = 5
+
+  elsif valToMatch == 419
+    caseMerged = 4
 
   else
     $__RTS.error("pattern matching failed")
@@ -1877,26 +1877,26 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
   valToMatch = nil
   valToMatch = _123_arg_95_2_125_
   caseMerged = nil
-  if valToMatch == 419
-    caseMerged = 4
-
-  elsif valToMatch == 287
-    caseMerged = 5
-
-  elsif valToMatch == 274
-    caseMerged = 0
-
-  elsif valToMatch == 108
-    caseMerged = 1
-
-  elsif valToMatch == 100
-    caseMerged = 2
+  if valToMatch == 17
+    caseMerged = 6
 
   elsif valToMatch == 27
     caseMerged = 3
 
-  elsif valToMatch == 17
-    caseMerged = 6
+  elsif valToMatch == 100
+    caseMerged = 2
+
+  elsif valToMatch == 108
+    caseMerged = 1
+
+  elsif valToMatch == 274
+    caseMerged = 0
+
+  elsif valToMatch == 287
+    caseMerged = 5
+
+  elsif valToMatch == 419
+    caseMerged = 4
 
   else
     $__RTS.error("pattern matching failed")
@@ -1913,26 +1913,26 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
     __valToMatch = nil
     __valToMatch = _123_arg_95_2_125_
     _caseMerged = nil
-    if __valToMatch == 419
-      _caseMerged = 4
-
-    elsif __valToMatch == 287
-      _caseMerged = 5
-
-    elsif __valToMatch == 274
-      _caseMerged = 0
-
-    elsif __valToMatch == 108
-      _caseMerged = 1
-
-    elsif __valToMatch == 100
-      _caseMerged = 2
+    if __valToMatch == 17
+      _caseMerged = 6
 
     elsif __valToMatch == 27
       _caseMerged = 3
 
-    elsif __valToMatch == 17
-      _caseMerged = 6
+    elsif __valToMatch == 100
+      _caseMerged = 2
+
+    elsif __valToMatch == 108
+      _caseMerged = 1
+
+    elsif __valToMatch == 274
+      _caseMerged = 0
+
+    elsif __valToMatch == 287
+      _caseMerged = 5
+
+    elsif __valToMatch == 419
+      _caseMerged = 4
 
     else
       $__RTS.error("pattern matching failed")
@@ -1955,7 +1955,10 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
   ____valToMatch = nil
   ____valToMatch = ___caseMerged
   ____caseMerged = nil
-  if ____valToMatch == true
+  if ____valToMatch == false
+    ____caseMerged = false
+
+  elsif ____valToMatch == true
     _____valToMatch = nil
     _____valToMatch = $__RTS.op_str_eq(_123_in_95_4_125_,"")
     _____caseMerged = nil
@@ -1969,7 +1972,10 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
     ______valToMatch = nil
     ______valToMatch = Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_46_DecEq_36_Bool_58__33_decEq_58_0(_____caseMerged,true)
     ______caseMerged = nil
-    if ______valToMatch == 431
+    if ______valToMatch == 259
+      ______caseMerged = false
+
+    elsif ______valToMatch == 431
       _______valToMatch = nil
       _______valToMatch = $__RTS.op_eq($__RTS.op_str_head(_123_in_95_4_125_),"-")
       _______caseMerged = nil
@@ -1982,18 +1988,12 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
       end
       ______caseMerged = _______caseMerged
 
-    elsif ______valToMatch == 259
-      ______caseMerged = false
-
     else
       $__RTS.error("pattern matching failed")
       ______caseMerged = nil
 
     end
     ____caseMerged = ______caseMerged
-
-  elsif ____valToMatch == false
-    ____caseMerged = false
 
   else
     $__RTS.error("pattern matching failed")
@@ -2003,11 +2003,11 @@ def Prelude_46_Show_46_primNumShow(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
   _____valToMatch = nil
   _____valToMatch = ____caseMerged
   _____caseMerged = nil
-  if _____valToMatch == true
-    _____caseMerged = $__RTS.op_str_concat("(",$__RTS.op_str_concat(_123_in_95_4_125_,")"))
-
-  elsif _____valToMatch == false
+  if _____valToMatch == false
     _____caseMerged = _123_in_95_4_125_
+
+  elsif _____valToMatch == true
+    _____caseMerged = $__RTS.op_str_concat("(",$__RTS.op_str_concat(_123_in_95_4_125_,")"))
 
   else
     $__RTS.error("pattern matching failed")
@@ -2177,11 +2177,11 @@ def Prelude_46_Show_46_showParens(_123_arg_95_0_125_,_123_arg_95_1_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_0_125_
   caseMerged = nil
-  if valToMatch == true
-    caseMerged = $__RTS.op_str_concat("(",$__RTS.op_str_concat(_123_arg_95_1_125_,")"))
-
-  elsif valToMatch == false
+  if valToMatch == false
     caseMerged = _123_arg_95_1_125_
+
+  elsif valToMatch == true
+    caseMerged = $__RTS.op_str_concat("(",$__RTS.op_str_concat(_123_arg_95_1_125_,")"))
 
   else
     $__RTS.error("pattern matching failed")
@@ -2203,11 +2203,11 @@ def Prelude_46_Bool_46__124__124_(_123_arg_95_0_125_,_123_arg_95_1_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_0_125_
   caseMerged = nil
-  if valToMatch == true
-    caseMerged = _123_arg_95_0_125_
-
-  elsif valToMatch == false
+  if valToMatch == false
     caseMerged = _123_EVAL_95_0_125_(_123_arg_95_1_125_)
+
+  elsif valToMatch == true
+    caseMerged = _123_arg_95_0_125_
 
   else
     $__RTS.error("pattern matching failed")
@@ -2262,14 +2262,14 @@ def Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_
   valToMatch = nil
   valToMatch = _123_arg_95_1_125_
   caseMerged = nil
-  if valToMatch == true
+  if valToMatch == false
     _valToMatch = nil
     _valToMatch = _123_arg_95_0_125_
     _caseMerged = nil
-    if _valToMatch == true
+    if _valToMatch == false
       _caseMerged = 431
 
-    elsif _valToMatch == false
+    elsif _valToMatch == true
       _caseMerged = 259
 
     else
@@ -2279,14 +2279,14 @@ def Decidable_46_Equality_46_Decidable_46_Equality_46__64_Decidable_46_Equality_
     end
     caseMerged = _caseMerged
 
-  elsif valToMatch == false
+  elsif valToMatch == true
     _valToMatch = nil
     _valToMatch = _123_arg_95_0_125_
     _caseMerged = nil
-    if _valToMatch == true
+    if _valToMatch == false
       _caseMerged = 259
 
-    elsif _valToMatch == false
+    elsif _valToMatch == true
       _caseMerged = 431
 
     else
@@ -2346,11 +2346,11 @@ def _95_Prelude_46_Strings_46_strM_95_with_95_33(_123_arg_95_0_125_,_123_arg_95_
   valToMatch = nil
   valToMatch = _123_arg_95_1_125_
   caseMerged = nil
-  if valToMatch == 431
-    caseMerged = $__RTS.make_tuple(378,$__RTS.op_str_head(_123_arg_95_0_125_))
-
-  elsif valToMatch == 259
+  if valToMatch == 259
     caseMerged = 380
+
+  elsif valToMatch == 431
+    caseMerged = $__RTS.make_tuple(378,$__RTS.op_str_head(_123_arg_95_0_125_))
 
   else
     $__RTS.error("pattern matching failed")

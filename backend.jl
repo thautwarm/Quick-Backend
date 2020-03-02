@@ -1,11 +1,9 @@
-"""
-idris *.idr -o out.qb --codegen qb --cg-opt "--javaName" --cg-opt "--symemu"
-
-Requirements:
-- (v1.3) pkg> add ArgParse
-- (v1.3) pkg> add MLStyle
-"""
-module Main
+# """
+# idris *.idr -o out.qb --codegen qb --cg-opt "--javaName" --cg-opt "--symemu"
+#
+# Requirements:
+# - (v1.3) pkg> add ArgParse
+# - (v1.3) pkg> add MLStyle
 using MLStyle
 using ArgParse
 
@@ -13,11 +11,12 @@ literal_map(kind, x) =
     @match kind begin
         "float" => parse(Float64, x)
         "int" => parse(Int64, x)
-        "bigint" => parse(BigInt, x)
+        "bigInt" => parse(BigInt, x)
         "char" => x[1]
         "string" => x
         "bool" => parse(Bool, x)
         "unit" => nothing
+        "symbol" => Symbol(x)
         _ => error(kind)
     end
 
@@ -63,12 +62,13 @@ end
 
 function Switch(var, xs, body)
     isempty(xs) && return Expr(:block, body...)
+    body = Expr(:block, body...)
     for (cc, stmts) in reverse(xs)
-        body = [Expr(:elseif, Expr(:block, :($var == $cc)), Expr(:block, body...))]
+        body = Expr(:elseif, Expr(:block, :($var == $cc)), Expr(:block, stmts...), body)
     end
 
-    body[0].head = :if
-    return body[0]
+    body.head = :if
+    return body
 end
 
 function If(cond, t, e)
@@ -109,6 +109,7 @@ function read_and_gen(io)
                 kind = pats[2]
                 length = parse(Int, pats[3])
                 buf = String(read(io, length))
+                readline(io)
                 buf = literal_map(kind, buf)
                 push!(obj_stack, buf)
 
@@ -162,11 +163,9 @@ close(f)
 
 out = parsed_args["out"]
 if out == "std"
-    println(Expr(:block, big...))
+    println(Expr(:block, :(include("rts.jl")), big...))
 else
     open(out, "w") do f
-        println(f, Expr(:block, big...))
+        println(f, Expr(:block, :(include("rts.jl")), big...))
     end
-end
-
 end
