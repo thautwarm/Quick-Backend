@@ -1,0 +1,9 @@
+ext : "ExtApp"  <name> [<expr>]
+    | "ExtVar" <name>
+    ;
+
+expr : "Var"    <name>
+     | "App"    <name> [<expr>]
+     | "Const" <constant>
+     | "Ext" <ext>
+     ;

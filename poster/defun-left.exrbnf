@@ -1,0 +1,13 @@
+expr :  "Var" <name>
+     | "App" <bool> <name> [<expr>]
+     | "Let" <name> <expr> <expr>
+     | "Update" <name> <expr>
+     | "Proj" <expr> <int>
+     | "Cons" <name> [<expr>]
+     | "Case" <expr> [<alt>]
+     | "Const" <constant>
+     | "Foreign" "..."
+     | "Op" <primitive-op> [<expr>]
+     | "DoNothing"
+     | "Error" <string>
+     ;

@@ -44,6 +44,7 @@
 
 % https://tex.stackexchange.com/questions/450226/how-to-avoid-column-vertical-line-inside-multicol-environment
 \setlength{\columnseprule}{0pt}
+\captionsetup{font=large}
 
 \begin{document}
 
@@ -83,24 +84,26 @@
 
 \section*{Abstract}
 
-As a dependently-typed functional programming languages, Idris shows
-quite a high expressiveness with its type system under a considerably strong static guarantee.
+As a dependently-typed functional programming language, Idris shows
+quite a high expressiveness with its type system under a considerably strong static guarantee,
+which is capable of ending many difficult and frequently occurring bugs in the industrial world.
 
-To leverage these powerful static programming language features for
+To leverage its powerful static programming language features and make
 existing industrial applications safer and more expressive,
-we're supposed to implement code generation back ends for Idris.
+a valid approach is to implement code generation back ends for Idris.
 
 Whereas Idris has already provided convenient interfaces to support
 agnostic back ends, it is still cumbersome to import Idris programs
-into an existing programming language, as the latter is already
+into an existing programming language. As the existing programming languages are already
 in a large amount and continuously proliferating, and the implementations
-of each back end certainly have quite a few overlaps.
+of different back ends certainly have quite a few overlaps.
   
-To address this, we introduce a "common" intermediate representation
-powered by Tagless Final Style, which contributes to the reuse most of the tasks
-required by an Idris back end. As a result, we allow making a Idris back end
-in a most simplified routine, which can usually be accomplished in few hours
-or even minutes.
+To address this, we introduce a "common" intermediate representation, Weakest Declaration,
+which is a much simpler IR and contributes to reusability of analyses and transformations
+required by different Idris back ends.
+
+As a result, we allow making an Idris back end in a most simplified routine,
+which can usually be accomplished in few hours or, even minutes.
 
 %----------------------------------------------------------------------------------------
 %   INTRODUCTION
@@ -113,10 +116,28 @@ or even minutes.
 \section*{Background}
 
 % \includegraphics[width=15cm]{Idris-Backend-For-Free.png}\\
-Idris has already made lots of efforts to their code generation, where
-they provided various IRs \cite{brady2015cross} to start a custom back end.
+Idris is a programming language with dependent types,
+hence it is capable of ending many difficult and frequently occurring bugs in the industrial world:
+For instance, dependently typed programs can statically verify the validness of array indexing \cite {xi1998eliminating},
+or statically verify the validness of tensor operations \cite {eaton2006statically} \cite {chen2017typesafe},
+especially statically checking/inferring dimensions.
 
-We provide a concise version of their defunctionalised IR with some details omitted, hereafter as $DDecl$.
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{-0.1cm}
+\includegraphics[width=0.8\linewidth]{figs/canonical.png}
+\captionof{figure}{\color{DarkRed} Canonical example, a dependent vector}
+\end{center}\vspace{-0.1cm}
+\end{minipage}
+
+To leverage its advanced type system in practice, a valid approach is
+implementing code generation back ends for Idris, and integrating Idris into
+the existing applications.
+
+To achieve this, Idris has already paid lots of efforts to their code generation facilities,
+and finally provided a convenient interface for back end plugins \cite{brady2015cross}.
+
+We hereby provide the definition of Idris defunctionalised IR with some details omitted and simplifications,
+hereafter as $DDecl$.
 
 \vspace{-1cm}
 
@@ -125,14 +146,14 @@ We provide a concise version of their defunctionalised IR with some details omit
 \begin{minipage}[b]{0.8\linewidth}
 \begin{bnf*}
     \bnfprod{expr}{\bnftd{Var} \bnfsp \bnftd{name}}\\
-    \bnfmore{\bnfor \bnftd{App} \bnfsp \bnftd{bool} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{App} \bnfsp \bnftd{bool} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
     \bnfmore{\bnfor \bnftd{Let} \bnfsp \bnftd{name} \bnfsp \bnftd{expr} \bnfsp \bnftd{expr}}\\
     \bnfmore{\bnfor \bnftd{Update} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
     \bnfmore{\bnfor \bnftd{Proj} \bnfsp \bnftd{expr} \bnfsp \bnftd{int}}\\
     \bnfmore{\bnfor \bnftd{Cons} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
-    \bnfmore{\bnfor \bnftd{Case} \bnfsp \bnftd{expr} \bnfsp \bnfts{[} \bnfpn{alt}\bnfts{]}}\\
-    \bnfmore{\bnfor \bnftd{Const} \bnfsp \bnftd{constant-literal}}\\
-    \bnfmore{\bnfor \bnftd{Foreign} \bnfsp \bnftd{fdesc} \bnfsp \bnftd{fdesc} \bnfsp \bnfts{[} \bnftd{(} \bnfsp \bnftd{fdesc} \bnfsp \bnftd{,} \bnfsp \bnftd{expr} \bnfsp \bnftd{)}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{Case} \bnfsp \bnftd{expr} \bnfsp \bnfts{[} \bnftd{alt}\bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{Const} \bnfsp \bnftd{constant}}\\
+    \bnfmore{\bnfor \bnftd{Foreign} \bnfsp \bnftd{...}}\\
     \bnfmore{\bnfor \bnftd{Op} \bnfsp \bnftd{primitive-op} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
     \bnfmore{\bnfor \bnftd{DoNothing}}\\
     \bnfmore{\bnfor \bnftd{Error} \bnfsp \bnftd{string}}\\
@@ -141,18 +162,18 @@ We provide a concise version of their defunctionalised IR with some details omit
 
 \begin{minipage}[b]{1\linewidth}
 \begin{bnf*}
-    \bnfprod{alt}{\bnftd{ConCase} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{expr}}\\
-    \bnfmore{\bnfor \bnftd{ConstCase} \bnfsp \bnftd{constant-literal} \bnfsp \bnftd{expr}}\\
-    \bnfmore{\bnfor \bnftd{DefaultCase} \bnfsp \bnftd{expr}}\\
     \bnfprod{decl}{\bnftd{DefFun} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{expr}}\\
-    \bnfmore{\bnfor \bnftd{DefCons} \bnfsp \bnftd{name} \bnfsp \bnftd{int}}\\   
+    \bnfmore{\bnfor \bnftd{DefCons} \bnfsp \bnftd{name} \bnfsp \bnftd{int}}\\
+    \bnfprod{alt}{\bnftd{ConCase} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{ConstCase} \bnfsp \bnftd{constant} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{DefaultCase} \bnfsp \bnftd{expr}}\\
     \bnfprod{arith-type}{\bnftd{float} \bnfor \bnftd{int}}\\
-    \bnfprod{primitive-op}{\bnftd{sdiv} \bnfsp \bnftd{arith-type}}\\
-    \bnfmore{\bnfor \bnftd{udiv} \bnfsp \bnftd{arith-type}}\\
-    \bnfmore{\bnfor \bnftd{+} \bnfsp \bnftd{arith-type}}\\
+    \bnfprod{primitive-op}{\bnftd{+} \bnfsp \bnftd{arith-type}}\\
     \bnfmore{\bnfor \bnftd{-} \bnfsp \bnftd{arith-type}}\\
     \bnfmore{\bnfor \bnftd{*} \bnfsp \bnftd{arith-type}}\\
-    \bnfmore{\bnfor \bnftd{...}}
+    \bnfmore{\bnfor \bnftd{sdiv} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{udiv} \bnfsp \bnftd{arith-type}}\\
+    \bnfmore{\bnfor \bnftd{...}}\\
 \end{bnf*}
 \end{minipage}
 \end{multicols}
@@ -164,12 +185,17 @@ We provide a concise version of their defunctionalised IR with some details omit
     \item $Cons$, $DefCons$ : constructing tagged unions, and constructor definitions
     \item $Case$ : pattern matching, or deconstructions
     \item $Proj$ : projections, on tuples and tagged unions
-    \item $primitive-op$ : $+$, $-$, $*$, $/$, and other primitive operators defined and used by Idris compiler
-
+    \item $primitive$-$op$ : $+$, $-$, $*$, $/$, and other primitive operators defined and used by Idris compiler
 \end{itemize}
 
-This IR is already convenient, however still cannot we gain code reuse or avoid repetitions,
-when implementing distinct back ends.
+
+\section*{Introduction}
+
+$DDecl$ is already convenient for code generation, however still \textbf{overly high level}, and could produce
+\textbf{redundant repetitions} when comparing the implementations of multiple back ends.
+
+% Different back end requires different properties of
+% IR for code generation, but 
 
 Firstly we check $Let$ expressions. They are responsible for variable introductions,
 and also capable of \textbf{shadowing variables}, but unfortunately missing in most old programming languages
@@ -287,11 +313,13 @@ getting used to support a back end quickly.
 
 \begin{minipage}[t]{0.8\linewidth}
 \begin{bnf*}
-    \bnfprod{block-stmt}{\bnfts{[} \bnftd{stmt} \bnfts{]}}\\
-    \bnfprod{stmt}{\bnftd{Update} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
-    \bnfmore{\bnfor \bnftd{DefFun} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{name}\bnfts{]} \bnfsp \bnftd{block-stmt}}\\
-    \bnfmore{\bnfor \bnftd{Switch} \bnfsp \bnftd{expr} \bnfsp \bnfts{[} \bnfts{(} \bnfsp \bnftd{constant-literal} \bnfsp \bnftd{,} \bnfsp \bnftd{block-stmt} \bnfsp \bnfts{)}\bnfts{]}}\\
+    \bnfprod{block-stmt}{\bnfts{[} \bnftd{stmt}\bnfts{]}}\\
+    \bnfprod{stmt}{\bnftd{Intro} \bnfsp \bnftd{name}}\\
+    \bnfmore{\bnfor \bnftd{Up} \bnfsp \bnftd{name} \bnfsp \bnftd{expr}}\\
     \bnfmore{\bnfor \bnftd{If} \bnfsp \bnftd{expr} \bnfsp \bnftd{block-stmt} \bnfsp \bnftd{block-stmt}}\\
+    \bnfmore{\bnfor \bnftd{Eff} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{Ret} \bnfsp \bnftd{expr}}\\
+    \bnfmore{\bnfor \bnftd{Switch} \bnfsp \bnftd{expr} \bnfsp \bnfts{[} \bnftd{(} \bnfsp \bnftd{constant} \bnfsp \bnftd{,} \bnfsp \bnftd{block-stmt} \bnfsp \bnftd{)}\bnfts{]} \bnfsp \bnftd{block-stmt}}\\
 \end{bnf*}
 \end{minipage}
 
@@ -300,10 +328,12 @@ getting used to support a back end quickly.
 
 \begin{minipage}[t]{0.8\linewidth}
 \begin{bnf*}
-    \bnfprod{lvar}{\bnftd{name} \bnfor \bnftd{constant-literal}}\\
+    \bnfprod{ext}{\bnftd{ExtApp} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{expr} \bnfts{]} }\\
+    \bnfmore{\bnfor \bnftd{ExtVar} \bnfsp \bnftd{name}}\\
     \bnfprod{expr}{\bnftd{Var} \bnfsp \bnftd{name}}\\
-    \bnfmore{\bnfor \bnftd{App} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{lvar} \bnfts{]}}\\
+    \bnfmore{\bnfor \bnftd{App} \bnfsp \bnftd{name} \bnfsp \bnfts{[} \bnftd{expr}\bnfts{]}}\\
     \bnfmore{\bnfor \bnftd{Const} \bnfsp \bnftd{constant-literal}}\\
+    \bnfmore{\bnfor \bnftd{Ext} \bnfsp \bnftd{ext}}\\
 \end{bnf*}
 \end{minipage}
 \end{multicols}

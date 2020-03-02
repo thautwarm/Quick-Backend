@@ -1,0 +1,11 @@
+block-stmt : [<stmt>] ;
+
+stmt : "Intro" <name>
+     | "Up" <name> <expr>
+     | "If" <expr> <block-stmt> <block-stmt>
+     | "Eff" <expr>
+     | "Ret" <expr>
+     | "Switch" <expr> ["(" <constant>  "," <block-stmt>  ")"] <block-stmt>
+     ;
+
+

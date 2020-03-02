@@ -1,0 +1,19 @@
+decl : "DefFun" <name> [<name>] <expr>
+     | "DefCons" <name> <int>
+     ;
+     
+alt : "ConCase" <name> [<name>] <expr>
+    | "ConstCase" <constant> <expr>
+    | "DefaultCase" <expr>
+    ;
+
+
+arith-type : "float" | "int" ;
+
+primitive-op : "+" <arith-type>
+             | "-" <arith-type>
+             | "*" <arith-type>
+             | "sdiv" <arith-type>
+             | "udiv" <arith-type>
+             | "..."
+             ;
