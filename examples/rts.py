@@ -19,6 +19,9 @@ class RTS:
     def op_plus(a, b):
         return a + b
 
+    def proj(a, b):
+        return a[b]
+
     def is_tuple(a):
         return isinstance(a, tuple)
 

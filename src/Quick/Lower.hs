@@ -72,13 +72,11 @@ lowerDecl =
         let suite :: [WStmt DefUse]
             suite = stmts ++ [WRet ret]
         return $ WDefFun (Def fn) (map Def args) suite
-    
     SDDefCons fn 0 -> do
       s <- get
       let tag = WC $ CC (fn `symConst` s)
       fn <- require fn
       locally $ return $ WDefFun (Def fn) [] [WRet tag]
-
     SDDefCons fn n -> do
       s <- get
       let tag = WC $ CC (fn `symConst` s)
@@ -168,11 +166,9 @@ caseSplit xs = caseSplitImpl (CaseSplit [] [] [] Nothing) xs
   where
     caseSplitImpl cs =
       \case
-        [] -> let CaseSplit
-                    { constCases = (reverse -> a')
-                    , enumCases = (reverse -> b')
-                    , ctorCases = (reverse -> c')
-                    } = cs in cs {constCases=a', enumCases=b', ctorCases=c'}
+        [] ->
+          let CaseSplit {constCases = (reverse -> a'), enumCases = (reverse -> b'), ctorCases = (reverse -> c')} = cs
+           in cs {constCases = a', enumCases = b', ctorCases = c'}
         x:xs ->
           flip caseSplitImpl xs $
           case x
@@ -251,7 +247,7 @@ caseCompile valToMatch CaseSplit {defaultCase, enumCases, constCases, ctorCases}
                   return (exp, concat binds ++ stmts)
               return (CC tag, stmts ++ [WUp (Use mergeRes) exp])
           let defaultStmts' = defaultStmts ++ [WUp (Use mergeRes) defaultExp]
-              switch = WSwitch valToMatch cases defaultStmts'
+              switch = WSwitch (WExt $ EF "proj" [valToMatch, WC (CC (0 :: Int))]) cases defaultStmts'
               ifStmt = WIf (WExt $ EF "is_tuple" [valToMatch]) [switch] defaultStmts'
           return (WVar (Use mergeRes), [ifStmt])
 

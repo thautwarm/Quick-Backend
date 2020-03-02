@@ -1852,11 +1852,21 @@ def Main_46_main(_123_in_95_0_125_)
   _123_in_95_5_125_ = nil
   _123_in_95_5_125_ = nil
   _123_in_95_6_125_ = nil
-  _123_in_95_6_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat("The answer!","\n"))
+  _123_in_95_6_125_ = Main_46_assert(nil,Main_46_reverse_58_revAcc_58_0(nil,nil,263,$__RTS.make_tuple(3,1,$__RTS.make_tuple(3,2,$__RTS.make_tuple(3,3,263)))),$__RTS.make_tuple(3,3,$__RTS.make_tuple(3,2,$__RTS.make_tuple(3,1,263))),_123_in_95_0_125_)
   _123_in_95_7_125_ = nil
-  _123_in_95_7_125_ = nil
+  _123_in_95_7_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat($__RTS.op_str_concat("sum False [1, 2, 3] = ",Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),279,Main_46_sum(false,$__RTS.make_tuple(3,1,$__RTS.make_tuple(3,2,$__RTS.make_tuple(3,3,263)))))),"\n"))
   _123_in_95_8_125_ = nil
-  _123_in_95_8_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),279,14),"\n"))
+  _123_in_95_8_125_ = nil
+  _123_in_95_9_125_ = nil
+  _123_in_95_9_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat($__RTS.op_str_concat("sum True 5 = ",Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),279,Main_46_sum(true,5))),"\n"))
+  _123_in_95_10_125_ = nil
+  _123_in_95_10_125_ = nil
+  _123_in_95_11_125_ = nil
+  _123_in_95_11_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat("The answer!","\n"))
+  _123_in_95_12_125_ = nil
+  _123_in_95_12_125_ = nil
+  _123_in_95_13_125_ = nil
+  _123_in_95_13_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),279,14),"\n"))
   return nil
 
 end
@@ -2275,6 +2285,53 @@ def Prelude_46_Show_46_showParens(_123_arg_95_0_125_,_123_arg_95_1_125_)
   return caseMerged
 
 end
+def Main_46_sum(_123_arg_95_0_125_,_123_arg_95_1_125_)
+  valToMatch = nil
+  valToMatch = _123_arg_95_0_125_
+  caseMerged = nil
+  if valToMatch == false
+    _valToMatch = nil
+    _valToMatch = _123_arg_95_1_125_
+    _caseMerged = nil
+    if _valToMatch == 263
+      _caseMerged = 0
+
+    else
+      if $__RTS.is_tuple(_valToMatch)
+        if $__RTS.proj(_valToMatch,0) == 3
+          _123_in_95_2_125_ = nil
+          _123_in_95_2_125_ = $__RTS.proj(_valToMatch,1)
+          _123_in_95_3_125_ = nil
+          _123_in_95_3_125_ = $__RTS.proj(_valToMatch,2)
+          _caseMerged = $__RTS.op_plus(_123_in_95_2_125_,Main_46_sum(false,_123_in_95_3_125_))
+
+        else
+          $__RTS.error("pattern matching failed")
+          _caseMerged = nil
+
+        end
+
+      else
+        $__RTS.error("pattern matching failed")
+        _caseMerged = nil
+
+      end
+      _caseMerged = _caseMerged
+
+    end
+    caseMerged = _caseMerged
+
+  elsif valToMatch == true
+    caseMerged = _123_arg_95_1_125_
+
+  else
+    $__RTS.error("pattern matching failed")
+    caseMerged = nil
+
+  end
+  return caseMerged
+
+end
 def unsafePerformPrimIO()
   return nil
 
@@ -2353,6 +2410,18 @@ def _123_U_95_prim_95__95_toStrBigInt_95_1_125_()
   return 442
 
 end
+def Main_46_foo_39__58_MyLT_58_0(constructor_95_arg)
+  return $__RTS.make_tuple(445,constructor_95_arg)
+
+end
+def Main_46_foo_39__58_No_58_0()
+  return 446
+
+end
+def Main_46_foo_39__58_Yes_58_0()
+  return 447
+
+end
 def Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_arg_95_2_125_,_123_arg_95_3_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_3_125_
@@ -2362,7 +2431,7 @@ def Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == 3
+      if $__RTS.proj(valToMatch,0) == 3
         _123_in_95_4_125_ = nil
         _123_in_95_4_125_ = $__RTS.proj(valToMatch,1)
         _123_in_95_5_125_ = nil
@@ -2395,7 +2464,7 @@ def Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == 3
+      if $__RTS.proj(valToMatch,0) == 3
         _123_in_95_5_125_ = nil
         _123_in_95_5_125_ = $__RTS.proj(valToMatch,1)
         _123_in_95_6_125_ = nil
@@ -2540,7 +2609,7 @@ def _95_Prelude_46_Show_46_firstCharIs_95_with_95_46(_123_arg_95_0_125_,_123_arg
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == 385
+      if $__RTS.proj(valToMatch,0) == 385
         _123_in_95_3_125_ = nil
         _123_in_95_3_125_ = $__RTS.proj(valToMatch,1)
         caseMerged = _123_APPLY_95_0_125_(_123_arg_95_0_125_,_123_in_95_3_125_)
@@ -2567,107 +2636,107 @@ def io_95_bind_95_IO_95__95_idr_95_108_95_34_95_108_95_36_95_case(_123_arg_95_0_
 
 end
 def Prelude_46_Interfaces_46_Abs_95_ictor()
-  return 445
-
-end
-def Prelude_46_Applicative_46_Alternative_95_ictor()
-  return 446
-
-end
-def Prelude_46_Applicative_46_Applicative_95_ictor()
-  return 447
-
-end
-def Prelude_46_Cast_46_Cast_95_ictor()
   return 448
 
 end
-def Decidable_46_Equality_46_DecEq_95_ictor()
+def Prelude_46_Applicative_46_Alternative_95_ictor()
   return 449
 
 end
-def Prelude_46_Enum_95_ictor()
+def Prelude_46_Applicative_46_Applicative_95_ictor()
   return 450
 
 end
-def Prelude_46_Interfaces_46_Eq_95_ictor()
+def Prelude_46_Cast_46_Cast_95_ictor()
   return 451
 
 end
-def Prelude_46_Foldable_46_Foldable_95_ictor()
+def Decidable_46_Equality_46_DecEq_95_ictor()
   return 452
 
 end
-def Prelude_46_Interfaces_46_Fractional_95_ictor()
+def Prelude_46_Enum_95_ictor()
   return 453
 
 end
-def Prelude_46_Functor_46_Functor_95_ictor()
+def Prelude_46_Interfaces_46_Eq_95_ictor()
   return 454
 
 end
-def Prelude_46_Interfaces_46_Integral_95_ictor()
+def Prelude_46_Foldable_46_Foldable_95_ictor()
   return 455
 
 end
-def Prelude_46_Interfaces_46_MaxBound_95_ictor()
+def Prelude_46_Interfaces_46_Fractional_95_ictor()
   return 456
 
 end
-def Prelude_46_Interfaces_46_MinBound_95_ictor()
+def Prelude_46_Functor_46_Functor_95_ictor()
   return 457
 
 end
-def Prelude_46_Monad_46_Monad_95_ictor()
+def Prelude_46_Interfaces_46_Integral_95_ictor()
   return 458
 
 end
-def Prelude_46_Algebra_46_Monoid_95_ictor()
+def Prelude_46_Interfaces_46_MaxBound_95_ictor()
   return 459
 
 end
-def Prelude_46_Interfaces_46_Neg_95_ictor()
+def Prelude_46_Interfaces_46_MinBound_95_ictor()
   return 460
 
 end
-def Prelude_46_Interfaces_46_Num_95_ictor()
+def Prelude_46_Monad_46_Monad_95_ictor()
   return 461
 
 end
-def Prelude_46_Interfaces_46_Ord_95_ictor()
+def Prelude_46_Algebra_46_Monoid_95_ictor()
   return 462
 
 end
-def Language_46_Reflection_46_Quotable_95_ictor()
+def Prelude_46_Interfaces_46_Neg_95_ictor()
   return 463
 
 end
-def Language_46_Reflection_46_ReflConst_95_ictor()
+def Prelude_46_Interfaces_46_Num_95_ictor()
   return 464
 
 end
-def Prelude_46_Algebra_46_Semigroup_95_ictor()
+def Prelude_46_Interfaces_46_Ord_95_ictor()
   return 465
 
 end
-def Prelude_46_Show_46_Show_95_ictor(constructor_95_arg)
-  return $__RTS.make_tuple(466,constructor_95_arg)
+def Language_46_Reflection_46_Quotable_95_ictor()
+  return 466
 
 end
-def Prelude_46_WellFounded_46_Sized_95_ictor()
+def Language_46_Reflection_46_ReflConst_95_ictor()
   return 467
 
 end
-def Prelude_46_Traversable_46_Traversable_95_ictor()
+def Prelude_46_Algebra_46_Semigroup_95_ictor()
   return 468
 
 end
+def Prelude_46_Show_46_Show_95_ictor(constructor_95_arg)
+  return $__RTS.make_tuple(469,constructor_95_arg)
+
+end
+def Prelude_46_WellFounded_46_Sized_95_ictor()
+  return 470
+
+end
+def Prelude_46_Traversable_46_Traversable_95_ictor()
+  return 471
+
+end
 def Prelude_46_Uninhabited_46_Uninhabited_95_ictor()
-  return 469
+  return 472
 
 end
 def Prelude_46_WellFounded_46_WellFounded_95_ictor()
-  return 470
+  return 473
 
 end
 _123_runMain_95_0_125_()

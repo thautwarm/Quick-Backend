@@ -19,6 +19,10 @@ module __RTS
         print(s)
     end
 
+    function proj(a, b :: Integer)
+        a[b + 1]
+    end
+
     function is_tuple(a)
         a isa Tuple
     end

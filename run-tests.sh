@@ -12,6 +12,7 @@ hget() {
 
 for filename in "hello_world" "testcases" "testcases.native-symbol" ; do
   for lang in "Python" "Ruby" "Julia" ; do
+     echo "=======backend : $lang, filename: $filename.idr============"
      exe="${lang}_exe"
      ext="${lang}_ext"
      path="examples/${filename}`hget $ext`"

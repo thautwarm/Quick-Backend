@@ -1847,11 +1847,19 @@ begin
         _123_in_95_6_125_ = nothing
         _123_in_95_6_125_ = Main_46_assert(nothing, Main_46_reverse_58_revAcc_58_0(nothing, nothing, Symbol("Prelude.List.Nil"), __RTS.make_tuple(Symbol("Prelude.List.::"), 1, __RTS.make_tuple(Symbol("Prelude.List.::"), 2, __RTS.make_tuple(Symbol("Prelude.List.::"), 3, Symbol("Prelude.List.Nil"))))), __RTS.make_tuple(Symbol("Prelude.List.::"), 3, __RTS.make_tuple(Symbol("Prelude.List.::"), 2, __RTS.make_tuple(Symbol("Prelude.List.::"), 1, Symbol("Prelude.List.Nil")))), _123_in_95_0_125_)
         _123_in_95_7_125_ = nothing
-        _123_in_95_7_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat("The answer!", "\n"))
+        _123_in_95_7_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(__RTS.op_str_concat("sum False [1, 2, 3] = ", Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), Symbol("Prelude.Show.Open"), Main_46_sum(false, __RTS.make_tuple(Symbol("Prelude.List.::"), 1, __RTS.make_tuple(Symbol("Prelude.List.::"), 2, __RTS.make_tuple(Symbol("Prelude.List.::"), 3, Symbol("Prelude.List.Nil"))))))), "\n"))
         _123_in_95_8_125_ = nothing
         _123_in_95_8_125_ = nothing
         _123_in_95_9_125_ = nothing
-        _123_in_95_9_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), Symbol("Prelude.Show.Open"), 14), "\n"))
+        _123_in_95_9_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(__RTS.op_str_concat("sum True 5 = ", Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), Symbol("Prelude.Show.Open"), Main_46_sum(true, 5))), "\n"))
+        _123_in_95_10_125_ = nothing
+        _123_in_95_10_125_ = nothing
+        _123_in_95_11_125_ = nothing
+        _123_in_95_11_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat("The answer!", "\n"))
+        _123_in_95_12_125_ = nothing
+        _123_in_95_12_125_ = nothing
+        _123_in_95_13_125_ = nothing
+        _123_in_95_13_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), Symbol("Prelude.Show.Open"), 14), "\n"))
         return
     end
     function mkForeignPrim()
@@ -2218,6 +2226,44 @@ begin
         end
         return caseMerged
     end
+    function Main_46_sum(_123_arg_95_0_125_, _123_arg_95_1_125_)
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        valToMatch = nothing
+        valToMatch = _123_arg_95_0_125_
+        caseMerged = nothing
+        if valToMatch == false
+            _valToMatch = nothing
+            _valToMatch = _123_arg_95_1_125_
+            _caseMerged = nothing
+            if _valToMatch == Symbol("Prelude.List.Nil")
+                _caseMerged = 0
+            else
+                if __RTS.is_tuple(_valToMatch)
+                    if __RTS.proj(_valToMatch, 0) == Symbol("Prelude.List.::")
+                        _123_in_95_2_125_ = nothing
+                        _123_in_95_2_125_ = __RTS.proj(_valToMatch, 1)
+                        _123_in_95_3_125_ = nothing
+                        _123_in_95_3_125_ = __RTS.proj(_valToMatch, 2)
+                        _caseMerged = __RTS.op_plus(_123_in_95_2_125_, Main_46_sum(false, _123_in_95_3_125_))
+                    else
+                        __RTS.error("pattern matching failed")
+                        _caseMerged = nothing
+                    end
+                else
+                    __RTS.error("pattern matching failed")
+                    _caseMerged = nothing
+                end
+                _caseMerged = _caseMerged
+            end
+            caseMerged = _caseMerged
+        elseif valToMatch == true
+            caseMerged = _123_arg_95_1_125_
+        else
+            __RTS.error("pattern matching failed")
+            caseMerged = nothing
+        end
+        return caseMerged
+    end
     function unsafePerformPrimIO()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         return
@@ -2290,6 +2336,18 @@ begin
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         return Symbol("{U_prim__toStrBigInt_1}")
     end
+    function Main_46_foo_39__58_MyLT_58_0(constructor_95_arg)
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return __RTS.make_tuple(Symbol("Main.foo':MyLT:0"), constructor_95_arg)
+    end
+    function Main_46_foo_39__58_No_58_0()
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return Symbol("Main.foo':No:0")
+    end
+    function Main_46_foo_39__58_Yes_58_0()
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return Symbol("Main.foo':Yes:0")
+    end
     function Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_, _123_arg_95_1_125_, _123_arg_95_2_125_, _123_arg_95_3_125_)
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         valToMatch = nothing
@@ -2299,7 +2357,7 @@ begin
             caseMerged = _123_arg_95_2_125_
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == Symbol("Prelude.List.::")
+                if __RTS.proj(valToMatch, 0) == Symbol("Prelude.List.::")
                     _123_in_95_4_125_ = nothing
                     _123_in_95_4_125_ = __RTS.proj(valToMatch, 1)
                     _123_in_95_5_125_ = nothing
@@ -2326,7 +2384,7 @@ begin
             caseMerged = _123_arg_95_3_125_
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == Symbol("Prelude.List.::")
+                if __RTS.proj(valToMatch, 0) == Symbol("Prelude.List.::")
                     _123_in_95_5_125_ = nothing
                     _123_in_95_5_125_ = __RTS.proj(valToMatch, 1)
                     _123_in_95_6_125_ = nothing
@@ -2445,7 +2503,7 @@ begin
             caseMerged = false
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == Symbol("Prelude.Strings.StrCons")
+                if __RTS.proj(valToMatch, 0) == Symbol("Prelude.Strings.StrCons")
                     _123_in_95_3_125_ = nothing
                     _123_in_95_3_125_ = __RTS.proj(valToMatch, 1)
                     caseMerged = _123_APPLY_95_0_125_(_123_arg_95_0_125_, _123_in_95_3_125_)

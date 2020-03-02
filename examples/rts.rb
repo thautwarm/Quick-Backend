@@ -27,6 +27,10 @@ class RTS
         a + b
     end
 
+    def proj(a, b)
+        a[b]
+    end
+
     def is_tuple(a)
         return a.is_a? Array
     end

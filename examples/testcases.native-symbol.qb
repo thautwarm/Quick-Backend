@@ -1,4 +1,4 @@
-list 547
+list 551
 constructor Defun 3
 literal string 27
 Prelude_46_Bool_46__38__38_
@@ -5410,7 +5410,7 @@ Main_46_main
 list 1
 literal string 17
 _123_in_95_0_125_
-list 17
+list 25
 constructor Introduction 1
 literal string 17
 _123_in_95_1_125_
@@ -5695,9 +5695,67 @@ constructor ExternalCall 2
 literal string 13
 op_str_concat
 list 2
+constructor ExternalCall 2
+literal string 13
+op_str_concat
+list 2
 constructor Constant 1
+literal string 22
+sum False [1, 2, 3] = 
+constructor Call 2
+literal string 30
+Prelude_46_Show_46_primNumShow
+list 4
+constructor Constant 1
+literal unit 0
+
+constructor Call 2
+literal string 43
+_123_U_95_prim_95__95_toStrBigInt_95_1_125_
+list 0
+constructor Constant 1
+literal symbol 17
+Prelude.Show.Open
+constructor Call 2
 literal string 11
-The answer!
+Main_46_sum
+list 2
+constructor Constant 1
+literal bool 1
+0
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Constant 1
+literal symbol 15
+Prelude.List.::
+constructor Constant 1
+literal bigInt 1
+1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Constant 1
+literal symbol 15
+Prelude.List.::
+constructor Constant 1
+literal bigInt 1
+2
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 3
+constructor Constant 1
+literal symbol 15
+Prelude.List.::
+constructor Constant 1
+literal bigInt 1
+3
+constructor Constant 1
+literal symbol 16
+Prelude.List.Nil
 constructor Constant 1
 literal string 1
 
@@ -5717,6 +5775,100 @@ _123_in_95_9_125_
 constructor Update 2
 literal string 17
 _123_in_95_9_125_
+constructor ExternalCall 2
+literal string 12
+op_write_str
+list 2
+constructor Var 1
+literal string 17
+_123_in_95_0_125_
+constructor ExternalCall 2
+literal string 13
+op_str_concat
+list 2
+constructor ExternalCall 2
+literal string 13
+op_str_concat
+list 2
+constructor Constant 1
+literal string 13
+sum True 5 = 
+constructor Call 2
+literal string 30
+Prelude_46_Show_46_primNumShow
+list 4
+constructor Constant 1
+literal unit 0
+
+constructor Call 2
+literal string 43
+_123_U_95_prim_95__95_toStrBigInt_95_1_125_
+list 0
+constructor Constant 1
+literal symbol 17
+Prelude.Show.Open
+constructor Call 2
+literal string 11
+Main_46_sum
+list 2
+constructor Constant 1
+literal bool 1
+1
+constructor Constant 1
+literal bigInt 1
+5
+constructor Constant 1
+literal string 1
+
+
+constructor Introduction 1
+literal string 18
+_123_in_95_10_125_
+constructor Update 2
+literal string 18
+_123_in_95_10_125_
+constructor Constant 1
+literal unit 0
+
+constructor Introduction 1
+literal string 18
+_123_in_95_11_125_
+constructor Update 2
+literal string 18
+_123_in_95_11_125_
+constructor ExternalCall 2
+literal string 12
+op_write_str
+list 2
+constructor Var 1
+literal string 17
+_123_in_95_0_125_
+constructor ExternalCall 2
+literal string 13
+op_str_concat
+list 2
+constructor Constant 1
+literal string 11
+The answer!
+constructor Constant 1
+literal string 1
+
+
+constructor Introduction 1
+literal string 18
+_123_in_95_12_125_
+constructor Update 2
+literal string 18
+_123_in_95_12_125_
+constructor Constant 1
+literal unit 0
+
+constructor Introduction 1
+literal string 18
+_123_in_95_13_125_
+constructor Update 2
+literal string 18
+_123_in_95_13_125_
 constructor ExternalCall 2
 literal string 12
 op_write_str
@@ -7643,6 +7795,216 @@ constructor Var 1
 literal string 10
 caseMerged
 constructor Defun 3
+literal string 11
+Main_46_sum
+list 2
+literal string 18
+_123_arg_95_0_125_
+literal string 18
+_123_arg_95_1_125_
+list 5
+constructor Introduction 1
+literal string 10
+valToMatch
+constructor Update 2
+literal string 10
+valToMatch
+constructor Var 1
+literal string 18
+_123_arg_95_0_125_
+constructor Introduction 1
+literal string 10
+caseMerged
+constructor Switch 3
+constructor Var 1
+literal string 10
+valToMatch
+list 2
+list 2
+constructor Constant 1
+literal bool 1
+0
+list 5
+constructor Introduction 1
+literal string 11
+_valToMatch
+constructor Update 2
+literal string 11
+_valToMatch
+constructor Var 1
+literal string 18
+_123_arg_95_1_125_
+constructor Introduction 1
+literal string 11
+_caseMerged
+constructor Switch 3
+constructor Var 1
+literal string 11
+_valToMatch
+list 1
+list 2
+constructor Constant 1
+literal symbol 16
+Prelude.List.Nil
+list 1
+constructor Update 2
+literal string 11
+_caseMerged
+constructor Constant 1
+literal bigInt 1
+0
+list 2
+constructor If 3
+constructor ExternalCall 2
+literal string 8
+is_tuple
+list 1
+constructor Var 1
+literal string 11
+_valToMatch
+list 1
+constructor Switch 3
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
+constructor Var 1
+literal string 11
+_valToMatch
+constructor Constant 1
+literal int 1
+0
+list 1
+list 2
+constructor Constant 1
+literal symbol 15
+Prelude.List.::
+list 5
+constructor Introduction 1
+literal string 17
+_123_in_95_2_125_
+constructor Update 2
+literal string 17
+_123_in_95_2_125_
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
+constructor Var 1
+literal string 11
+_valToMatch
+constructor Constant 1
+literal int 1
+1
+constructor Introduction 1
+literal string 17
+_123_in_95_3_125_
+constructor Update 2
+literal string 17
+_123_in_95_3_125_
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
+constructor Var 1
+literal string 11
+_valToMatch
+constructor Constant 1
+literal int 1
+2
+constructor Update 2
+literal string 11
+_caseMerged
+constructor ExternalCall 2
+literal string 7
+op_plus
+list 2
+constructor Var 1
+literal string 17
+_123_in_95_2_125_
+constructor Call 2
+literal string 11
+Main_46_sum
+list 2
+constructor Constant 1
+literal bool 1
+0
+constructor Var 1
+literal string 17
+_123_in_95_3_125_
+list 2
+constructor EffectExpr 1
+constructor ExternalCall 2
+literal string 5
+error
+list 1
+constructor Constant 1
+literal string 23
+pattern matching failed
+constructor Update 2
+literal string 11
+_caseMerged
+constructor Constant 1
+literal unit 0
+
+list 2
+constructor EffectExpr 1
+constructor ExternalCall 2
+literal string 5
+error
+list 1
+constructor Constant 1
+literal string 23
+pattern matching failed
+constructor Update 2
+literal string 11
+_caseMerged
+constructor Constant 1
+literal unit 0
+
+constructor Update 2
+literal string 11
+_caseMerged
+constructor Var 1
+literal string 11
+_caseMerged
+constructor Update 2
+literal string 10
+caseMerged
+constructor Var 1
+literal string 11
+_caseMerged
+list 2
+constructor Constant 1
+literal bool 1
+1
+list 1
+constructor Update 2
+literal string 10
+caseMerged
+constructor Var 1
+literal string 18
+_123_arg_95_1_125_
+list 2
+constructor EffectExpr 1
+constructor ExternalCall 2
+literal string 5
+error
+list 1
+constructor Constant 1
+literal string 23
+pattern matching failed
+constructor Update 2
+literal string 10
+caseMerged
+constructor Constant 1
+literal unit 0
+
+constructor Return 1
+constructor Var 1
+literal string 10
+caseMerged
+constructor Defun 3
 literal string 19
 unsafePerformPrimIO
 list 0
@@ -7917,6 +8279,42 @@ constructor Constant 1
 literal symbol 23
 {U_prim__toStrBigInt_1}
 constructor Defun 3
+literal string 28
+Main_46_foo_39__58_MyLT_58_0
+list 1
+literal string 18
+constructor_95_arg
+list 1
+constructor Return 1
+constructor ExternalCall 2
+literal string 10
+make_tuple
+list 2
+constructor Constant 1
+literal symbol 16
+Main.foo':MyLT:0
+constructor Var 1
+literal string 18
+constructor_95_arg
+constructor Defun 3
+literal string 26
+Main_46_foo_39__58_No_58_0
+list 0
+list 1
+constructor Return 1
+constructor Constant 1
+literal symbol 14
+Main.foo':No:0
+constructor Defun 3
+literal string 27
+Main_46_foo_39__58_Yes_58_0
+list 0
+list 1
+constructor Return 1
+constructor Constant 1
+literal symbol 15
+Main.foo':Yes:0
+constructor Defun 3
 literal string 30
 Main_46_reverse_58_revAcc_58_0
 list 4
@@ -7968,9 +8366,16 @@ literal string 10
 valToMatch
 list 1
 constructor Switch 3
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
 constructor Var 1
 literal string 10
 valToMatch
+constructor Constant 1
+literal int 1
+0
 list 1
 list 2
 constructor Constant 1
@@ -8132,9 +8537,16 @@ literal string 10
 valToMatch
 list 1
 constructor Switch 3
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
 constructor Var 1
 literal string 10
 valToMatch
+constructor Constant 1
+literal int 1
+0
 list 1
 list 2
 constructor Constant 1
@@ -8755,9 +9167,16 @@ literal string 10
 valToMatch
 list 1
 constructor Switch 3
+constructor ExternalCall 2
+literal string 4
+proj
+list 2
 constructor Var 1
 literal string 10
 valToMatch
+constructor Constant 1
+literal int 1
+0
 list 1
 list 2
 constructor Constant 1

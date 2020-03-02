@@ -1854,11 +1854,19 @@ def Main_46_main(_123_in_95_0_125_)
   _123_in_95_6_125_ = nil
   _123_in_95_6_125_ = Main_46_assert(nil,Main_46_reverse_58_revAcc_58_0(nil,nil,:"Prelude.List.Nil",$__RTS.make_tuple(:"Prelude.List.::",1,$__RTS.make_tuple(:"Prelude.List.::",2,$__RTS.make_tuple(:"Prelude.List.::",3,:"Prelude.List.Nil")))),$__RTS.make_tuple(:"Prelude.List.::",3,$__RTS.make_tuple(:"Prelude.List.::",2,$__RTS.make_tuple(:"Prelude.List.::",1,:"Prelude.List.Nil"))),_123_in_95_0_125_)
   _123_in_95_7_125_ = nil
-  _123_in_95_7_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat("The answer!","\n"))
+  _123_in_95_7_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat($__RTS.op_str_concat("sum False [1, 2, 3] = ",Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),:"Prelude.Show.Open",Main_46_sum(false,$__RTS.make_tuple(:"Prelude.List.::",1,$__RTS.make_tuple(:"Prelude.List.::",2,$__RTS.make_tuple(:"Prelude.List.::",3,:"Prelude.List.Nil")))))),"\n"))
   _123_in_95_8_125_ = nil
   _123_in_95_8_125_ = nil
   _123_in_95_9_125_ = nil
-  _123_in_95_9_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),:"Prelude.Show.Open",14),"\n"))
+  _123_in_95_9_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat($__RTS.op_str_concat("sum True 5 = ",Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),:"Prelude.Show.Open",Main_46_sum(true,5))),"\n"))
+  _123_in_95_10_125_ = nil
+  _123_in_95_10_125_ = nil
+  _123_in_95_11_125_ = nil
+  _123_in_95_11_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat("The answer!","\n"))
+  _123_in_95_12_125_ = nil
+  _123_in_95_12_125_ = nil
+  _123_in_95_13_125_ = nil
+  _123_in_95_13_125_ = $__RTS.op_write_str(_123_in_95_0_125_,$__RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nil,_123_U_95_prim_95__95_toStrBigInt_95_1_125_(),:"Prelude.Show.Open",14),"\n"))
   return nil
 
 end
@@ -2277,6 +2285,53 @@ def Prelude_46_Show_46_showParens(_123_arg_95_0_125_,_123_arg_95_1_125_)
   return caseMerged
 
 end
+def Main_46_sum(_123_arg_95_0_125_,_123_arg_95_1_125_)
+  valToMatch = nil
+  valToMatch = _123_arg_95_0_125_
+  caseMerged = nil
+  if valToMatch == false
+    _valToMatch = nil
+    _valToMatch = _123_arg_95_1_125_
+    _caseMerged = nil
+    if _valToMatch == :"Prelude.List.Nil"
+      _caseMerged = 0
+
+    else
+      if $__RTS.is_tuple(_valToMatch)
+        if $__RTS.proj(_valToMatch,0) == :"Prelude.List.::"
+          _123_in_95_2_125_ = nil
+          _123_in_95_2_125_ = $__RTS.proj(_valToMatch,1)
+          _123_in_95_3_125_ = nil
+          _123_in_95_3_125_ = $__RTS.proj(_valToMatch,2)
+          _caseMerged = $__RTS.op_plus(_123_in_95_2_125_,Main_46_sum(false,_123_in_95_3_125_))
+
+        else
+          $__RTS.error("pattern matching failed")
+          _caseMerged = nil
+
+        end
+
+      else
+        $__RTS.error("pattern matching failed")
+        _caseMerged = nil
+
+      end
+      _caseMerged = _caseMerged
+
+    end
+    caseMerged = _caseMerged
+
+  elsif valToMatch == true
+    caseMerged = _123_arg_95_1_125_
+
+  else
+    $__RTS.error("pattern matching failed")
+    caseMerged = nil
+
+  end
+  return caseMerged
+
+end
 def unsafePerformPrimIO()
   return nil
 
@@ -2355,6 +2410,18 @@ def _123_U_95_prim_95__95_toStrBigInt_95_1_125_()
   return :"{U_prim__toStrBigInt_1}"
 
 end
+def Main_46_foo_39__58_MyLT_58_0(constructor_95_arg)
+  return $__RTS.make_tuple(:"Main.foo':MyLT:0",constructor_95_arg)
+
+end
+def Main_46_foo_39__58_No_58_0()
+  return :"Main.foo':No:0"
+
+end
+def Main_46_foo_39__58_Yes_58_0()
+  return :"Main.foo':Yes:0"
+
+end
 def Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_arg_95_2_125_,_123_arg_95_3_125_)
   valToMatch = nil
   valToMatch = _123_arg_95_3_125_
@@ -2364,7 +2431,7 @@ def Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_,_123_arg_95_1_125_,_123_ar
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == :"Prelude.List.::"
+      if $__RTS.proj(valToMatch,0) == :"Prelude.List.::"
         _123_in_95_4_125_ = nil
         _123_in_95_4_125_ = $__RTS.proj(valToMatch,1)
         _123_in_95_5_125_ = nil
@@ -2397,7 +2464,7 @@ def Prelude_46_Show_46_Prelude_46_Show_46__64_Prelude_46_Show_46_Show_36_List_32
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == :"Prelude.List.::"
+      if $__RTS.proj(valToMatch,0) == :"Prelude.List.::"
         _123_in_95_5_125_ = nil
         _123_in_95_5_125_ = $__RTS.proj(valToMatch,1)
         _123_in_95_6_125_ = nil
@@ -2542,7 +2609,7 @@ def _95_Prelude_46_Show_46_firstCharIs_95_with_95_46(_123_arg_95_0_125_,_123_arg
 
   else
     if $__RTS.is_tuple(valToMatch)
-      if valToMatch == :"Prelude.Strings.StrCons"
+      if $__RTS.proj(valToMatch,0) == :"Prelude.Strings.StrCons"
         _123_in_95_3_125_ = nil
         _123_in_95_3_125_ = $__RTS.proj(valToMatch,1)
         caseMerged = _123_APPLY_95_0_125_(_123_arg_95_0_125_,_123_in_95_3_125_)

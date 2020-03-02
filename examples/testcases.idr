@@ -44,8 +44,8 @@ reverse xs = revAcc [] xs where
   revAcc acc (x :: xs) = revAcc (x :: acc) xs
 
 
-foo : Int -> Int
-foo x = case isLT of
+foo' : Int -> Int
+foo' x = case isLT of
             Yes => x*2
             No => x*4
     where
@@ -66,6 +66,21 @@ test = [c (S 1), c Z, d (S Z)]
         d y = c (y + 1 + z y)
               where z w = y + w
 
+
+-- http://docs.idris-lang.org/en/latest/tutorial/typesfuns.html#first-class-types
+isSingleton : Bool -> Type
+isSingleton True = Nat
+isSingleton False = List Nat
+
+mkSingle : (x : Bool) -> isSingleton x
+mkSingle True = 0
+mkSingle False = []
+
+sum : (single : Bool) -> isSingleton single -> Nat
+sum True x = x
+sum False [] = 0
+sum False (x :: xs) = x + sum False xs
+
 main : IO ()
 main = do
     -- http://docs.idris-lang.org/en/latest/tutorial/typesfuns.html#functions
@@ -73,6 +88,10 @@ main = do
     assert (mult' (S (S (S Z))) (plus' (S (S Z)) (S (S Z)))) 12
     putStrLn' $ show $ reverse [1, 2, 3]
     assert (reverse [1, 2, 3]) ([3, 2, 1])
+
+    putStrLn' $ "sum False [1, 2, 3] = " ++ show (sum False [1, 2, 3])
+    putStrLn' $ "sum True 5 = " ++ show (sum True 5)
+
     putStrLn' $ if x == 6 * 6 + 6 then "The answer!" else "Not the answer"
     putStrLn' $
         showInt $ case (annInt 12, annInt 2) of

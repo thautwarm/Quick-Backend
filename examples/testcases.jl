@@ -1845,11 +1845,21 @@ begin
         _123_in_95_5_125_ = nothing
         _123_in_95_5_125_ = nothing
         _123_in_95_6_125_ = nothing
-        _123_in_95_6_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat("The answer!", "\n"))
+        _123_in_95_6_125_ = Main_46_assert(nothing, Main_46_reverse_58_revAcc_58_0(nothing, nothing, 263, __RTS.make_tuple(3, 1, __RTS.make_tuple(3, 2, __RTS.make_tuple(3, 3, 263)))), __RTS.make_tuple(3, 3, __RTS.make_tuple(3, 2, __RTS.make_tuple(3, 1, 263))), _123_in_95_0_125_)
         _123_in_95_7_125_ = nothing
-        _123_in_95_7_125_ = nothing
+        _123_in_95_7_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(__RTS.op_str_concat("sum False [1, 2, 3] = ", Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), 279, Main_46_sum(false, __RTS.make_tuple(3, 1, __RTS.make_tuple(3, 2, __RTS.make_tuple(3, 3, 263)))))), "\n"))
         _123_in_95_8_125_ = nothing
-        _123_in_95_8_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), 279, 14), "\n"))
+        _123_in_95_8_125_ = nothing
+        _123_in_95_9_125_ = nothing
+        _123_in_95_9_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(__RTS.op_str_concat("sum True 5 = ", Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), 279, Main_46_sum(true, 5))), "\n"))
+        _123_in_95_10_125_ = nothing
+        _123_in_95_10_125_ = nothing
+        _123_in_95_11_125_ = nothing
+        _123_in_95_11_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat("The answer!", "\n"))
+        _123_in_95_12_125_ = nothing
+        _123_in_95_12_125_ = nothing
+        _123_in_95_13_125_ = nothing
+        _123_in_95_13_125_ = __RTS.op_write_str(_123_in_95_0_125_, __RTS.op_str_concat(Prelude_46_Show_46_primNumShow(nothing, _123_U_95_prim_95__95_toStrBigInt_95_1_125_(), 279, 14), "\n"))
         return
     end
     function mkForeignPrim()
@@ -2216,6 +2226,44 @@ begin
         end
         return caseMerged
     end
+    function Main_46_sum(_123_arg_95_0_125_, _123_arg_95_1_125_)
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        valToMatch = nothing
+        valToMatch = _123_arg_95_0_125_
+        caseMerged = nothing
+        if valToMatch == false
+            _valToMatch = nothing
+            _valToMatch = _123_arg_95_1_125_
+            _caseMerged = nothing
+            if _valToMatch == 263
+                _caseMerged = 0
+            else
+                if __RTS.is_tuple(_valToMatch)
+                    if __RTS.proj(_valToMatch, 0) == 3
+                        _123_in_95_2_125_ = nothing
+                        _123_in_95_2_125_ = __RTS.proj(_valToMatch, 1)
+                        _123_in_95_3_125_ = nothing
+                        _123_in_95_3_125_ = __RTS.proj(_valToMatch, 2)
+                        _caseMerged = __RTS.op_plus(_123_in_95_2_125_, Main_46_sum(false, _123_in_95_3_125_))
+                    else
+                        __RTS.error("pattern matching failed")
+                        _caseMerged = nothing
+                    end
+                else
+                    __RTS.error("pattern matching failed")
+                    _caseMerged = nothing
+                end
+                _caseMerged = _caseMerged
+            end
+            caseMerged = _caseMerged
+        elseif valToMatch == true
+            caseMerged = _123_arg_95_1_125_
+        else
+            __RTS.error("pattern matching failed")
+            caseMerged = nothing
+        end
+        return caseMerged
+    end
     function unsafePerformPrimIO()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         return
@@ -2288,6 +2336,18 @@ begin
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         return 442
     end
+    function Main_46_foo_39__58_MyLT_58_0(constructor_95_arg)
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return __RTS.make_tuple(445, constructor_95_arg)
+    end
+    function Main_46_foo_39__58_No_58_0()
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return 446
+    end
+    function Main_46_foo_39__58_Yes_58_0()
+        #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
+        return 447
+    end
     function Main_46_reverse_58_revAcc_58_0(_123_arg_95_0_125_, _123_arg_95_1_125_, _123_arg_95_2_125_, _123_arg_95_3_125_)
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
         valToMatch = nothing
@@ -2297,7 +2357,7 @@ begin
             caseMerged = _123_arg_95_2_125_
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == 3
+                if __RTS.proj(valToMatch, 0) == 3
                     _123_in_95_4_125_ = nothing
                     _123_in_95_4_125_ = __RTS.proj(valToMatch, 1)
                     _123_in_95_5_125_ = nothing
@@ -2324,7 +2384,7 @@ begin
             caseMerged = _123_arg_95_3_125_
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == 3
+                if __RTS.proj(valToMatch, 0) == 3
                     _123_in_95_5_125_ = nothing
                     _123_in_95_5_125_ = __RTS.proj(valToMatch, 1)
                     _123_in_95_6_125_ = nothing
@@ -2443,7 +2503,7 @@ begin
             caseMerged = false
         else
             if __RTS.is_tuple(valToMatch)
-                if valToMatch == 385
+                if __RTS.proj(valToMatch, 0) == 385
                     _123_in_95_3_125_ = nothing
                     _123_in_95_3_125_ = __RTS.proj(valToMatch, 1)
                     caseMerged = _123_APPLY_95_0_125_(_123_arg_95_0_125_, _123_in_95_3_125_)
@@ -2465,107 +2525,107 @@ begin
     end
     function Prelude_46_Interfaces_46_Abs_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 445
+        return 448
     end
     function Prelude_46_Applicative_46_Alternative_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 446
+        return 449
     end
     function Prelude_46_Applicative_46_Applicative_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 447
+        return 450
     end
     function Prelude_46_Cast_46_Cast_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 448
+        return 451
     end
     function Decidable_46_Equality_46_DecEq_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 449
+        return 452
     end
     function Prelude_46_Enum_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 450
+        return 453
     end
     function Prelude_46_Interfaces_46_Eq_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 451
+        return 454
     end
     function Prelude_46_Foldable_46_Foldable_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 452
+        return 455
     end
     function Prelude_46_Interfaces_46_Fractional_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 453
+        return 456
     end
     function Prelude_46_Functor_46_Functor_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 454
+        return 457
     end
     function Prelude_46_Interfaces_46_Integral_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 455
+        return 458
     end
     function Prelude_46_Interfaces_46_MaxBound_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 456
+        return 459
     end
     function Prelude_46_Interfaces_46_MinBound_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 457
+        return 460
     end
     function Prelude_46_Monad_46_Monad_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 458
+        return 461
     end
     function Prelude_46_Algebra_46_Monoid_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 459
+        return 462
     end
     function Prelude_46_Interfaces_46_Neg_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 460
+        return 463
     end
     function Prelude_46_Interfaces_46_Num_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 461
+        return 464
     end
     function Prelude_46_Interfaces_46_Ord_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 462
+        return 465
     end
     function Language_46_Reflection_46_Quotable_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 463
+        return 466
     end
     function Language_46_Reflection_46_ReflConst_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 464
+        return 467
     end
     function Prelude_46_Algebra_46_Semigroup_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 465
+        return 468
     end
     function Prelude_46_Show_46_Show_95_ictor(constructor_95_arg)
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return __RTS.make_tuple(466, constructor_95_arg)
+        return __RTS.make_tuple(469, constructor_95_arg)
     end
     function Prelude_46_WellFounded_46_Sized_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 467
+        return 470
     end
     function Prelude_46_Traversable_46_Traversable_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 468
+        return 471
     end
     function Prelude_46_Uninhabited_46_Uninhabited_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 469
+        return 472
     end
     function Prelude_46_WellFounded_46_WellFounded_95_ictor()
         #= C:\Users\twshe\Desktop\swap\poster\backend.jl:46 =#
-        return 470
+        return 473
     end
     _123_runMain_95_0_125_()
 end
