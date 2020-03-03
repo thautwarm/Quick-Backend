@@ -2,7 +2,7 @@
 
 This is about **how to implement an Idris back end within hours or even minutes**.
 
-POSTER PDF: `poster.pdf` in the project root directory.
+POSTER PDF: `final.pdf` in the project root directory.
 
 This repo provides 3 solid implementations, for Python, Julia, and Ruby.
 
