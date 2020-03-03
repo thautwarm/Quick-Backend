@@ -1,4 +1,4 @@
-# The Poster of "Quick and Reusable Code Generation for Idris"
+# Quick and Reusable Code Generation for Idris
 
 This is about **how to implement an Idris back end within hours or even minutes**.
 
