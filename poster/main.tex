@@ -29,7 +29,6 @@
 
 \usepackage{times} % Use the times font
 
-
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figs/}} % Location of the graphics files
 \usepackage{booktabs} % Top and bottom rules for table
@@ -46,6 +45,9 @@
 \setlength{\columnseprule}{0pt}
 \captionsetup{font=large}
 
+\newcommand{\tbcell}[2][0.18]{\includegraphics[width=#1\linewidth, trim={0.1cm 3cm 0.1cm 2.5cm}, clip]{#2}}
+
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -56,6 +58,7 @@
 % 
 %----------------------------------------------------------------------------------------
 
+
 \begin{minipage}[b]{0.6\linewidth}
 \huge \color{DarkRed} \textbf{Quick and Reusable Code Generation for Idris} \color{Black}\\ % Title
 \huge\textit{Integrating dependent types into the industrial services}\\[1cm] % Subtitle
@@ -64,10 +67,6 @@
 \texttt{thaut@logic.cs.tsukuba.ac.jp; kam@cs.tsukuba.ac.jp}\\
 \end{minipage}
 %
-% \begin{minipage}[b]{0.4\linewidth}
-% \includegraphics[width=15cm]{emsnew.PNG}\\
-% \end{minipage}
-
 \vspace{.5cm} % A bit of extra whitespace between the header and poster content
 
 %----------------------------------------------------------------------------------------
@@ -123,11 +122,15 @@ or statically verify the validness of tensor operations \cite {eaton2006statical
 especially statically checking/inferring dimensions.
 
 \begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{-0.1cm}
+\begin{center}
 \includegraphics[width=0.8\linewidth]{figs/canonical.png}
+\vspace{-1cm}
 \captionof{figure}{\color{DarkRed} Canonical example, a dependent vector}
-\end{center}\vspace{-0.1cm}
+\end{center}
+
 \end{minipage}
+
+\vspace{0.5cm}
 
 To leverage its advanced type system in practice, a valid approach is
 implementing code generation back ends for Idris, and integrating Idris into
@@ -142,7 +145,7 @@ hereafter as $DDecl$.
 \vspace{-1cm}
 
 \begin{multicols}{2}
-
+\vspace{-1.0cm}
 \begin{minipage}[b]{0.8\linewidth}
 \begin{bnf*}
     \bnfprod{expr}{\bnftd{Var} \bnfsp \bnftd{name}}\\
@@ -176,20 +179,23 @@ hereafter as $DDecl$.
     \bnfmore{\bnfor \bnftd{...}}\\
 \end{bnf*}
 \end{minipage}
+\vspace{-1cm}
 \end{multicols}
-
-\vspace{-0.5cm}
+\vspace{-1.5cm}
+\begin{center}  \textbf{Language 1}: \color{DarkRed} \textbf{Defunctionalised Declarations} \end{center}
 
 \begin{itemize}
-    \setlength\itemsep{-0.2em}
+    \setlength\itemsep{-0.38em}
     \item $Cons$, $DefCons$ : constructing tagged unions, and constructor definitions
     \item $Case$ : pattern matching, or deconstructions
     \item $Proj$ : projections, on tuples and tagged unions
     \item $primitive$-$op$ : $+$, $-$, $*$, $/$, and other primitive operators defined and used by Idris compiler
 \end{itemize}
 
+\captionsetup{font=normalsize}
 
-\section*{Introduction}
+\vspace {-0.5cm}
+\section*{Investigation}
 
 $DDecl$ is already convenient for code generation, however still \textbf{overly high level}, and could produce
 \textbf{redundant repetitions} when comparing the implementations of multiple back ends.
@@ -197,116 +203,148 @@ $DDecl$ is already convenient for code generation, however still \textbf{overly 
 % Different back end requires different properties of
 % IR for code generation, but 
 
-Firstly we check $Let$ expressions. They are responsible for variable introductions,
-and also capable of \textbf{shadowing variables}, but unfortunately missing in most old programming languages
-such as C/C++, Java, Ruby, Python, etc.
+$DDecl$ has $Let$ expressions which is responsible for variable introductions
+and \textbf{name shadowing}, however missing in most older programming languages like C/C++, Java, Ruby, Python, etc.
+
+There're two ways of eliminating $Let$ expressions(see \textbf{figure 2,3,4}). Using IIFE is straightforward,
+however will extremely \textbf{SLOW} down the back ends of dynamic programming languages, however another
+approach requires analyzing the scope of your programs, and might performance register allocation optimisations
+to avoid using too many local variables. 
+
+
+Besides, $DDecl$ has algebraic data types(abbr. ADT),
+and the underlying of ADTs is the representation of sum types and product types(see \textbf{figure 4, 5}).
+
+Product type merely requires the back end to implement tuples, which can be usually straightforward.
+However, the sum type, or tagged union, requires the back end to implement tags.
+Tags shall be $O(1)$ comparable, and identical to the qualified name of the data constructor, which is
+supported by programming languages with $Symbol$ types. When the back end has no native $Symbol$ type,
+our compiler should be responsible for emulating symbols.
+
+There're other language constructs too high level, or difficult to achieved by many existing languages,
+and we shall desugar or lower it with our compiler, according to user-given compiler options:
+\vspace{-0.2cm}
+\begin{itemize}
+    \setlength\itemsep{-0.13em}
+    \item pattern matching
+    \item block expression \cite{gcc-stmt-expr} \cite{pep572}
+    \item arbitrary identifier
+    \item tail call
+    \item mutation
+\end{itemize}
+
+    % \item primitive operations
+    % \item support FFI
+
+% From our observation, eliminating $Let$ is used by many back ends,
+% so we make it an option to compilation pipeline, for better reuse.
 
 \begin{multicols}{3}
 
 \begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-\includegraphics[width=0.9\linewidth]{figs/let.png}
+\begin{center}
+\includegraphics[width=0.9\linewidth, trim={0.2cm 0.2cm 0.2cm 0.2cm}, clip]{figs/let.png}
 \captionof{figure}{\color{DarkRed} $let$ in $DDecl$}
-\end{center}\vspace{0.1cm}
+\end{center}
 \end{minipage}
 
 \begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-\includegraphics[width=0.9\linewidth]{figs/let-by-mangling.png}
+\begin{center}
+\includegraphics[width=0.9\linewidth, trim={0.2cm 0.3cm 0.2cm 0.2cm}, clip]{figs/let-by-mangling.png}
 \captionof{figure}{\color{DarkRed} Eliminating $let$ by name mangling}
-\end{center}\vspace{0.1cm}
+\end{center}
 \end{minipage}
 
 
 \begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-\includegraphics[width=0.9\linewidth]{figs/let-by-im-call.png}
+\begin{center}
+\includegraphics[width=0.9\linewidth, trim={0.2cm 0.2cm 0.2cm 0.3cm}, clip]{figs/let-by-im-call.png}
+\vspace{-0.65cm}
 \captionof{figure}{\color{DarkRed} Eliminating $let$ by immediately invoked functions(abbr. IIFE)}
-\end{center}\vspace{0.1cm}
+\end{center}
 \end{minipage}
-
 \end{multicols}
 
- Eliminating $let$ by IIFE is very handy without requiring much code, however
- extremely \textbf{SLOW} down the back ends of dynamic programming languages.
-
- As for name mangling,
-
-\begin{itemize}
-    \setlength\itemsep{-0.2em}
-    \item renaming variables itself needs a simple pass to analyse the scope of your program!
-    \item considering register allocation problems?
-\end{itemize}
+\vspace{-1cm}
 
 \begin{multicols}{2}
 
 \begin{minipage}[b]{1\linewidth}
 \begin{center}\vspace{0.1cm}
-    \includegraphics[width=0.9\linewidth]{figs/let-occur.png}
-    \captionof{figure}{\color{DarkRed} Occurrences of distinct $x$}
-\end{center}\vspace{0.1cm}
-\end{minipage}
-
-\begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-    \includegraphics[width=0.9\linewidth]{figs/let-realloc.png}
-    \captionof{figure}{\color{DarkRed} Register allocation optimisation for $x$}
-\end{center}\vspace{0.1cm}
-\end{minipage}
-\end{multicols}
-
-Besides, the underlying of ADTs is the representation of the tagged unions.
-
-A valid approach is, firstly emulate LISP symbols to achieve $O(1)$ comparable \textbf{tags},
-and then use tuples whose 1st element is a LISP symbol, to represent ADTs.
-\begin{multicols}{2}
-
-\begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-    \includegraphics[width=0.9\linewidth]{figs/tagged-union.png}
-    \captionof{figure}{\color{DarkRed} Algebraic Data Types(ADTs)}
-\end{center}\vspace{0.1cm}
-\end{minipage}
-
-\begin{minipage}[b]{1\linewidth}
-\begin{center}\vspace{0.1cm}
-    \includegraphics[width=0.9\linewidth]{figs/tagged-union-impl.png}
+    \includegraphics[width=1\linewidth, trim={0.1cm 0.1cm 0.1cm 0.1cm}, clip]{figs/tagged-union-impl.png}
+    \vspace{-1.5cm}
     \captionof{figure}{\color{DarkRed} ADT internals in back ends}
-\end{center}\vspace{0.1cm}
+\end{center}
+\end{minipage}
+
+
+\begin{minipage}[b]{1\linewidth}
+\begin{center}\vspace{0.75cm}
+    \includegraphics[width=1\linewidth, trim={0.2cm 0.2cm 0.2cm 0.3cm}, clip]{figs/tagged-union.png}
+    \vspace{-1.5cm}
+    \captionof{figure}{\color{DarkRed} Algebraic Data Types(ADTs)}
+\end{center}
 \end{minipage}
 
 \end{multicols}
 
-We also have to
+Other than above desugaring and lowering, $DDecl$ is still tough to tackle as back end implementer
+should aware various primitive operations and constructs, such as
+projections $Proj$, FFIs $Foreign$, throwing exceptions $Error$, and primitive operators $Op$.
 
-\begin{itemize}
-    \setlength\itemsep{-0.1em}
-    \item translate pattern matching things to non-pattern match languages
-    \item translate block expressions \cite{gcc-stmt-expr} \cite{pep572} into languages whose expressions cannot accommodate statements
-    \item support primitive operations
-    \item support FFI
-\end{itemize}
+It could be beneficial to transfer the complexity to the upstream, i.e., a runtime system of
+the back end \cite {appel1990runtime}, see \textbf{table 1}, columns \textbf{DDecl} and \textbf{JavaScript-like pseudo code}.
 
-Options shall be provided here to control the properties of the IR, to achieve the reuse of
-\begin{itemize}
-    \setlength\itemsep{-0.2em}
-    \item desugaring block expressions, which may requires register allocation optimisations.
-    \item  desugaring pattern matching to switch statements and if statements
-    \item  desugaring data constructors to normal functions
-    \item  using LISP-style $Symbol$ as the tag of tagged union, for a language with $Symbol$ data.
-    \item  emulation of $Symbol$ in the language without $Symbol$ data for tags of tagged unions
-\end{itemize}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \toprule
+ \textit{Cases} & \textit{DDecl} & \textit{JavaScript-like pseudo code} & \textit{WDecl}\\
+ \midrule
+ Integer Additions & \tbcell{figs/cell-1-1.png} & \tbcell[0.25]{figs/cell-1-2.png} & \tbcell[0.25]{figs/cell-1-3.png}\\
+ \midrule
+ Projections & \tbcell[0.15]{figs/cell-2-1.png} & \tbcell[0.23]{figs/cell-2-2.png} & \tbcell[0.25]{figs/cell-2-3.png} \\
+ \midrule
+ Pattern Matching 1 & \tbcell{figs/cell-3-1.png} & \tbcell[0.25]{figs/cell-3-2.png} & ... \\
+ \midrule
+ Pattern Matching 2 & \tbcell{figs/cell-4-1.png} & \tbcell[0.25]{figs/cell-4-2.png} & ... \\
+ \midrule
+ Construction 1 & \tbcell[0.15]{figs/cell-5-1.png} & \tbcell[0.09]{figs/cell-5-2.png} & \tbcell[0.25]{figs/cell-5-3.png} \\
+ \midrule
+ Construction 2 & \tbcell{figs/cell-6-1.png} & \tbcell[0.25]{figs/cell-6-2.png} & ... \\
+ \bottomrule
+\end{tabular}
+\captionof{table}{\color{DarkRed} Correspondences}
+\end{center}
 
-Those stuffs are not difficult, but quite annoying when implementing
-them again and again, for each back end.
 
-What is the possibly simplest IR for code generation?
+% We also have to
+
+% \begin{itemize}
+%     \setlength\itemsep{-0.1em}
+%     \item translate pattern matching things to non-pattern match languages
+%     \item translate block expressions \cite{gcc-stmt-expr} \cite{pep572} into languages whose expressions cannot accommodate statements
+%     \item support primitive operations
+%     \item support FFI
+% \end{itemize}
+
+% Options shall be provided here to control the properties of the IR, to achieve the reuse of
+% \begin{itemize}
+%     \setlength\itemsep{-0.2em}
+%     \item desugaring block expressions, which may requires register allocation optimisations.
+%     \item  desugaring pattern matching to switch statements and if statements
+%     \item  desugaring data constructors to normal functions
+%     \item  using LISP-style $Symbol$ as the tag of tagged union, for a language with $Symbol$ data.
+%     \item  emulation of $Symbol$ in the language without $Symbol$ data for tags of tagged unions
+% \end{itemize}
+
+% Those stuffs are not difficult, but quite annoying when implementing
+% them again and again, for each back end.
 
 \section*{Proposal}
 
-To address problems mentioned above, We hereby propose an IR,
-which is lightweight, neat and compact, and finally capable of
-getting used to support a back end quickly.
+To address problems mentioned in section $Investigation$, We hereby propose a new IR,
+which is lightweight, neat and compact, and finally capable of getting used to implement a back end reasonably fast.
+
 
 \vspace{-1.5cm}
 \begin{multicols}{2}
@@ -337,113 +375,96 @@ getting used to support a back end quickly.
 \end{bnf*}
 \end{minipage}
 \end{multicols}
-\captionof{figure}{\color{DarkRed} Weakest Declarations}
 
-Instead of leaving a blank for the internal implementations of tuples, FFIs, constructors of algebraic data,
-we can assume a generally applicable implementation, and transform $DDecl$ to the proposed IR, which we'd call
-it a \textbf{Weakest Declaration}(abbr. $WDecl$).
+\vspace{-1cm}
 
+\begin{center} {\textbf{Language 2}: \color{DarkRed} \textbf{Weakest Declarations}} \end{center}
 
-$WDecl$ desugars $Let$ expressions to $Update$ statements, simplifies function arguments to accept variables or constants only,
-and avoids requirement of expressing block expressions in the target language.
+Instead of leaving a blank for the internal implementations of product types, FFIs, constructors of algebraic data,
+we can assume a generally applicable implementation for each of them, and finally,
+transform $DDecl$ to the proposed IR, with desugaring $Let$ expressions and block expressions, and permitting
+optional transformations which might be required by some back ends.
 
-Further, we point out some correspondences between the original $DDecl$ and our $WDecl$.
+We'd call it a \textbf{Weakest Declaration}(abbr. $WDecl$), as it is weak enough to be expressed by
+all of the target programming languages investigated in this project.
 
-%
-
-
-% \begin{center}
-% \begin{table}
-% \begin{tabular}{ |c|c|c| } 
-% \hline
-% \textbf{Cases} & \textbf{DDecl} & \textbf{WDecl}                                   \\ \hline
-% Addition Integers & \lstinline!Op (+ int) a b!  & \lstinline!App "+" [int, a, b])! \\ \hline
-% Projections & \lstinline!Proj a 1! & \lstinline!App "proj" [a, 1]!                 \\ \hline
-% Pattern Matching 1 & \lstinline!Case a [ConstCase 1 233]! & \lstinline!Switch a [(1, 233)]! \\ \hline
-% Pattern Matching 2 & \lstinline!Case a [ConCase "Cons" [_, _] 321]! & \lstinline!Switch App "proj" [a, 0] [("Cons", 321)]! \\ \hline
-% Pattern Matching 2 & \lstinline!Case a [ConCase "Cons" [_, _] 321]! & \lstinline!Switch App "proj" [a, 0] [("Cons", 321)]! \\ \hline
-% Construction 1 & \lstinline!Cons "Nil" []! & \lstinline!App "make_symbol" ["Nil"]! \\ \hline
-% Construction 2 & \lstinline!Cons "Cons" [1, a]! & \lstinline!App "make_tuple" [App "make_symbol" ["Cons"], 1, a]! \\ \hline
-% \end{tabular}
-% \end{table}
-% \end{center}
-% \captionof{table}{\color{DarkRed} Correspondences between $DDecl$ and $WDecl$}
-
-\begin{center}
-\begin{tabular}{ |c|c|c| } 
- \toprule
- \textit{Cases} & \textit{DDecl} & \textit{WDecl} \\
- \midrule
- Addition Integers & \lstinline!Op (+ int) a b!  & \lstinline!App "+" [int, a, b])! \\
- \midrule
- Projections & \lstinline!Proj a 1! & \lstinline!App "proj" [a, 1]!                 \\
- \midrule
- Pattern Matching 1 & \lstinline!Case a [ConstCase 1 233]! & \lstinline!Switch a [(1, 233)]! \\
- \midrule
- Pattern Matching 2 & \lstinline!Case a [ConCase "Cons" [_, _] 321]! & \lstinline!Switch App "proj" [a, 0] [("Cons", 321)]! \\
- \midrule
- Construction 1 & \lstinline!Cons "Nil" []! & \lstinline!App "make_symbol" ["Nil"]! \\
- \midrule
- Construction 2 & \lstinline!Cons "Cons" [1, a]! & \lstinline!App "make_tuple" [App "make_symbol" ["Cons"], 1, a]! \\
- \bottomrule
-\end{tabular}
-\end{center}
-
-In the above table, for being concise, we omitted the constructions of \lstinline!Const!,
-but simply use literals like \lstinline!1!, \lstinline!321!, \lstinline!"+"! instead.
-
-
-
-% 2 common ways of eliminating $Let$ expressions are illustrated in above boxes, where
-% the approach by immediately invoked function expressions(abbr. IIFE) is straightforward,
-% and can be achieved without much code.
-
-% Yet, function calls in dynamic programming languages without JIT compilation can be particularly slow.
-% For instance, in Python, addition as a function is about 2.5 slower than addition as a binary operation.
-
-% Other than a performance concern, eliminating $Let$ by IIFE may also produce
-% stack overflow errors, because combinations of $Let$ expressions lead to nested function calls,
-% unlike a series of parallel assignments.
-
-% Hence, to support back ends of some dynamic programming languages, we shall use name mangling instead of IIFE,
-% to achieve a better performance, and get rid of stack overflow.
+See \text{Table 1} for the correspondences between $DDecl$, JavaScript-like pseudo code, and $WDecl$.
 
 \color{FireBrick} %  colour for the conclusions to make them stand out
 
 \section*{Results}
 
 We implemented the transformation from $DDecl$ to $WDecl$ in the Haskell side,
-produce it a binary executable, which implements the Idris back end interfaces.
+then produced a binary executable which compiles Idris source files to a standalone \textbf{.qb} file.
 
-Hence, we become capable of compiling an Idris project, fetching its $WDecl$ and
-dumping the IR to the disk.
+A target language will later read $WDecl$ IR from the \textbf{.qb} file,
+and then do back end specific code generation, i.e., Haskell side
+is not responsible for generating executable code from Idris source files.
 
-As a target language, it'll read the standalone file of $WDecl$ IR, parse it,
-and then do back end specific code generation, which means that the Haskell side
-is not responsible for generating executable code.
+This strategy is advantageous,
+as most long-living languages have their own libraries or features
+to idiomatically manipulate their own programs as data.
 
-This is advantageous as
-each long-living language has its own libraries or features to manipulate
-their own program as data.
+Finally, we provided back end implementations for Python, Julia, Ruby and Erlang,
+with a surprisingly concise code, each of which consists of only
+trivial procedures within a sparse 200 lines,
+and tested by the examples provided by official website of Idris tutorials.
 
-TODO
+\begin{center}
+\begin{tabular}{ |c|c|c|c } 
+ \toprule
+ \textit{Target Language} & \textit{Existing Implementation, Line Count} & \textit{Line Count by QB(abbr. Quick Backend)} & \textit{Notes} \\
+ \midrule
+ Python2 & ziman/idris-py, $> 900$ & 177 & QB: Python 2+3 \\
+ Python3 & thautwarm/idris-python, $> 1000$ & 177 & ditto \\
+ Ruby & mrb/idris-ruby, $> 220 $ &  209 & QB: full-featured + optimized \\
+ Julia & none so far & 171 & very fast \\
+ \bottomrule
+\end{tabular}
+\captionof{table}{\color{DarkRed} Line count comparisons of results}
+\end{center}
 
-TODO
+Note that, by using our Quick Backend implementation, a lot of stuffs
+such as FFI, primitive operations get decoupled from the back end implementation itself,
+as a result, we gain extensibility,
+and further optimizations can be easily introduced as plugins.
 
-TODO
-
-TODO
-
-TODO
-
-TODO
-
-TODO: show various back ends by $WDecl$, report the size of codebase for each implementation.
-
+TODO: add erlang backend and JavaScript backend tonight
 
 \section*{Conclusions}
 
-TODO
+We achieved our goal of implementing Idris back ends quickly, with the capability of reusing transformations used by multiple back ends.
+
+
+\begin{multicols}{2}
+
+\begin{minipage}[t]{0.9\linewidth}
+Some reusable transformations:
+\begin{itemize}
+    \setlength\itemsep{-0.2em}
+    \item LISP-symbol emulations
+    \item arbitrary identifier to the classic Java identifier
+    \item block expression desugaring
+    \item let expression desugaring
+    \item pattern matching compilation
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.8\linewidth}
+Due to the limitations of our bandwidth, the more difficult transformations are missing.
+However, it shall not be a problem, as what matters here is how to reuse of transformations for multiple back ends.
+
+\begin{itemize}
+    \setlength\itemsep{-0.2em}
+    \item tail call scheduling
+    \item register allocation optimizations
+    \item mutation to state monads
+\end{itemize}
+\end{minipage}
+
+\end{multicols}
+
+\vspace{-1cm}
 
 \color{Black}
 
@@ -475,6 +496,10 @@ All these metadata are missing in $DDecl$ or other convenient IRs provided by Id
 as a consequence, it's impossible to get a practical runtime checking.
 
 
+\section*{Acknowledgements}
+
+Archibald Samuel Elliott for his elaborated notes about Idris $DDecl$ \cite {elliott2015concurrency}, and so far all those IRs are highly-undocumented in Idris official site.
+
 \begin{small}%Makes the text of the references section smaller
 \begin{multicols}{2}%Makes the section two col
 \nocite{*} % Print all references regardless of whether they were cited in the poster or not
@@ -483,29 +508,21 @@ as a consequence, it's impossible to get a practical runtime checking.
 \end{multicols}
 \end{small}
 
-\section*{Acknowledgements}
 
-Archibald Samuel Elliott for his elaborated notes about Idris $DDecl$ \cite {elliott2015concurrency}, and so far all those IRs are highly-undocumented in Idris official site.
+% \section*{Supplementary}
 
-\section*{Contact Details}
+% $WDecl$ is actually simpler than the so-called $SDecl$ provided by the Idris compiler \cite {brady2013idris} as their simplest IR.
 
-Taine Zhao - thaut@logic.cs.tsukuba.ac.jp
-
-Yukiyoshi Kameyama - kam@cs.tsukuba.ac.jp
-
-\section*{Supplementary}
-
-$WDecl$ is actually simpler than the so-called $SDecl$ provided by the Idris compiler \cite {brady2013idris} as their simplest IR.
-
-The reason why we take $WDecl$ as the weakest is, incidentally, it's like a simplified form
-of ASTs of the Python Programming Language.
-Python is the weakest programming language among all well-known dynamic programming languages,
-which is to say, despite of the details of object models/systems, Python can be trivially
-expressed/translated to Ruby, Lua, JavaScript, Erlang, etc., whereas transforming
-from the latter ones to Python is thorny, due to the lack of block expressions and
-assignment expressions \cite {pep572}. Although the weakness of Python is considered harmful in regular
-programming tasks, it unveils what a generally transformable upstream IR shall look like.
+% The reason why we take $WDecl$ as the weakest is, incidentally, it's like a simplified form
+% of ASTs of the Python Programming Language.
+% Python is the weakest programming language among all well-known dynamic programming languages,
+% which is to say, despite of the details of object models/systems, Python can be trivially
+% expressed/translated to Ruby, Lua, JavaScript, Erlang, etc., whereas transforming
+% from the latter ones to Python is thorny, due to the lack of block expressions and
+% assignment expressions \cite {pep572}. Although the weakness of Python is considered harmful in regular
+% programming tasks, it unveils what a generally transformable upstream IR shall look like.
 
 \end{multicols}
+
 \end{document}
 
