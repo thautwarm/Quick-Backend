@@ -45,7 +45,7 @@
 \setlength{\columnseprule}{0pt}
 \captionsetup{font=large}
 
-\newcommand{\tbcell}[2][0.18]{\includegraphics[width=#1\linewidth, trim={0.1cm 3cm 0.1cm 2.5cm}, clip]{#2}}
+\newcommand{\tbcell}[2][0.18]{\includegraphics[height=0.5cm, trim={0.1cm 3cm 0.1cm 2.5cm}, clip]{#2}}
 
 
 \begin{document}
@@ -94,15 +94,15 @@ a valid approach is to implement code generation back ends for Idris.
 Whereas Idris has already provided convenient interfaces to support
 agnostic back ends, it is still cumbersome to import Idris programs
 into an existing programming language. As the existing programming languages are already
-in a large amount and continuously proliferating, and the implementations
-of different back ends certainly have quite a few overlaps.
+in such a quantity and continuously proliferating,
+and many programming languages are quite similar, the implementations
+of different Idris back ends can have quite a lot of overlaps and redundancies.
   
-To address this, we introduce a "common" intermediate representation, Weakest Declaration,
+To address them, we introduce a "common" intermediate representation, Weakest Declaration,
 which is a much simpler IR and contributes to reusability of analyses and transformations
-required by different Idris back ends.
-
-As a result, we allow making an Idris back end in a most simplified routine,
-which can usually be accomplished in few hours or, even minutes.
+required by different Idris back ends. As a result, we allow making an Idris back end
+in a most simplified routine, which can usually be accomplished within very few code
+in few hours or, even minutes.
 
 %----------------------------------------------------------------------------------------
 %   INTRODUCTION
@@ -119,7 +119,7 @@ Idris is a programming language with dependent types,
 hence it is capable of ending many difficult and frequently occurring bugs in the industrial world:
 For instance, dependently typed programs can statically verify the validness of array indexing \cite {xi1998eliminating},
 or statically verify the validness of tensor operations \cite {eaton2006statically} \cite {chen2017typesafe},
-especially statically checking/inferring dimensions.
+especially statically checking/inferring tensor dimensions.
 
 \begin{minipage}[b]{1\linewidth}
 \begin{center}
@@ -133,8 +133,8 @@ especially statically checking/inferring dimensions.
 \vspace{0.5cm}
 
 To leverage its advanced type system in practice, a valid approach is
-implementing code generation back ends for Idris, and integrating Idris into
-the existing applications.
+implementing code generation back ends for Idris, and then integrating Idris into
+the existing industrial applications.
 
 To achieve this, Idris has already paid lots of efforts to their code generation facilities,
 and finally provided a convenient interface for back end plugins \cite{brady2015cross}.
@@ -198,7 +198,7 @@ hereafter as $DDecl$.
 \section*{Investigation}
 
 $DDecl$ is already convenient for code generation, however still \textbf{overly high level}, and could produce
-\textbf{redundant repetitions} when comparing the implementations of multiple back ends.
+\textbf{redundant repetitions} when comparing the implementations of many different back ends.
 
 % Different back end requires different properties of
 % IR for code generation, but 
@@ -207,22 +207,23 @@ $DDecl$ has $Let$ expressions which is responsible for variable introductions
 and \textbf{name shadowing}, however missing in most older programming languages like C/C++, Java, Ruby, Python, etc.
 
 There're two ways of eliminating $Let$ expressions(see \textbf{figure 2,3,4}). Using IIFE is straightforward,
-however will extremely \textbf{SLOW} down the back ends of dynamic programming languages, however another
-approach requires analyzing the scope of your programs, and might performance register allocation optimisations
+however will extremely \textbf{SLOW} down the back ends of dynamic programming languages. Another
+approach requires analyzing the scope of your programs and, performing register allocation optimizations
 to avoid using too many local variables. 
 
 
 Besides, $DDecl$ has algebraic data types(abbr. ADT),
 and the underlying of ADTs is the representation of sum types and product types(see \textbf{figure 4, 5}).
 
-Product type merely requires the back end to implement tuples, which can be usually straightforward.
+The product type merely requires the back end to implement tuples, which is usually straightforward.
 However, the sum type, or tagged union, requires the back end to implement tags.
-Tags shall be $O(1)$ comparable, and identical to the qualified name of the data constructor, which is
+A tag shall be $O(1)$ comparable, and identical to the qualified name of the data constructor, which is
 supported by programming languages with $Symbol$ types. When the back end has no native $Symbol$ type,
 our compiler should be responsible for emulating symbols.
 
 There're other language constructs too high level, or difficult to achieved by many existing languages,
-and we shall desugar or lower it with our compiler, according to user-given compiler options:
+in the case, our compiler shall desugar or lower them:
+
 \vspace{-0.2cm}
 \begin{itemize}
     \setlength\itemsep{-0.13em}
@@ -244,14 +245,14 @@ and we shall desugar or lower it with our compiler, according to user-given comp
 \begin{minipage}[b]{1\linewidth}
 \begin{center}
 \includegraphics[width=0.9\linewidth, trim={0.2cm 0.2cm 0.2cm 0.2cm}, clip]{figs/let.png}
-\captionof{figure}{\color{DarkRed} $let$ in $DDecl$}
+\captionof{figure}{\color{DarkRed} $Let$ in $DDecl$}
 \end{center}
 \end{minipage}
 
 \begin{minipage}[b]{1\linewidth}
 \begin{center}
 \includegraphics[width=0.9\linewidth, trim={0.2cm 0.3cm 0.2cm 0.2cm}, clip]{figs/let-by-mangling.png}
-\captionof{figure}{\color{DarkRed} Eliminating $let$ by name mangling}
+\captionof{figure}{\color{DarkRed} Eliminating $Let$ by name mangling}
 \end{center}
 \end{minipage}
 
@@ -260,7 +261,7 @@ and we shall desugar or lower it with our compiler, according to user-given comp
 \begin{center}
 \includegraphics[width=0.9\linewidth, trim={0.2cm 0.2cm 0.2cm 0.3cm}, clip]{figs/let-by-im-call.png}
 \vspace{-0.65cm}
-\captionof{figure}{\color{DarkRed} Eliminating $let$ by immediately invoked functions(abbr. IIFE)}
+\captionof{figure}{\color{DarkRed} Eliminating $Let$ by immediately invoked functions(abbr. IIFE)}
 \end{center}
 \end{minipage}
 \end{multicols}
@@ -289,11 +290,12 @@ and we shall desugar or lower it with our compiler, according to user-given comp
 \end{multicols}
 
 Other than above desugaring and lowering, $DDecl$ is still tough to tackle as back end implementer
-should aware various primitive operations and constructs, such as
+should aware various primitive operations and language constructs, such as
 projections $Proj$, FFIs $Foreign$, throwing exceptions $Error$, and primitive operators $Op$.
 
 It could be beneficial to transfer the complexity to the upstream, i.e., a runtime system of
-the back end \cite {appel1990runtime}, see \textbf{table 1}, columns \textbf{DDecl} and \textbf{JavaScript-like pseudo code}.
+the back end \cite {appel1990runtime}, see columns \textit{DDecl} and \textit{JavaScript-like pseudo code} in
+\textbf{Table 1}.
 
 \begin{center}
 \begin{tabular}{ |c|c|c|c| } 
@@ -313,7 +315,7 @@ the back end \cite {appel1990runtime}, see \textbf{table 1}, columns \textbf{DDe
  Construction 2 & \tbcell{figs/cell-6-1.png} & \tbcell[0.25]{figs/cell-6-2.png} & ... \\
  \bottomrule
 \end{tabular}
-\captionof{table}{\color{DarkRed} Correspondences}
+\captionof{table}{\color{DarkRed} Correspondences between different program representations}
 \end{center}
 
 
@@ -330,7 +332,7 @@ the back end \cite {appel1990runtime}, see \textbf{table 1}, columns \textbf{DDe
 % Options shall be provided here to control the properties of the IR, to achieve the reuse of
 % \begin{itemize}
 %     \setlength\itemsep{-0.2em}
-%     \item desugaring block expressions, which may requires register allocation optimisations.
+%     \item desugaring block expressions, which may requires register allocation optimizations.
 %     \item  desugaring pattern matching to switch statements and if statements
 %     \item  desugaring data constructors to normal functions
 %     \item  using LISP-style $Symbol$ as the tag of tagged union, for a language with $Symbol$ data.
@@ -388,11 +390,11 @@ optional transformations which might be required by some back ends.
 We'd call it a \textbf{Weakest Declaration}(abbr. $WDecl$), as it is weak enough to be expressed by
 all of the target programming languages investigated in this project.
 
-See \text{Table 1} for the correspondences between $DDecl$, JavaScript-like pseudo code, and $WDecl$.
+See \textbf{Table 1} for the correspondences between $DDecl$, JavaScript-like pseudo code, and $WDecl$.
 
 \color{FireBrick} %  colour for the conclusions to make them stand out
 
-\section*{Results}
+\section*{Results \small code at {\url{https://bitbucket.org/thautwarm/ppl2020-idris-codegen-backend/src/master}}}
 
 We implemented the transformation from $DDecl$ to $WDecl$ in the Haskell side,
 then produced a binary executable which compiles Idris source files to a standalone \textbf{.qb} file.
@@ -405,10 +407,11 @@ This strategy is advantageous,
 as most long-living languages have their own libraries or features
 to idiomatically manipulate their own programs as data.
 
-Finally, we provided back end implementations for Python, Julia, Ruby and Erlang,
+Finally, we provided back end implementations for Python, Julia and Ruby,
 with a surprisingly concise code, each of which consists of only
 trivial procedures within a sparse 200 lines,
-and tested by the examples provided by official website of Idris tutorials.
+and tested by the examples provided by the official website of Idris tutorials.
+We call our design and implementation \textbf{Quick Backend}.
 
 \begin{center}
 \begin{tabular}{ |c|c|c|c } 
@@ -424,22 +427,19 @@ and tested by the examples provided by official website of Idris tutorials.
 \captionof{table}{\color{DarkRed} Line count comparisons of results}
 \end{center}
 
-Note that, by using our Quick Backend implementation, a lot of stuffs
+Note that, by using the Quick Backend approach, a lot of stuffs,
 such as FFI, primitive operations get decoupled from the back end implementation itself,
 as a result, we gain extensibility,
 and further optimizations can be easily introduced as plugins.
 
-TODO: add erlang backend and JavaScript backend tonight
-
 \section*{Conclusions}
 
-We achieved our goal of implementing Idris back ends quickly, with the capability of reusing transformations used by multiple back ends.
-
+We achieved our goal of implementing Idris back ends quickly, with the capability of \textbf{reusing} many transformations for multiple back ends.
 
 \begin{multicols}{2}
 
 \begin{minipage}[t]{0.9\linewidth}
-Some reusable transformations:
+Some available transformations:
 \begin{itemize}
     \setlength\itemsep{-0.2em}
     \item LISP-symbol emulations
@@ -451,14 +451,16 @@ Some reusable transformations:
 \end{minipage}
 
 \begin{minipage}[t]{0.8\linewidth}
-Due to the limitations of our bandwidth, the more difficult transformations are missing.
+Due to the limitations of our bandwidth, some more difficult transformations are missing.
 However, it shall not be a problem, as what matters here is how to reuse of transformations for multiple back ends.
 
+Some WIP transformations:
 \begin{itemize}
     \setlength\itemsep{-0.2em}
     \item tail call scheduling
     \item register allocation optimizations
-    \item mutation to state monads
+    \item mutations to state monads
+    \item garbage collections
 \end{itemize}
 \end{minipage}
 
@@ -471,18 +473,18 @@ However, it shall not be a problem, as what matters here is how to reuse of tran
 \section*{Forthcoming Research}
 
 Although Idris is powerful enough to express very complex static properties,
-there're still cases where runtime checking will be needed.
+still are there cases runtime checking is in need.
 
 Some reasons here could be
 
 \begin{itemize}
     \setlength\itemsep{-0.2em}
-    \item Constructing proofs for complex properties is pretty niche, requiring specific and knowledge about dependent types and theorem proving.
-    \item Programmers incapable of prove the correctness with their code, might be able to prove it in other means.
-    \item Idris itself is not perfect enough to prove things just like as is, i.e., hand-written mathematical proofs can sometimes be easier.
+    \item Constructing proofs for complex properties is pretty niche, requiring specific knowledge about dependent types and theorem proving.
+    \item Programmers incapable of proving the correctness with their code, might be able to prove it in other means.
+    \item Idris itself is not perfect enough to prove things as it is, i.e., hand-written mathematical proofs can sometimes be easier.
 \end{itemize}
 
-To support runtime checking, the reasonable error reports and debugging shall be supported,
+To support runtime checking, the reasonable error reports and debugging facilities shall be provided,
 which both require some metadata from the original source code, e.g.,
 
 \begin{itemize}
@@ -493,12 +495,14 @@ which both require some metadata from the original source code, e.g.,
 \end{itemize}
 
 All these metadata are missing in $DDecl$ or other convenient IRs provided by Idris,
-as a consequence, it's impossible to get a practical runtime checking.
+as a consequence, it's impossible to get a practical runtime checking. Hence, how to access
+metadata of Idris programs could be a future research.
+
 
 
 \section*{Acknowledgements}
 
-Archibald Samuel Elliott for his elaborated notes about Idris $DDecl$ \cite {elliott2015concurrency}, and so far all those IRs are highly-undocumented in Idris official site.
+Archibald Samuel Elliott for his elaborated notes about Idris $DDecl$ \cite {elliott2015concurrency}, while so far all those IRs are highly-undocumented in Idris official site.
 
 \begin{small}%Makes the text of the references section smaller
 \begin{multicols}{2}%Makes the section two col
