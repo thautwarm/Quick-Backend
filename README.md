@@ -17,7 +17,7 @@ Check following files in the root directory:
 We tested the implemented back ends with examples from [Idris Offical Tutorials](http://docs.idris-lang.org/en/latest/tutorial),
 check `examples/testcases.idr`.
 
-To build and run the tests:
+To build and run the tests, firstly `cd` into `libs` directory and `idris --install quick-backend.ipkg`, then
 
 - build: `bash build-tests.sh`
 
