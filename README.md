@@ -62,7 +62,7 @@ callff2 "foreign function name" (unsafe idris_value) (unsafe idris_value)
 
 This does break the type safety of Idris, but for achieving a quick industrial integration, we provide this.
 
-It's still a future research about support for the full featured(type safety) Idris FFI. 
+It's still a future research about support for the full featured Idris FFI, i.e., type safe FFI.
 
 In terms of the current design,
 when accessing a foreign function or value named `foreign`, you're actually accessing `RTS.foreign` in the backend.     
