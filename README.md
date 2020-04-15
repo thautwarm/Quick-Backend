@@ -4,6 +4,8 @@ This is about **how to implement an Idris back end within hours or even minutes*
 
 POSTER PDF: `final.pdf` in the project root directory.
 
+You're expected to use `stack install .` to build this project and install it.
+
 This repo provides 3 solid implementations, for Python, Julia, and Ruby.
 
 Check following files in the root directory:
