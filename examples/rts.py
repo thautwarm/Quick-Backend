@@ -37,6 +37,29 @@ class RTS:
 
     op_int_str = str
     
-    
     def assert2(a, b):
         assert a == b
+
+    def op_read_str(f):
+        return input()
+
+    def op_str_eq(a, b):
+        return a == b
+
+    def op_str_rev(a):
+        return a[::-1]
+
+
+    def op_str_head(a):
+        return a[0]
+
+    def op_str_cons(a, b):
+        return a + b
+
+    def op_str_tail(a):
+        if not a:
+            raise IndexError
+        return a[1:]
+
+    def op_str_int(s):
+        return int(s)

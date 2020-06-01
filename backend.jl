@@ -8,7 +8,7 @@ using MLStyle
 using ArgParse
 
 literal_map(kind, x) =
-    @match kind begin
+    @match String(kind) begin
         "float" => parse(Float64, x)
         "int" => parse(Int64, x)
         "bigInt" => parse(BigInt, x)
@@ -83,7 +83,6 @@ function Return(exp)
     :(return $exp)
 end
 
-
 function read_and_gen(io)
     ctor_stack = []
     obj_stack = []
@@ -91,7 +90,7 @@ function read_and_gen(io)
     left = 1
     while true
         while (left !== 0)
-            s = strip(readline(io))
+            s = readuntil(io, '\n'; keep=false)
             if isempty(s)
                 continue
             end
@@ -109,7 +108,7 @@ function read_and_gen(io)
                 kind = pats[2]
                 length = parse(Int, pats[3])
                 buf = String(read(io, length))
-                readline(io)
+                readuntil(io, '\n'; keep=false)
                 buf = literal_map(kind, buf)
                 push!(obj_stack, buf)
 

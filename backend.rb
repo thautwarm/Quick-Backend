@@ -122,8 +122,8 @@ def read_and_gen(io)
     left = 1
     loop do
         while left > 0
-            line = io.readline
-            pats = line.strip.split
+            line = io.readline(newline: '\n')
+            pats = line.split
             if pats.empty?
                 next
             end
@@ -140,7 +140,7 @@ def read_and_gen(io)
                 kind = pats[1]
                 length = pats[2].to_i
                 buf = io.read(length)
-                io.readline
+                io.readline(newline: '\n')
                 obj_stack.push literal_map(kind, buf)
 
             when "list"

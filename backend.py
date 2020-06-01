@@ -31,6 +31,20 @@ def code_list_to_string(prefix, io, xs):
     io.write(xs)
     io.write('\n')
 
+def concat_stmts(xs):
+    ret = []
+    extend = list.extend
+    append = list.append
+    for x in xs:
+        (isinstance(x, list) and extend or append)(ret, x)
+    return ret
+
+def concat_stmts_(ret, xs):
+    extend = list.extend
+    append = list.append
+    for x in xs:
+        (isinstance(x, list) and extend or append)(ret, x)
+    return ret
 
 def mk_list(*args):
     return args
@@ -55,7 +69,7 @@ class Generate:
 
     @staticmethod
     def Defun(name, args, body):
-        return ["def {}({}):".format(name, ','.join(args)), sum(body, [])]
+        return ["def {}({}):".format(name, ','.join(args)), concat_stmts(body)]
 
     @staticmethod
     def Introduction(n):
@@ -76,11 +90,9 @@ class Generate:
         for i, [cc, stmts] in enumerate(xs):
             head = i and "elif" or "if"
             ret.append('{} {} == {}:'.format(head, var, cc))
-            assert isinstance(stmts, list)
-            ret.append(sum(stmts, []))
+            ret.append(concat_stmts(stmts))
         ret.append('else:')
-        assert isinstance(body, list)
-        ret.append(sum(body, []))
+        ret.append(concat_stmts(body))
         return ret
 
     @staticmethod
@@ -88,7 +100,7 @@ class Generate:
         assert isinstance(cond, str)
         assert isinstance(t, list)
         assert isinstance(e, list)
-        return ['if {}:'.format(cond), sum(t, []), "else:", sum(e, [])]
+        return ['if {}:'.format(cond), concat_stmts(t), "else:", concat_stmts(e)]
 
     @staticmethod
     def EffectExpr(exp):
@@ -160,7 +172,7 @@ def main(filename: str, out: str):
     """
 	QB to Python Compiler
     """
-    with open(filename) as f:
+    with open(filename, newline='\n') as f:
         io = StringIO()
         for c in sum(Generate.read_and_gen(f), []):
             code_list_to_string('', io, c)
